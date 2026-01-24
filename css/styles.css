@@ -364,7 +364,7 @@ a:hover {
 
 .scroll-indicator {
     position: absolute;
-    bottom: var(--spacing-md);
+    bottom: var(--spacing-xl);
     display: flex;
     flex-direction: column;
     align-items: center;
