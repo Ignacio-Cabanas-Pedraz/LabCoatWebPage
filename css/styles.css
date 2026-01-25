@@ -362,32 +362,6 @@ a:hover {
     font-size: 0.875rem;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: var(--spacing-xl);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--color-text-secondary);
-    font-size: 0.75rem;
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    animation: fadeInUp 0.8s ease-out 0.5s both;
-}
-
-.scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--color-text-secondary), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
-}
-
-@keyframes scrollLine {
-    0%, 100% { opacity: 0; transform: translateY(-10px); }
-    50% { opacity: 1; transform: translateY(0); }
-}
 
 @keyframes fadeInUp {
     from {
@@ -518,10 +492,10 @@ a:hover {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    max-width: 1200px;
+    gap: var(--spacing-sm);
+    max-width: 1000px;
     margin: 0 auto;
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
 }
 
 .journey-step-box {
@@ -581,27 +555,30 @@ a:hover {
     color: var(--color-primary);
 }
 
+
 /* Semicircular Arrows */
 .journey-arrow-horizontal {
     position: absolute;
     pointer-events: none;
     z-index: 1;
+    stroke-dasharray: 4;
+    opacity: 0.6;
 }
 
 /* Arrow from bottom of Step 1 to bottom of Step 2 */
 .arrow-bottom {
-    width: 300px;
-    height: 120px;
-    left: calc(33.33% - 150px);
-    bottom: -40px;
+    width: 180px;
+    height: 60px;
+    left: calc(33.33% - 90px);
+    bottom: -30px;
 }
 
 /* Arrow from top of Step 2 to top of Step 3 */
 .arrow-top {
-    width: 300px;
-    height: 120px;
-    left: calc(66.66% - 150px);
-    top: -40px;
+    width: 180px;
+    height: 60px;
+    left: calc(66.66% - 90px);
+    top: -30px;
 }
 
 /* Responsive adjustments */
