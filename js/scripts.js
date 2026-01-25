@@ -156,7 +156,7 @@ if (contactForm) {
             formSuccess.classList.add('show');
             
             // Log form data (remove in production)
-            console.log('Form submitted:', data);
+            // console.log('Form submitted');
             
             // Optional: Send to Netlify Forms
             // The form will automatically work with Netlify if you add:
@@ -328,4 +328,5 @@ window.addEventListener('scroll', () => {
 // ================================
 console.log('%cLabCoat AI', 'font-size: 24px; font-weight: bold; color: #2563eb;');
 console.log('%cYour Personal Laboratory Teacher', 'font-size: 14px; color: #64748b;');
-console.log('Interested in joining our mission? Contact: ignacio.cabanas.p@gmail.com');
+console.log('%cYour Personal Laboratory Teacher', 'font-size: 14px; color: #64748b;');
+// console.log('Interested in joining our mission? Contact us via the form.');
