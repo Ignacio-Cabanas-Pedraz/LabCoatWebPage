@@ -596,7 +596,7 @@ a:hover {
     width: 300px;
     height: 120px;
     left: calc(33.33% - 150px);
-    bottom: -40px;
+    bottom: 5px;
 }
 
 /* Arrow from top of Step 2 to top of Step 3 */
@@ -604,7 +604,7 @@ a:hover {
     width: 300px;
     height: 120px;
     left: calc(66.66% - 150px);
-    top: -40px;
+    top: 5px;
 }
 
 /* Responsive adjustments */
@@ -1206,14 +1206,13 @@ section {
 .form-group select:focus+label,
 .form-group input:not(:placeholder-shown)+label,
 .form-group textarea:not(:placeholder-shown)+label,
-.form-group select:valid+label {
-    top: -0.75rem;
-    left: 0.75rem;
+.form-group select+label {
+    top: -1.5rem;
+    left: 0;
     font-size: 0.875rem;
-    background-color: var(--color-text);
-    padding: 0.25rem 0.75rem;
-    color: white;
-    border-radius: 4px;
+    background-color: transparent;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .form-group select {

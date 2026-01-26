@@ -33,8 +33,8 @@
                 <a href="index.html" class="nav-link">Product</a>
                 <a href="index.html#features" class="nav-link">Features</a>
                 <a href="index.html#technology" class="nav-link">Technology</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="index.html#contact" class="nav-cta nav-cta-inverse">Get Started</a>
+                <a href="#company-form" class="nav-link">Inquire</a>
+                <a href="company.html" class="nav-cta nav-cta-inverse">About us</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -48,12 +48,20 @@
     <section class="hero" style="min-height: 60vh; padding-bottom: 4rem;">
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="hero-title-line">LabCoat</span>
+                <span class="hero-title-line" style="color: var(--color-primary);">LabCoat</span>
             </h1>
             <p class="hero-subtitle">
                 We're building the future of laboratory education by combining artificial intelligence
                 with augmented reality to create personalized, hands-on learning experiences.
             </p>
+            <div style="margin-top: 2rem; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <video src="assets/ar-productivity-video.mp4" autoplay loop muted playsinline
+                    style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);"></video>
+                <p
+                    style="color: var(--color-text-secondary); font-style: italic; font-size: 0.75rem; margin-top: 0.5rem; text-align: center; opacity: 0.8;">
+                    Assets generated with AI
+                </p>
+            </div>
         </div>
     </section>
 
@@ -125,225 +133,166 @@
             </div>
 
             <!-- First Story Block: The Problem -->
-            <div class="feature-showcase">
+            <div class="feature-showcase"
+                style="border: 1px solid var(--color-border); border-radius: 12px; padding: var(--spacing-sm);">
                 <div class="feature-card feature-card-large">
                     <div class="feature-content">
-                        <h3 class="feature-title" style="font-size: 1.75rem; margin-bottom: 1.5rem;">
-                            The Laboratory Challenge
+                        <h3 class="feature-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">
+                            The Attention Challenge
                         </h3>
-                        <p class="feature-description" style="margin-bottom: 1rem;">
-                            As a student working in the laboratory with complex procedures, I experienced firsthand
-                            what happens when you need help but the teacher is spread too thin. Students want to learn,
-                            but they need guidance—not just what to do, but how to use equipment properly and why we
-                            perform each action in the laboratory.
-                        </p>
-                        <p class="feature-description">
-                            I realized that by creating an intelligent agent, we could empower students to learn
-                            independently while ensuring they understand the reasoning behind every procedure.
+                        <p class="feature-description" style="margin-bottom: 0.5rem;">
+                            I spent countless hours puzzled in the laboratory, realizing that a single teacher for 10-12
+                            students simply isn't enough. Without immediate guidance, students struggle to master
+                            complex procedures, leading to frustration rather than learning.
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <img src="assets/story-hololens-1.jpg" alt="Ignacio using HoloLens 2 in surgical environment"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        <img src="assets/lab-research.jpg" alt="Student conducting research in a laboratory"
+                            style="width: 100%; height: auto; object-fit: contain; border-radius: 12px;"
+                            class="lightbox-trigger" data-media-src="assets/lab-research.jpg">
                     </div>
                 </div>
             </div>
 
-            <!-- Second Story Block: The Discovery (Video) -->
-            <div class="feature-showcase" style="margin-top: var(--spacing-xl);">
-                <div class="feature-card feature-card-large">
-                    <div class="feature-visual">
-                        <video controls style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;"
-                            poster="assets/story-hololens-1.jpg">
-                            <source src="assets/story-hololens-video.mp4" type="video/mp4">
-                            Your browser doesn't support video.
-                        </video>
-                    </div>
+            <!-- Consolidated Story Block: The Solution -->
+            <div class="feature-showcase"
+                style="margin-top: var(--spacing-sm); display: flex; flex-direction: column; gap: var(--spacing-md); border: 1px solid var(--color-border); border-radius: 12px; padding: var(--spacing-sm);">
+                <!-- Main Content: Image Left, Text Right -->
+                <div class="feature-card feature-card-large" style="flex-direction: row-reverse;">
                     <div class="feature-content">
-                        <h3 class="feature-title" style="font-size: 1.75rem; margin-bottom: 1.5rem;">
-                            Witnessing AR's Potential
+                        <h3 class="feature-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">
+                            The Inspiration
                         </h3>
-                        <p class="feature-description" style="margin-bottom: 1rem;">
-                            The breakthrough came when I witnessed knee surgery aided by Microsoft's HoloLens.
-                            The surgeons used it as a productivity tool—planning procedures beforehand and viewing
-                            holographic overlays of the patient's unique anatomy at real scale during surgery.
+                        <p class="feature-description" style="margin-bottom: 0.5rem;">
+                            I witnessed AR's potential in surgery aided by HoloLens, but I was paralyzed by the
+                            prohibitive hardware costs ($3,500+). There was simply no way to bring this technology to
+                            students at scale.
                         </p>
-                        <p class="feature-description">
-                            I spoke with the lead developer and had the opportunity to try the HoloLens myself.
-                            I even sponsored a lecture for my university companions to share this technology.
-                            That's when I knew: AR would be essential in our near future.
+                    </div>
+                    <div class="feature-visual" style="display: flex; gap: var(--spacing-sm);">
+                        <!-- Image 1 -->
+                        <div class="lightbox-trigger" data-type="image" data-src="assets/story-hololens-1.jpg"
+                            style="flex: 1;">
+                            <img src="assets/story-hololens-1.jpg" alt="HoloLens surgical planning"
+                                style="width: 100%; height: auto; object-fit: contain; border-radius: 12px; cursor: pointer;">
+                        </div>
+                        <!-- Image 2 -->
+                        <div class="lightbox-trigger" data-type="image" data-src="assets/story-hololens-2.jpg"
+                            style="flex: 1;">
+                            <img src="assets/story-hololens-2.jpg" alt="HoloLens live surgery demo"
+                                style="width: 100%; height: auto; object-fit: contain; border-radius: 12px; cursor: pointer;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Grid Below (Removed) -->
+            </div>
+
+            <!-- New Story Block: The Breakthrough -->
+            <div class="feature-showcase"
+                style="margin-top: var(--spacing-sm); border: 1px solid var(--color-border); border-radius: 12px; padding: var(--spacing-sm);">
+                <div class="feature-card feature-card-large" style="flex-direction: row-reverse;">
+                    <div class="feature-content">
+                        <h3 class="feature-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">
+                            The Breakthrough
+                        </h3>
+                        <p class="feature-description" style="margin-bottom: 0.5rem;">
+                            Then, almost overnight, the barrier was removed. Meta introduced affordable smart glasses
+                            with high-quality displays and AI integration. Finally, we had the hardware to build a
+                            hands-free laboratory teacher for everyone.
                         </p>
+                    </div>
+                    <div class="feature-visual" style="display: flex; align-items: center; justify-content: center;">
+                        <a href="https://www.youtube.com/watch?v=gZ9IsB72nVk" target="_blank"
+                            title="Watch our vision video" style="width: 100%;">
+                            <img src="assets/meta-glasses-detail.png"
+                                alt="Close up of Ray-Ban Meta smart glasses display"
+                                style="width: 100%; aspect-ratio: 16/9; height: auto; object-fit: cover; border-radius: 12px; transition: opacity 0.2s;"
+                                onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Third Story Block: The Vision -->
-            <div class="feature-showcase" style="margin-top: var(--spacing-xl);">
-                <div class="feature-card feature-card-large">
-                    <div class="feature-content">
-                        <h3 class="feature-title" style="font-size: 1.75rem; margin-bottom: 1.5rem;">
-                            The Perfect Moment
-                        </h3>
-                        <p class="feature-description" style="margin-bottom: 1rem;">
-                            I saw the potential immediately—combining affordable AR hardware with advanced AI models
-                            to create a laboratory learning assistant unlike anything before. But there was a problem:
-                            the only available AR glasses cost $5,000 and were being discontinued.
-                        </p>
-                        <p class="feature-description" style="margin-bottom: 1rem;">
-                            Then in September, Meta announced the Ray-Ban smart glasses with integrated displays and
-                            neural interface—at just $800. Everything clicked. An AI-powered laboratory teacher you can
-                            control hands-free, without touching anything or speaking commands.
-                        </p>
-                        <p class="feature-description">
-                            This is just the beginning. Beyond learning, this becomes a productivity tool for
-                            researchers.
-                            The natural evolution: a comprehensive laboratory inventory management system with AR
-                            integration,
-                            enabling real-time data access, inventory interaction, and complete spatial awareness.
-                            The most efficient laboratory system ever created—and we can build it now.
-                        </p>
-                    </div>
-                    <div class="feature-visual">
-                        <img src="assets/story-hololens-2.jpg" alt="HoloLens 2 demonstration in surgical room"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="features" style="background-color: var(--color-background);">
-        <div class="container">
-            <div class="section-header center">
-                <h2 class="section-title">Meet the Team</h2>
-                <p class="section-subtitle">
-                    A multidisciplinary team combining expertise in AI, education, and biotechnology.
+            <!-- Conclusion Section -->
+            <div
+                style="margin-top: var(--spacing-sm); background-color: var(--color-primary); color: white; border-radius: 12px; padding: var(--spacing-lg) var(--spacing-xl); text-align: center; max-width: fit-content; margin-left: auto; margin-right: auto; box-shadow: var(--shadow-md);">
+                <p class="feature-description"
+                    style="font-size: 1.5rem; line-height: 1.4; font-weight: 700; color: white; margin: 0;">
+                    We can now implement affordable solutions to increase productivity in many fields, especially
+                    scientific research.
                 </p>
             </div>
-
-            <div class="feature-grid" style="margin-top: var(--spacing-xl);">
-                <div class="feature-card" style="text-align: center;">
-                    <div
-                        style="width: 120px; height: 120px; margin: 0 auto 1rem; border-radius: 50%; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--color-primary);">
-                        <span style="font-size: 2rem;">👤</span>
-                    </div>
-                    <h3 class="feature-title" style="font-size: 1.25rem;">Ignacio Cabañas</h3>
-                    <p class="feature-description"
-                        style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--color-primary);">
-                        Founder & CEO
-                    </p>
-                    <p class="feature-description" style="font-size: 0.875rem;">
-                        Biotech researcher with experience in laboratory education and AI applications
-                        in scientific research.
-                    </p>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <div
-                        style="width: 120px; height: 120px; margin: 0 auto 1rem; border-radius: 50%; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--color-primary);">
-                        <span style="font-size: 2rem;">👤</span>
-                    </div>
-                    <h3 class="feature-title" style="font-size: 1.25rem;">[Team Member]</h3>
-                    <p class="feature-description"
-                        style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--color-primary);">
-                        [Role]
-                    </p>
-                    <p class="feature-description" style="font-size: 0.875rem;">
-                        [Brief bio - replace with actual team member information]
-                    </p>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <div
-                        style="width: 120px; height: 120px; margin: 0 auto 1rem; border-radius: 50%; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--color-primary);">
-                        <span style="font-size: 2rem;">👤</span>
-                    </div>
-                    <h3 class="feature-title" style="font-size: 1.25rem;">[Team Member]</h3>
-                    <p class="feature-description"
-                        style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--color-primary);">
-                        [Role]
-                    </p>
-                    <p class="feature-description" style="font-size: 0.875rem;">
-                        [Brief bio - replace with actual team member information]
-                    </p>
-                </div>
-            </div>
         </div>
     </section>
 
+
     <!-- Values Section -->
-    <section class="technology">
+    <section class="technology" style="padding: var(--spacing-md) 0;">
         <div class="container">
             <div class="tech-layout-single">
-                <div class="section-header">
-                    <h2 class="section-title">Our Values</h2>
-                    <p class="tech-intro">
+                <div class="section-header" style="margin-bottom: var(--spacing-md);">
+                    <h2 class="section-title" style="color: var(--color-background);">Our Values</h2>
+                    <p class="tech-intro" style="margin-bottom: 0;">
                         The principles that guide everything we build and every decision we make.
                     </p>
                 </div>
 
-                <div class="tech-features-horizontal">
-                    <div class="tech-feature">
+                <div class="tech-features-horizontal" style="gap: 1rem; margin-bottom: 0;">
+                    <div class="tech-feature" style="padding: 1rem;">
                         <h4>Student-Centered</h4>
-                        <p>Every feature exists to improve student learning outcomes, safety, and confidence in the
+                        <p style="font-size: 0.95rem;">Every feature exists to improve student learning outcomes,
+                            safety, and confidence in the
                             laboratory.</p>
                     </div>
-                    <div class="tech-feature">
+                    <div class="tech-feature" style="padding: 1rem;">
                         <h4>Evidence-Based</h4>
-                        <p>We build on proven educational principles and rigorous testing, not hype or assumptions.</p>
+                        <p style="font-size: 0.95rem;">We build on proven educational principles and rigorous testing,
+                            not hype or assumptions.</p>
                     </div>
-                    <div class="tech-feature">
-                        <h4>Ethical AI</h4>
-                        <p>We design transparent, deterministic AI systems that augment human teaching rather than
-                            replace it.</p>
+                    <div class="tech-feature" style="padding: 1rem;">
+                        <h4>Predictable Unpredictability</h4>
+                        <p style="font-size: 0.95rem;">We embed deterministic behavior so that it behaves
+                            predictably, even when it's being creative.</p>
                     </div>
-                </div>
-
-                <div class="tech-features-horizontal" style="margin-top: var(--spacing-md);">
-                    <div class="tech-feature">
+                    <div class="tech-feature" style="padding: 1rem;">
                         <h4>Open Collaboration</h4>
-                        <p>We work closely with educators, institutions, and students to continuously improve our
+                        <p style="font-size: 0.95rem;">We work closely with educators, institutions, and students to
+                            continuously improve our
                             technology.</p>
                     </div>
-                    <div class="tech-feature">
-                        <h4>Safety Above All</h4>
-                        <p>Laboratory safety is non-negotiable. Our systems are designed with multiple layers of error
-                            prevention.</p>
+                    <div class="tech-feature" style="padding: 1rem;">
+                        <h4>Safety First</h4>
+                        <p style="font-size: 0.95rem;">Laboratory safety is non-negotiable. LabCoat AI is designed to
+                            improve safety in all experiments.</p>
                     </div>
-                    <div class="tech-feature">
+                    <div class="tech-feature" style="padding: 1rem;">
                         <h4>Continuous Learning</h4>
-                        <p>We iterate based on real-world feedback, constantly refining our approach to better serve
+                        <p style="font-size: 0.95rem;">We iterate based on user feedback, constantly refining our
+                            approach to better serve
                             students.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </div>
+    </div>
+    </section>
 
     <!-- Vision Section -->
     <section class="features" style="background-color: var(--color-surface);">
         <div class="container">
             <div class="section-header center">
-                <h2 class="section-title">Our Vision for the Future</h2>
+                <h2 class="section-title" style="color: var(--color-primary);">Our Vision for the Future</h2>
             </div>
 
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="feature-card" style="padding: var(--spacing-xl); text-align: center;">
-                    <p class="feature-description" style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        We envision a world where <strong>every student</strong> can access world-class laboratory
-                        education, regardless of their institution's resources or geographic location.
-                    </p>
                     <p class="feature-description"
-                        style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        A world where laboratory accidents are prevented through intelligent real-time guidance,
-                        where students learn at their own pace with personalized support, and where teachers can
-                        focus on inspiring scientific curiosity rather than managing safety concerns.
-                    </p>
-                    <p class="feature-description" style="font-size: 1.125rem; line-height: 1.7;">
-                        LabCoat AI is just the beginning. We're building the foundation for the next generation
-                        of hands-on STEM education.
+                        style="font-size: 1.5rem; line-height: 1.6; font-weight: 500; font-style: italic">
+                        We envision a future where affordable, AI-powered augmented reality becomes a universal platform
+                        for productivity and learning.
                     </p>
                 </div>
             </div>
@@ -360,27 +309,64 @@
                     STEM education, we'd love to hear from you.
                 </p>
 
-                <div class="cta-options" style="max-width: 900px; margin: 0 auto var(--spacing-lg);">
+                <div class="cta-options">
                     <div class="cta-card">
-                        <h3>Partner With Us</h3>
-                        <p>Educational institutions interested in pioneering the future of laboratory education.</p>
-                        <a href="index.html#contact" class="btn btn-primary">Express Interest</a>
+                        <h3>For Educational Institutions</h3>
+                        <p>Express your interest in bringing LabCoat AI to your biotech or chemistry program. Early
+                            partners shape product development.</p>
+                        <a href="#company-form" class="btn btn-primary" data-interest="institution">Express Interest</a>
                     </div>
                     <div class="cta-card">
-                        <h3>Invest in the Future</h3>
-                        <p>Join us in revolutionizing how millions of students learn in laboratories worldwide.</p>
-                        <a href="index.html#contact" class="btn btn-secondary">Investment Inquiry</a>
+                        <h3>For Investors</h3>
+                        <p>Learn about our vision, development roadmap, and investment opportunities. Let's discuss how
+                            we're revolutionizing laboratory education.</p>
+                        <a href="#company-form" class="btn btn-primary" data-interest="investment">Investment
+                            Inquiry</a>
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: var(--spacing-lg);">
-                    <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 1rem;">
-                        <strong>Contact:</strong><br>
-                        Ignacio Cabañas<br>
-                        <a href="/cdn-cgi/l/email-protection#ea838d848b898385c4898b888b848b99c49aaa8d878b8386c4898587"
-                            style="color: white;"><span class="__cf_email__"
-                                data-cfemail="1c757b727d7f7573327f7d7e7d727d6f326c5c7b717d7570327f7371">[email&#160;protected]</span></a>
+                <div class="contact-form" id="company-form">
+                    <h3>Get in Touch</h3>
+                    <p
+                        style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 3rem; font-size: 0.95rem;">
+                        Please, contact us using the form below.
+                        Thank you!
                     </p>
+                    <form class="form" id="contactForm" action="https://formspree.io/f/mvzaaqbp" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="organization" name="organization" required>
+                                <label for="organization">Institution / Organization</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="interest" name="interest" required>
+                                    <option value="">Select Interest Type</option>
+                                    <option value="institution">Educational Institution</option>
+                                    <option value="investment">Investment Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="interest">I'm Interested In</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Message / Letter of Intent</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Letter of Intent</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <p>Thank you for your interest in LabCoat AI! We'll be in touch within 24-48 hours.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -404,15 +390,32 @@
                 <div class="footer-section">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#features">For Students</a></li>
+                        <li><a href="index.html#teachers">For Teachers</a></li>
                         <li><a href="index.html#technology">Technology</a></li>
-                        <li><a href="index.html#impact">Testimonials</a></li>
-                        <li><a href="index.html#contact">Get Started</a></li>
+                        <li><a href="index.html#contact">Express Interest</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Company</h4>
+                    <h4>Development</h4>
                     <ul>
-                        <li><a href="company.html">About</a></li>
-                        <li><a href="company.html#team">Team</a></li>
-                        <li><a href="index.html#contact">Contact</a>
+                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">Current Status</a></li>
+                        <li><a href="#">Launch Timeline</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="company.html">Company</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2024 LabCoat AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
