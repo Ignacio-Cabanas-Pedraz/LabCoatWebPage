@@ -27,18 +27,6 @@ if (navToggle) {
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         navToggle.classList.toggle('active');
-
-        // Animate hamburger icon
-        const spans = navToggle.querySelectorAll('span');
-        if (navToggle.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translateY(7px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translateY(-7px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
     });
 
     // Close mobile menu when clicking a link
@@ -46,10 +34,6 @@ if (navToggle) {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             navToggle.classList.remove('active');
-            const spans = navToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
         });
     });
 }
@@ -97,10 +81,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all elements that should fade in
-document.querySelectorAll('.fade-in').forEach(element => {
-    observer.observe(element);
-});
+
 
 // Add fade-in class to elements on page load
 window.addEventListener('DOMContentLoaded', () => {
@@ -108,23 +89,27 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.feature-card').forEach((card, index) => {
         card.classList.add('fade-in');
         card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
     });
 
     // Testimonial cards
     document.querySelectorAll('.testimonial-card').forEach((card, index) => {
         card.classList.add('fade-in');
         card.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(card);
     });
 
     // Section headers
     document.querySelectorAll('.section-header').forEach(header => {
         header.classList.add('fade-in');
+        observer.observe(header);
     });
 
     // CTA cards
     document.querySelectorAll('.cta-card').forEach((card, index) => {
         card.classList.add('fade-in');
         card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
     });
 });
 

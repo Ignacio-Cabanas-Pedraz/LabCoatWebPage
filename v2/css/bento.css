@@ -1,0 +1,142 @@
+/* 4. Bento Grids (Legacy Feature Port) */
+.bento-section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.section-header.center {
+    text-align: center;
+}
+
+.section-header .section-subtitle {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    margin-top: 1rem;
+}
+
+.bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bento-card {
+    background-color: var(--card-bg-subtle, #ffffff);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.bento-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+@media (min-width: 901px) {
+    .bento-flipped .bento-visual {
+        order: -1;
+    }
+}
+
+.bento-content {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bento-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.bento-content p {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+}
+
+.bento-visual {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.bento-visual img {
+    width: 85%;
+    /* Scaled down ~15% to actively reduce banner height */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bento-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.bento-small {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg-subtle, #f4f4f5);
+    border: none;
+    box-shadow: none;
+    border-radius: 1.5rem;
+}
+
+.bento-icon {
+    margin-bottom: 1.5rem;
+    color: #111;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bento-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bento-small h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+.bento-small p {
+    font-size: 0.9375rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+@media (max-width: 900px) {
+    .bento-large {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-content {
+        padding: 2.5rem;
+    }
+}

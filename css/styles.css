@@ -257,13 +257,105 @@ a:hover {
 .nav-toggle span {
     width: 20px;
     height: 2px;
-    background-color: var(--color-text);
-    transition: all var(--transition-fast);
+    background-color: white;
+    /* Changed to white as requested */
+    transition: all var(--transition-normal);
+    transform-origin: center;
+}
+
+/* Active State for Toggle (X shape) */
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+    /* Slide out for better feel */
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: var(--shadow-lg);
+
+        /* Initial State (Hidden) */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    /* Staggered Animation for Links */
+    .nav-links .nav-link,
+    .nav-links .nav-cta {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-out;
+    }
+
+    .nav-links.active .nav-link,
+    .nav-links.active .nav-cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger Delays */
+    .nav-links.active .nav-link:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links.active .nav-link:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    .nav-links.active .nav-link:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active .nav-link:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+
+    .nav-links.active .nav-cta:nth-child(5) {
+        transition-delay: 0.3s;
+    }
+
+    /* Blue text for mobile menu */
+    .nav-blue .nav-links .nav-link {
+        color: var(--color-primary);
+        font-size: 1.125rem;
+        font-weight: var(--font-weight-medium);
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nav-blue .nav-links .nav-cta {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
     }
 
     .nav-toggle {
