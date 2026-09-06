@@ -15,16 +15,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/bento.css">
 </head>
 
 <body>
-    <!-- Transparent Banner -->
-    <header class="header">
-        <div class="container flex items-center justify-between header-container">
-            <a href="index.html" class="logo">
+    <!-- Glassmorphic Banner -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
@@ -32,132 +32,114 @@
                 <span>LabCoat</span>
             </a>
 
-            <div class="header-right">
-                <nav class="nav-links">
-                    <a href="#features" class="nav-link">Product</a>
-                    <a href="#students" class="nav-link">Features</a>
-                    <a href="#teachers" class="nav-link">Teachers</a>
-                    <a href="#technology" class="nav-link">Architecture</a>
-                    <a href="#contact" class="nav-link">Inquire</a>
+            <div class="flex items-center gap-6">
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#features" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1">Product</a>
+                    <a href="#students" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1">Features</a>
+                    <a href="#teachers" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1">Teachers</a>
+                    <a href="#technology" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1">Architecture</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1">Inquire</a>
                 </nav>
 
-                <div class="nav-actions">
+                <div class="flex items-center">
+                    <a href="#contact" class="text-sm font-medium bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Get Started</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section with Text Animation -->
-        <section class="hero bg-step-1" id="product">
-            <div class="container hero-split">
-                <div class="hero-left">
-                    <h1 class="hero-title">
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="bg-slate-50 py-24 px-8 overflow-hidden" id="product">
+            <div class="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 space-y-8">
+                    <h1 class="text-5xl lg:text-6xl font-display font-bold text-slate-900 tracking-tight leading-tight">
                         Your personal
-                        <span class="animated-word-wrapper">
-                            <span class="animated-word-track">
-                                <span class="word">chemistry</span>
-                                <span class="word">biology</span>
-                                <span class="word">biotechnology</span>
-                                <span class="word">chemistry</span>
-                            </span>
+                        <span class="text-indigo-600 block">
+                            laboratory teacher
                         </span>
-                        <br>
-                        laboratory teacher
                     </h1>
 
-                    <p class="hero-subtitle">
-                        LabCoat AI combines AI with AR glasses to create the first virtual laboratory teacher, providing
-                        a
-                        better learning experience for students
+                    <p class="text-lg text-slate-500 font-sans max-w-xl leading-relaxed">
+                        LabCoat AI combines AI with AR glasses to create the first virtual laboratory teacher, providing a better learning experience for students.
                     </p>
 
 
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-value">1,000+</div>
-                            <div class="stat-label">Students Guided</div>
+                    <div class="flex flex-wrap gap-8 pt-4">
+                        <div class="flex flex-col">
+                            <div class="text-3xl font-display font-bold text-slate-900">1,000+</div>
+                            <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Students Guided</div>
                         </div>
-                        <div class="stat">
-                            <div class="stat-value">50k+</div>
-                            <div class="stat-label">Hours Logged</div>
+                        <div class="flex flex-col">
+                            <div class="text-3xl font-display font-bold text-slate-900">50k+</div>
+                            <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Hours Logged</div>
                         </div>
-                        <div class="stat">
-                            <div class="stat-value">50+</div>
-                            <div class="stat-label">Universities</div>
+                        <div class="flex flex-col">
+                            <div class="text-3xl font-display font-bold text-slate-900">50+</div>
+                            <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Universities</div>
                         </div>
                     </div>
                 </div>
-                <div class="hero-right">
-                    <img src="assets/hero_image.png" alt="LabCoat Teacher Interface" class="hero-visual">
+                <div class="flex-1 flex justify-center lg:justify-end">
+                    <img src="assets/hero_image.png" alt="LabCoat Teacher Interface" class="w-full max-w-lg object-contain rounded-2xl shadow-xl border border-slate-200">
                 </div>
             </div>
         </section>
-        <hr class="section-divider">
 
         <!-- Features Section (Stacked Tabs) -->
-        <section id="features" class="features-section bg-step-2">
-            <div class="container">
-                <h2 class="section-title text-center">Master every lab technique</h2>
+        <section id="features" class="py-24 bg-white border-y border-slate-200">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 text-center mb-16 tracking-tight">Master every lab technique</h2>
 
-                <div class="tabs-container">
-                    <div class="tabs-header">
-                        <button class="tab-btn active" data-target="tab-1">
-                            <span class="tab-label">1 Select a procedure</span>
-                            <div class="tab-progress-bg">
-                                <div class="tab-progress-fill"></div>
-                            </div>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="flex flex-col w-full md:w-1/3 gap-2">
+                        <button class="text-left px-6 py-4 rounded-xl transition-all duration-200 border-2 border-indigo-600 bg-indigo-50 text-indigo-900 font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                            <span class="block">1. Select a procedure</span>
                         </button>
-                        <button class="tab-btn" data-target="tab-2">
-                            <span class="tab-label">2 Use the glasses</span>
-                            <div class="tab-progress-bg">
-                                <div class="tab-progress-fill"></div>
-                            </div>
+                        <button class="text-left px-6 py-4 rounded-xl transition-all duration-200 border-2 border-transparent hover:bg-slate-50 text-slate-600 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                            <span class="block">2. Use the glasses</span>
                         </button>
-                        <button class="tab-btn" data-target="tab-3">
-                            <span class="tab-label">3 Begin experimenting</span>
-                            <div class="tab-progress-bg">
-                                <div class="tab-progress-fill"></div>
-                            </div>
+                        <button class="text-left px-6 py-4 rounded-xl transition-all duration-200 border-2 border-transparent hover:bg-slate-50 text-slate-600 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                            <span class="block">3. Begin experimenting</span>
                         </button>
                     </div>
 
-                    <div class="tab-content-wrapper">
+                    <div class="flex-1 w-full bg-slate-50 rounded-2xl border border-slate-200 shadow-sm p-8 relative overflow-hidden">
                         <!-- Tab 1 -->
-                        <div class="tab-panel active" id="tab-1">
-                            <div class="tab-card">
-                                <div class="tab-text">
-                                    <h3>Select, upload or create your procedure</h3>
-                                    <p>Choose from some preset procedures, upload an existing one or create your own</p>
+                        <div class="block transition-opacity duration-300" id="tab-1">
+                            <div class="flex flex-col gap-6">
+                                <div>
+                                    <h3 class="text-2xl font-display font-semibold text-slate-900 mb-2">Select, upload or create your procedure</h3>
+                                    <p class="text-slate-600 font-sans">Choose from some preset procedures, upload an existing one or create your own.</p>
                                 </div>
-                                <div class="tab-visual">
-                                    <img src="assets/tab_1.png" alt="Upload procedure">
+                                <div class="rounded-xl overflow-hidden shadow-sm border border-slate-200 aspect-video">
+                                    <img src="assets/tab_1.png" alt="Upload procedure" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tab 2 -->
-                        <div class="tab-panel" id="tab-2">
-                            <div class="tab-card">
-                                <div class="tab-text">
-                                    <h3>Start LabCoat AI in the glasses</h3>
-                                    <p>Use the Meta Ray Ban Displays® to log into the LabCoat AI app</p>
+                        <div class="hidden transition-opacity duration-300" id="tab-2">
+                            <div class="flex flex-col gap-6">
+                                <div>
+                                    <h3 class="text-2xl font-display font-semibold text-slate-900 mb-2">Start LabCoat AI in the glasses</h3>
+                                    <p class="text-slate-600 font-sans">Use the Meta Ray Ban Displays® to log into the LabCoat AI app.</p>
                                 </div>
-                                <div class="tab-visual">
-                                    <img src="assets/tab_2.png" alt="Connect classes">
+                                <div class="rounded-xl overflow-hidden shadow-sm border border-slate-200 aspect-video">
+                                    <img src="assets/tab_2.png" alt="Connect classes" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tab 3 -->
-                        <div class="tab-panel" id="tab-3">
-                            <div class="tab-card">
-                                <div class="tab-text">
-                                    <h3>Choose a procedure and begin experimenting</h3>
-                                    <p>Enjoy the guidance from LabCoat AI tailored to your procedure</p>
+                        <div class="hidden transition-opacity duration-300" id="tab-3">
+                            <div class="flex flex-col gap-6">
+                                <div>
+                                    <h3 class="text-2xl font-display font-semibold text-slate-900 mb-2">Choose a procedure and begin experimenting</h3>
+                                    <p class="text-slate-600 font-sans">Enjoy the guidance from LabCoat AI tailored to your procedure.</p>
                                 </div>
-                                <div class="tab-visual">
-                                    <img src="assets/tab_3.png" alt="Learn interactively">
+                                <div class="rounded-xl overflow-hidden shadow-sm border border-slate-200 aspect-video">
+                                    <img src="assets/tab_3.png" alt="Learn interactively" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
@@ -169,305 +151,249 @@
         <hr class="section-divider">
 
         <!-- Student Success Section -->
-        <section id="students" class="bento-section bg-step-1">
-            <div class="container">
-                <div class="section-header center mb-4" style="margin-bottom: 4rem;">
-                    <h2 class="section-title">Designed for Student Success</h2>
+        <section id="students" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">Designed for Student Success</h2>
                 </div>
 
-                <div class="bento-grid">
+                <div class="flex flex-col gap-6 mb-6">
                     <!-- Large Card 1 -->
-                    <div class="bento-card bento-large">
-                        <div class="bento-content">
-                            <h3>Step-by-Step Procedure Guidance</h3>
-                            <p>Navigate complex procedures with real-time, personalized guidance, adapting to your pace
-                                and responding to your questions</p>
+                    <div class="w-full bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="p-8 md:w-5/12 flex flex-col justify-center">
+                            <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">Step-by-Step Procedure Guidance</h3>
+                            <p class="text-slate-600 font-sans leading-relaxed">Navigate complex procedures with real-time, personalized guidance, adapting to your pace and responding to your questions.</p>
                         </div>
-                        <div class="bento-visual">
-                            <img src="assets/feature-step-by-step.jpg" alt="Step-by-step guidance">
+                        <div class="md:w-7/12 bg-slate-100 min-h-[300px]">
+                            <img src="assets/feature-step-by-step.jpg" alt="Step-by-step guidance" class="w-full h-full object-cover">
                         </div>
                     </div>
 
                     <!-- Large Card 2 -->
-                    <div class="bento-card bento-large bento-flipped">
-                        <div class="bento-visual">
-                            <img src="assets/feature-notebook.jpg" alt="Automatic lab notebook">
+                    <div class="w-full bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row-reverse overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="p-8 md:w-5/12 flex flex-col justify-center">
+                            <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">Automatic Lab Notebook Generation</h3>
+                            <p class="text-slate-600 font-sans leading-relaxed">Automatically documents any observations, events or results, creating comprehensive lab reports tailored to your style.</p>
                         </div>
-                        <div class="bento-content">
-                            <h3>Automatic Lab Notebook Generation</h3>
-                            <p>Automatically documents any observations, events or results, creating comprehensive lab
-                                reports tailored to your style</p>
+                        <div class="md:w-7/12 bg-slate-100 min-h-[300px]">
+                            <img src="assets/feature-notebook.jpg" alt="Automatic lab notebook" class="w-full h-full object-cover">
                         </div>
                     </div>
+                </div>
 
-                    <!-- Small Cards Grid -->
-                    <div class="bento-grid-3">
-                        <div class="bento-card bento-small">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 40 40" fill="none" stroke="currentColor"
-                                    stroke-width="2.5">
-                                    <path d="M20 8L32 32H8L20 8Z" stroke-linejoin="round" />
-                                    <path d="M20 18V24M20 28V28.5" stroke-linecap="round" />
+                <!-- Small Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                                 </svg>
                             </div>
-                            <h3>Procedural Error Catching</h3>
-                            <p>Error detection warns you of mistakes and any hazards before they become problems</p>
+                            <h3 class="text-lg font-display font-semibold text-slate-900">Procedural Error Catching</h3>
+                            <p class="text-slate-600 font-sans text-sm">Error detection warns you of mistakes and any hazards before they become problems.</p>
                         </div>
-                        <div class="bento-card bento-small">
-                            <div class="bento-icon">
-                                <img src="assets/laboratory-equipment.png" alt="Laboratory Equipment"
-                                    style="width: 100%; height: 100%; object-fit: contain;">
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.393L4.2 15.3m15.6 0v1.473c0 1.096-.867 1.996-1.95 2.083a48.618 48.618 0 0 1-11.7 0 2.059 2.059 0 0 1-1.95-2.083V15.3" />
+                                </svg>
                             </div>
-                            <h3>Laboratory Equipment Library</h3>
-                            <p>Access information on lab equipment and learn to use them with visual guides through the
-                                AR glasses</p>
+                            <h3 class="text-lg font-display font-semibold text-slate-900">Laboratory Equipment Library</h3>
+                            <p class="text-slate-600 font-sans text-sm">Access information on lab equipment and learn to use them with visual guides through the AR glasses.</p>
                         </div>
-                        <div class="bento-card bento-small">
-                            <div class="bento-icon">
-                                <img src="assets/libro.png" alt="Etiquette Repository"
-                                    style="width: 100%; height: 100%; object-fit: contain;">
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                                </svg>
                             </div>
-                            <h3>Laboratory Etiquette Repository</h3>
-                            <p>Master techniques and conduct specific to the lab, learn the correct way to mix, stir,
-                                pipette and more</p>
+                            <h3 class="text-lg font-display font-semibold text-slate-900">Laboratory Etiquette Repository</h3>
+                            <p class="text-slate-600 font-sans text-sm">Master techniques and conduct specific to the lab, learn the correct way to mix, stir, pipette and more.</p>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Teachers Section -->
-        <section id="teachers" class="bento-section bg-step-2">
-            <div class="container">
-                <div class="section-header center mb-4" style="margin-bottom: 3rem;">
-                    <h2 class="section-title" style="margin-bottom: 0.5rem;">With Teachers in Mind</h2>
-                    <p class="section-subtitle">Empower educators with tools designed for effective laboratory teaching
-                    </p>
+        <section id="teachers" class="py-24 bg-white border-y border-slate-200">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight mb-4">With Teachers in Mind</h2>
+                    <p class="text-lg text-slate-500 font-sans max-w-2xl mx-auto">Empower educators with tools designed for effective laboratory teaching.</p>
                 </div>
 
-                <div class="bento-grid">
+                <div class="flex flex-col gap-6 mb-6">
                     <!-- Large Card 1 -->
-                    <div class="bento-card bento-large">
-                        <div class="bento-content">
-                            <h3>Intuitive Platform to Manage Experiments</h3>
-                            <p>A comprehensive teacher-focused learning platform that puts you in control by allowing
-                                you to upload custom
-                                procedures, monitor student progress in real-time, and adapt experiments to your
-                                curriculum effortlessly</p>
+                    <div class="w-full bg-slate-50 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="p-8 md:w-5/12 flex flex-col justify-center">
+                            <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">Intuitive Platform to Manage Experiments</h3>
+                            <p class="text-slate-600 font-sans leading-relaxed">A comprehensive teacher-focused learning platform that puts you in control by allowing you to upload custom procedures, monitor student progress in real-time, and adapt experiments to your curriculum effortlessly.</p>
                         </div>
-                        <div class="bento-visual">
-                            <img src="assets/teacher_dashboard_new.png" alt="Teacher Dashboard">
-                        </div>
-                    </div>
-
-                    <!-- Small Cards Grid -->
-                    <div class="bento-grid-3">
-                        <div class="bento-card bento-small">
-                            <div class="bento-icon">
-                                <img src="assets/teacher_icon_first.png" alt="Real-Time Student Monitoring"
-                                    style="width: 100%; height: 100%; object-fit: contain;">
-                            </div>
-                            <h3>Real-Time Student Monitoring</h3>
-                            <p>Track student progress live during laboratory sessions to identify who needs help and
-                                intervene proactively to ensure successful learning outcomes</p>
-                        </div>
-                        <div class="bento-card bento-small">
-                            <div class="bento-icon">
-                                <img src="assets/teacher_icon_second.png" alt="Custom Procedure Builder"
-                                    style="width: 100%; height: 100%; object-fit: contain;">
-                            </div>
-                            <h3>Custom Procedure Builder</h3>
-                            <p>Create and customize laboratory procedures tailored to your teaching objectives by adding
-                                instructions, safety notes, and assessment criteria</p>
-                        </div>
-                        <div class="bento-card bento-small">
-                            <div class="bento-icon">
-                                <img src="assets/teacher_icon_third.png" alt="Automated Assessment Analytics"
-                                    style="width: 100%; height: 100%; object-fit: contain;">
-                            </div>
-                            <h3>Automated Assessment Analytics</h3>
-                            <p>Receive detailed analytics on student performance, common errors, and completion rates
-                                with auto-generated reports</p>
+                        <div class="md:w-7/12 bg-slate-200 min-h-[300px]">
+                            <img src="assets/teacher_dashboard_new.png" alt="Teacher Dashboard" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Small Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4 h-full">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-display font-semibold text-slate-900">Real-Time Student Monitoring</h3>
+                            <p class="text-slate-600 font-sans text-sm">Track student progress live during laboratory sessions to identify who needs help and intervene proactively to ensure successful learning outcomes.</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4 h-full">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-display font-semibold text-slate-900">Custom Procedure Builder</h3>
+                            <p class="text-slate-600 font-sans text-sm">Create and customize laboratory procedures tailored to your teaching objectives by adding instructions, safety notes, and assessment criteria.</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4 h-full">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m6.75 12H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-display font-semibold text-slate-900">Automated Assessment Analytics</h3>
+                            <p class="text-slate-600 font-sans text-sm">Receive detailed analytics on student performance, common errors, and completion rates with auto-generated reports.</p>
+                        </div>
+                    </div>
+                </div>
         </section>
 
         <hr class="section-divider">
 
         <!-- Technology Section -->
-        <section id="technology" class="bento-section bg-step-1">
-            <div class="container">
-                <div class="section-header center mb-4" style="margin-bottom: 4rem;">
-                    <h2 class="section-title">Intelligent Architecture</h2>
-                    <p class="section-subtitle" style="max-width: 800px; margin: 1rem auto 0;">Built on a modular,
-                        deterministic architecture designed to mitigate hallucinations and provide reliable, accurate
-                        guidance combining specialized AI reasoning with AR</p>
+        <section id="technology" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight mb-4">Intelligent Architecture</h2>
+                    <p class="text-lg text-slate-500 font-sans max-w-3xl mx-auto">Built on a modular, deterministic architecture designed to mitigate hallucinations and provide reliable, accurate guidance combining specialized AI reasoning with AR.</p>
                 </div>
 
-                <div class="bento-grid-3">
-                    <div class="bento-card bento-small">
-                        <div class="bento-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="19" y1="5" x2="5" y2="19"></line>
-                                <circle cx="6.5" cy="6.5" r="2.5"></circle>
-                                <circle cx="17.5" cy="17.5" r="2.5"></circle>
-                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4">
+                        <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
                             </svg>
                         </div>
-                        <h3>Deterministic, Not Probabilistic</h3>
-                        <p>Fixed reasoning paths ensure consistent, reliable responses without the unpredictability of
-                            traditional AI models</p>
+                        <h3 class="text-lg font-display font-semibold text-slate-900">Deterministic, Not Probabilistic</h3>
+                        <p class="text-slate-600 font-sans text-sm">Fixed reasoning paths ensure consistent, reliable responses without the unpredictability of traditional AI models.</p>
                     </div>
-                    <div class="bento-card bento-small">
-                        <div class="bento-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4">
+                        <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
                             </svg>
                         </div>
-                        <h3>Modular & Customizable</h3>
-                        <p>Compartmentalized components adapt to your institution's specific equipment, procedures, and
-                            teaching methodology</p>
+                        <h3 class="text-lg font-display font-semibold text-slate-900">Modular & Customizable</h3>
+                        <p class="text-slate-600 font-sans text-sm">Compartmentalized components adapt to your institution's specific equipment, procedures, and teaching methodology.</p>
                     </div>
-                    <div class="bento-card bento-small">
-                        <div class="bento-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
-                                <path
-                                    d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
-                                <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
-                                <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
-                                <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
-                                <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
-                                <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
-                                <path d="M6 18a4 4 0 0 1-1.967-.516" />
-                                <path d="M19.967 17.484A4 4 0 0 1 18 18" />
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 hover:shadow-md transition-shadow flex flex-col gap-4">
+                        <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
                             </svg>
                         </div>
-                        <h3>Multi-Workstation Memory</h3>
-                        <p>Spatial awareness allows LabCoat AI to remember and navigate multiple lab environments
-                            simultaneously</p>
+                        <h3 class="text-lg font-display font-semibold text-slate-900">Multi-Workstation Memory</h3>
+                        <p class="text-slate-600 font-sans text-sm">Spatial awareness allows LabCoat AI to remember and navigate multiple lab environments simultaneously.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA & Contact Section -->
-        <section id="contact" class="bento-section bg-step-2">
-            <div class="container">
-                <div class="bento-grid">
-                    <div class="bento-card bento-large">
-                        <div class="bento-content">
-                            <h3>Ready to Transform Laboratory Learning?</h3>
-                            <p style="margin-bottom: 2rem;">Express your interest in bringing LabCoat AI to your biotech
-                                or chemistry program and become an early partner to shape product development</p>
+        <section id="contact" class="py-24 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="bg-slate-50 rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
+                    <div class="p-10 md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-3xl font-display font-bold text-slate-900 mb-4">Ready to Transform Laboratory Learning?</h3>
+                        <p class="text-slate-600 font-sans mb-8">Express your interest in bringing LabCoat AI to your biotech or chemistry program and become an early partner to shape product development.</p>
 
-                            <h4 style="font-size: 1.125rem; margin-bottom: 0.5rem; color: var(--foreground);">For
-                                Educational
-                                Institutions</h4>
-                            <p style="margin-bottom: 1.5rem; color: var(--muted-foreground);">Join our pilot program to
-                                revolutionize your lab
-                                classrooms</p>
+                        <h4 class="text-lg font-display font-semibold text-slate-900 mb-2">For Educational Institutions</h4>
+                        <p class="text-slate-500 font-sans mb-6">Join our pilot program to revolutionize your lab classrooms.</p>
 
-                            <h4 style="font-size: 1.125rem; margin-bottom: 0.5rem; color: var(--foreground);">For
-                                Investors</h4>
-                            <p style="color: var(--muted-foreground);">Learn about our vision, development roadmap, and
-                                investment opportunities</p>
-                        </div>
-                        <div class="bento-content" style="background-color: var(--bg-step-1);">
-                            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--foreground);">Submit
-                                Letter of Intent</h3>
-                            <form action="https://formspree.io/f/mvzaaqbp" method="POST"
-                                style="display: flex; flex-direction: column; gap: 1rem;">
-                                <input type="text" name="name" placeholder="Full Name" required
-                                    style="padding: 0.75rem 1rem; border-radius: 0.5rem; border: 1px solid var(--border); background-color: var(--bg-step-2); color: var(--foreground); font-family: inherit;">
-                                <input type="email" name="email" placeholder="Email Address" required
-                                    style="padding: 0.75rem 1rem; border-radius: 0.5rem; border: 1px solid var(--border); background-color: var(--bg-step-2); color: var(--foreground); font-family: inherit;">
-                                <input type="text" name="organization" placeholder="Institution / Organization" required
-                                    style="padding: 0.75rem 1rem; border-radius: 0.5rem; border: 1px solid var(--border); background-color: var(--bg-step-2); color: var(--foreground); font-family: inherit;">
-                                <select name="interest" required
-                                    style="padding: 0.75rem 1rem; border-radius: 0.5rem; border: 1px solid var(--border); background-color: var(--bg-step-2); color: var(--foreground); font-family: inherit;">
-                                    <option value="">I'm Interested In...</option>
-                                    <option value="institution">Educational Institution</option>
-                                    <option value="investor">Investment</option>
-                                </select>
-                                <button type="submit" class="btn btn-primary"
-                                    style="margin-top: 1rem; border: none; cursor: pointer;">Submit Inquiry</button>
-                            </form>
-                        </div>
+                        <h4 class="text-lg font-display font-semibold text-slate-900 mb-2">For Investors</h4>
+                        <p class="text-slate-500 font-sans">Learn about our vision, development roadmap, and investment opportunities.</p>
+                    </div>
+                    <div class="p-10 md:w-1/2 bg-white border-l md:border-l border-slate-200 md:border-t-0 border-t">
+                        <h3 class="text-2xl font-display font-semibold text-slate-900 mb-6">Submit Letter of Intent</h3>
+                        <form action="https://formspree.io/f/mvzaaqbp" method="POST" class="flex flex-col gap-4">
+                            <input type="text" name="name" placeholder="Full Name" required class="px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full">
+                            <input type="email" name="email" placeholder="Email Address" required class="px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full">
+                            <input type="text" name="organization" placeholder="Institution / Organization" required class="px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full">
+                            <select name="interest" required class="px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 font-sans focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full appearance-none">
+                                <option value="">I'm Interested In...</option>
+                                <option value="institution">Educational Institution</option>
+                                <option value="investor">Investment</option>
+                            </select>
+                            <button type="submit" class="mt-4 w-full px-6 py-3 bg-indigo-600 text-white font-sans font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">Submit Inquiry</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-left">
-                        <div class="logo"
-                            style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                style="color: var(--foreground);">
-                                <path
-                                    d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+        <footer class="bg-slate-50 py-12 border-t border-slate-200">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+                    <div class="flex flex-col gap-4 max-w-xs">
+                        <div class="flex items-center gap-2 text-slate-900">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
                             </svg>
-                            <span style="font-size: 1.5rem; font-weight: 700; color: var(--foreground);">LabCoat
-                                AI</span>
+                            <span class="text-xl font-display font-bold">LabCoat AI</span>
                         </div>
-                        <p class="footer-tagline" style="color: var(--muted-foreground); font-size: 0.95rem;">
-                            Your personal laboratory teacher.
-                        </p>
-                        <div class="footer-socials">
-                            <a href="https://www.linkedin.com/in/ignacio-cabañas-9422762a8/" target="_blank"
-                                rel="noopener noreferrer" class="footer-social-link" title="LinkedIn">
+                        <p class="text-slate-500 font-sans text-sm">Your personal laboratory teacher.</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://www.linkedin.com/in/ignacio-cabañas-9422762a8/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-600 transition-colors" title="LinkedIn">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                                 </svg>
                             </a>
                         </div>
                     </div>
 
-                    <div class="footer-right">
-                        <div class="footer-column">
-                            <h4>PRODUCT</h4>
-                            <ul>
-                                <li><a href="index.html#contact">Book a Demo</a></li>
-                                <li><a href="#contact">Inquire</a></li>
+                    <div class="flex flex-wrap gap-12 md:gap-24">
+                        <div class="flex flex-col gap-4">
+                            <h4 class="font-display font-semibold text-slate-900 tracking-wide text-sm uppercase">Product</h4>
+                            <ul class="flex flex-col gap-2">
+                                <li><a href="index.html#contact" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Book a Demo</a></li>
+                                <li><a href="#contact" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Inquire</a></li>
                             </ul>
                         </div>
-                        <div class="footer-column">
-                            <h4>LEGAL</h4>
-                            <ul>
-                                <li><a href="terms.html">Terms & Conditions</a></li>
-                                <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                                <li><a href="cookie_policy.html">Cookie Policy</a></li>
-                                <li><a href="dpa.html">Data Processing Agreement</a></li>
-                                <li><a href="data_deletion.html">Data Deletion Request</a></li>
+                        <div class="flex flex-col gap-4">
+                            <h4 class="font-display font-semibold text-slate-900 tracking-wide text-sm uppercase">Legal</h4>
+                            <ul class="flex flex-col gap-2">
+                                <li><a href="terms.html" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Terms & Conditions</a></li>
+                                <li><a href="privacy_policy.html" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Privacy Policy</a></li>
+                                <li><a href="cookie_policy.html" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Cookie Policy</a></li>
+                                <li><a href="dpa.html" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Data Processing Agreement</a></li>
+                                <li><a href="data_deletion.html" class="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-sans">Data Deletion Request</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
+                <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-slate-400 text-sm font-sans">
                         &copy; 2026 LabCoat AI. All rights reserved.
                     </div>
-                    <div class="footer-bottom-links">
-                        <a href="privacy_policy.html">Privacy</a>
-                        <a href="cookie_policy.html">Cookies</a>
-                        <a href="terms.html">Terms</a>
-                        <a href="dpa.html">DPA</a>
-                        <a href="data_deletion.html">Data Deletion</a>
+                    <div class="flex flex-wrap gap-4 md:gap-6 text-sm">
+                        <a href="privacy_policy.html" class="text-slate-400 hover:text-indigo-600 transition-colors">Privacy</a>
+                        <a href="cookie_policy.html" class="text-slate-400 hover:text-indigo-600 transition-colors">Cookies</a>
+                        <a href="terms.html" class="text-slate-400 hover:text-indigo-600 transition-colors">Terms</a>
+                        <a href="dpa.html" class="text-slate-400 hover:text-indigo-600 transition-colors">DPA</a>
+                        <a href="data_deletion.html" class="text-slate-400 hover:text-indigo-600 transition-colors">Data Deletion</a>
                     </div>
                 </div>
             </div>
@@ -476,18 +402,15 @@
 
 
     <!-- Cookie Consent Banner -->
-    <div id="cookie-consent-banner" class="cookie-banner">
-        <div class="cookie-banner-container">
-            <div class="cookie-text">
-                <p>We use optional cookies (Google Analytics) to understand how visitors use our site so we can improve
-                    the experience. We do not use cookies for advertising. Please let us know if you accept these
-                    tracking cookies.</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Read our <a href="cookie_policy.html">Cookie
-                        Policy</a> for more details.</p>
+    <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border-t border-slate-200 z-[100] transform translate-y-full transition-transform duration-300 hidden">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-sm text-slate-600 font-sans max-w-3xl">
+                <p>We use optional cookies (Google Analytics) to understand how visitors use our site so we can improve the experience. We do not use cookies for advertising. Please let us know if you accept these tracking cookies.</p>
+                <p class="text-xs mt-1">Read our <a href="cookie_policy.html" class="text-indigo-600 hover:underline">Cookie Policy</a> for more details.</p>
             </div>
-            <div class="cookie-buttons">
-                <button id="decline-cookies" class="btn btn-secondary">Decline</button>
-                <button id="accept-cookies" class="btn btn-primary">Accept All</button>
+            <div class="flex items-center gap-3 shrink-0">
+                <button id="decline-cookies" class="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-md hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">Decline</button>
+                <button id="accept-cookies" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">Accept All</button>
             </div>
         </div>
     </div>
