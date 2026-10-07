@@ -61,10 +61,10 @@
 
     <main class="pt-16">
 
-        <!-- 2. Hero Section (Benchling-Inspired Split with Thicker Muted Grid & Text Fade) -->
-        <section class="relative overflow-hidden border-b border-slate-200 bg-white min-h-[calc(100vh-4rem)] flex items-center py-12 px-10 sm:px-16 lg:px-24 xl:px-32" id="hero">
-            <!-- Animated Thicker Muted Grid Canvas with Soft Text Vignette -->
-            <canvas id="hero-grid-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+        <!-- 2. Hero Section (Benchling-Inspired Split with Fixed Animated Grid & Text Cover Effect) -->
+        <section class="relative border-b border-slate-200 bg-transparent min-h-[calc(100vh-4rem)] flex items-center py-12 px-10 sm:px-16 lg:px-24 xl:px-32" id="hero">
+            <!-- Animated Fixed Grid Canvas: stays fixed in viewport so next sections slide over and cover it -->
+            <canvas id="hero-grid-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
             <div class="relative z-10 max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                 <!-- Left: Authoritative Typography, Stats & Actions (with subtle legibility backdrop glow) -->
@@ -209,10 +209,10 @@
         </section>
 
         <!-- 3. The 4 Pain Points: Vertical List with Shifting Timer Bar & Wider Image -->
-        <section class="relative z-10 py-12 lg:py-14 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-50 border-b border-slate-200" id="problem">
+        <section class="relative z-10 py-12 lg:py-14 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-50 border-t border-b border-slate-200 shadow-[0_-4px_24px_rgba(0,0,0,0.03)]" id="problem">
             <div class="max-w-7xl mx-auto">
                 <!-- Shortened Section Title -->
-                <div class="max-w-3xl mb-6 lg:mb-8 lg:pl-4">
+                <div class="max-w-3xl mb-6 lg:mb-8">
                     <h2 class="text-2xl sm:text-3xl lg:text-[2rem] font-display font-bold text-slate-900 tracking-tight">
                         Stalled by Yesterday's Tools
                     </h2>
@@ -222,10 +222,10 @@
                 </div>
 
                 <!-- 2-Column Layout: Left Vertical Points (5 cols) + Right Wider Image (7 cols) -->
-                <div id="problem-showcase" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch lg:pl-4">
+                <div id="problem-showcase" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
                     
                     <!-- Left: Vertical 4 Points with Animated Timer Separator -->
-                    <div class="lg:col-span-5 flex flex-col justify-between space-y-2">
+                    <div id="problem-list" class="lg:col-span-5 flex flex-col justify-between space-y-2">
                         
                         <!-- Point 01 -->
                         <div class="problem-point-item cursor-pointer p-3 rounded-xl transition-all duration-300 bg-white/70 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm" data-index="0">

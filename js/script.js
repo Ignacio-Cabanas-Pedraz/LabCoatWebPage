@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function resizeCanvas() {
             dpr = window.devicePixelRatio || 1;
-            const rect = heroSection.getBoundingClientRect();
-            width = rect.width;
-            height = rect.height;
+            width = document.documentElement.clientWidth || window.innerWidth;
+            height = window.innerHeight;
 
             canvas.width = width * dpr;
             canvas.height = height * dpr;
@@ -137,7 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
         function render() {
             if (!isVisible) return;
 
-            ctx.clearRect(0, 0, width, height);
+            // Paint clean white background base
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, width, height);
 
             // 1. Draw Thicker, Crisp Light Grey Grid
             ctx.beginPath();
@@ -172,33 +173,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 node.draw(ctx);
             });
 
-            // 4. Soft Vignette: Fades the grid and nodes behind the hero text for maximum legibility
-            const textFadeGradient = ctx.createRadialGradient(
-                width * 0.26, height * 0.48, 60,
-                width * 0.26, height * 0.48, width * 0.42
-            );
-            textFadeGradient.addColorStop(0, 'rgba(255, 255, 255, 0.86)');
-            textFadeGradient.addColorStop(0.6, 'rgba(255, 255, 255, 0.65)');
-            textFadeGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-
-            ctx.fillStyle = textFadeGradient;
-            ctx.fillRect(0, 0, width, height);
-
             animationFrameId = requestAnimationFrame(render);
         }
 
         animationFrameId = requestAnimationFrame(render);
 
-        // Pause animation when scrolled off-screen
+        // Pause animation and hide canvas when scrolled off-screen
         const observer = new IntersectionObserver(([entry]) => {
             isVisible = entry.isIntersecting;
+            canvas.style.visibility = isVisible ? 'visible' : 'hidden';
             if (isVisible) {
                 cancelAnimationFrame(animationFrameId);
                 animationFrameId = requestAnimationFrame(render);
             } else {
                 cancelAnimationFrame(animationFrameId);
             }
-        }, { threshold: 0.05 });
+        }, { threshold: 0.01 });
 
         observer.observe(heroSection);
 
@@ -304,13 +294,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Hover pause
-        problemShowcase.addEventListener('mouseenter', () => {
+        // Hover pause - only stop progress bar when hovering over the text outline, not the images
+        const problemList = document.getElementById('problem-list');
+        const hoverPauseTarget = problemList || problemShowcase;
+
+        hoverPauseTarget.addEventListener('mouseenter', () => {
             isHovered = true;
             if (problemTimerIndicator) problemTimerIndicator.textContent = "Paused";
         });
 
-        problemShowcase.addEventListener('mouseleave', () => {
+        hoverPauseTarget.addEventListener('mouseleave', () => {
             isHovered = false;
             timerStart = performance.now() - (lastProgress * STEP_DURATION);
             if (problemTimerIndicator) problemTimerIndicator.textContent = "Auto-cycling";
