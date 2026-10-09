@@ -37,4 +37,31 @@
   .animate-marquee:hover {
     animation-play-state: paused;
   }
+
+  /* Smooth unified accordion motion for Problem section */
+  .problem-point-item {
+    transition: flex 500ms cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 500ms cubic-bezier(0.25, 1, 0.5, 1),
+                background-color 500ms cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 500ms cubic-bezier(0.25, 1, 0.5, 1),
+                box-shadow 500ms cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .problem-content-grid {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 500ms cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 400ms ease;
+  }
+
+  .problem-point-item.is-active .problem-content-grid {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .problem-content-inner {
+    overflow: hidden;
+    min-height: 0;
+  }
 }

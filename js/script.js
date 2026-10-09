@@ -210,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const problemItems = document.querySelectorAll('.problem-point-item');
     const problemImages = document.querySelectorAll('.problem-image');
     const problemBadgeText = document.getElementById('problem-badge-text');
-    const problemTimerIndicator = document.getElementById('problem-timer-indicator');
 
     if (problemShowcase && problemItems.length > 0) {
         const badgeTitles = [
@@ -221,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         let currentIndex = 0;
-        const STEP_DURATION = 5000; // 5000ms per point
+        const STEP_DURATION = 7500; // 7500ms per point (increased 50% for comfortable reading)
         let timerStart = null;
         let isHovered = false;
         let lastProgress = 0;
@@ -235,11 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const bar = item.querySelector('.timer-bar');
                 const num = item.querySelector('.point-num');
                 const title = item.querySelector('.point-title');
-                const desc = item.querySelector('.point-desc');
+                const body = item.querySelector('.point-body');
+                const footer = item.querySelector('.point-footer');
 
                 if (i === index) {
-                    item.classList.remove('opacity-50', 'bg-white/40');
-                    item.classList.add('opacity-100', 'bg-white', 'shadow-sm', 'border-slate-200/80');
+                    item.classList.add('is-active', 'opacity-100', 'bg-white', 'shadow-sm', 'border-slate-200/80', 'p-4', 'sm:p-5', 'flex-1');
+                    item.classList.remove('opacity-70', 'bg-white/50', 'border-transparent', 'shadow-none', 'px-4', 'py-3.5', 'sm:px-5', 'sm:py-4', 'min-h-[64px]', 'sm:min-h-[68px]', 'flex-none');
                     if (num) {
                         num.classList.remove('text-slate-400');
                         num.classList.add('text-indigo-600');
@@ -248,13 +248,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         title.classList.remove('text-slate-700', 'font-semibold');
                         title.classList.add('text-slate-900', 'font-bold');
                     }
-                    if (desc) {
-                        desc.classList.remove('text-slate-500');
-                        desc.classList.add('text-slate-600');
-                    }
                 } else {
-                    item.classList.add('opacity-50', 'bg-white/40');
-                    item.classList.remove('opacity-100', 'bg-white', 'shadow-sm', 'border-slate-200/80');
+                    item.classList.remove('is-active', 'opacity-100', 'bg-white', 'shadow-sm', 'border-slate-200/80', 'p-4', 'sm:p-5', 'flex-1');
+                    item.classList.add('opacity-70', 'bg-white/50', 'border-transparent', 'shadow-none', 'px-4', 'py-3.5', 'sm:px-5', 'sm:py-4', 'min-h-[64px]', 'sm:min-h-[68px]', 'flex-none');
                     if (bar) bar.style.width = '0%';
                     if (num) {
                         num.classList.add('text-slate-400');
@@ -263,10 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (title) {
                         title.classList.add('text-slate-700', 'font-semibold');
                         title.classList.remove('text-slate-900', 'font-bold');
-                    }
-                    if (desc) {
-                        desc.classList.add('text-slate-500');
-                        desc.classList.remove('text-slate-600');
                     }
                 }
             });
@@ -300,13 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         hoverPauseTarget.addEventListener('mouseenter', () => {
             isHovered = true;
-            if (problemTimerIndicator) problemTimerIndicator.textContent = "Paused";
         });
 
         hoverPauseTarget.addEventListener('mouseleave', () => {
             isHovered = false;
             timerStart = performance.now() - (lastProgress * STEP_DURATION);
-            if (problemTimerIndicator) problemTimerIndicator.textContent = "Auto-cycling";
         });
 
         function runTimer(now) {

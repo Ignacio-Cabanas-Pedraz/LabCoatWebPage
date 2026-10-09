@@ -44,8 +44,8 @@ The new LabCoat website is engineered for sophisticated pharmaceutical and biote
 │    01 Outdated Paradigm │ 02 Missing Link │ 03 Productivity │ 04 ALCOA │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 5. THE 4 CORE SOLUTION PILLARS (HIGH-DENSITY BENTO CARDS)              │
-│    Pillar 1: Hands-Free AR    │ Pillar 2: E-Signatures & Integrity    │
-│    Pillar 3: Global Network   │ Pillar 4: Real-Time LIMS Integration   │
+│    Pillar 1: Regulatory Integrity   │ Pillar 2: Hands-Free AR & Vision      │
+│    Pillar 3: Global Network         │ Pillar 4: Third-Party Integrations    │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 6. DATA-BACKED PROOF & WORKOS-STYLE ELEVATED TESTIMONIAL CARD          │
 │    Statsig Metrics Tabs (Throughput, Audit Defense, Batch Release)    │
@@ -79,10 +79,10 @@ The new LabCoat website is engineered for sophisticated pharmaceutical and biote
   - **Eyebrow:** `span` pill with `bg-indigo-50 text-indigo-700 border border-indigo-100 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider`:  
     *The World's First Personal & Intelligent Laboratory Audit Platform*
   - **Headline (H1):**  
-    `Audit-Proof Science.`  
-    `<span class="text-indigo-600 block underline decoration-indigo-200 underline-offset-8">Personally Integrated.</span>`
+    `Audit-Proof Science`  
+    `<span class="text-indigo-600 block underline decoration-indigo-200 underline-offset-8">Personally Integrated</span>`
   - **Sub-headline:**  
-    *"Empower your scientists with standalone AR smart glasses that integrate directly with their workflow. Hands-free protocol guidance, zero-latency edge capture, and instant FDA 21 CFR Part 11 compliance—without touching a keyboard or removing gloves."*
+    *"Personal and zero-latency audit platform with instantaneous, hands-free compliance via the use of the latest in AR glasses."*
   - **Action Button:** Large rounded pill `bg-slate-900 hover:bg-indigo-600 text-white px-6 py-3.5 rounded-full font-medium transition-all shadow-sm` with text **"Request a Demo"** paired with a quiet text link **"Explore the Architecture →"**.
   - **Quick Stats Bar:**
     - **< 1 ms** *Local Write Latency*
@@ -96,11 +96,11 @@ The new LabCoat website is engineered for sophisticated pharmaceutical and biote
 ---
 
 ### Section 3: The Multi-Window "Time-Events" Showcase (Clay / Synchronized State Engine)
-* **Core Concept:** This is the visual centerpiece of the website. It proves how LabCoat connects the physical human to the digital enterprise in real time through synchronized, coordinated windows.
+* **Core Concept:** LabCoat connects everyday interactions to digital compliance in real time, providing a cloud based audit-proof platform that synchronizes across AR devices, regulatory ledgers, and other systems.
 * **Layout:** A clean, horizontal timeline scrubber at the top with 3 time states:
-  - **State 1 (00:00:01):** *Physical Interaction & Reagent Scan*
-  - **State 2 (00:00:02):** *Cryptographic Edge Capture & E-Signature*
-  - **State 3 (00:00:03):** *Real-Time LIMS & Central Ledger Sync*
+  - **State 1 (00:00:01):** *Event detection*
+  - **State 2 (00:00:02):** *Ledger Entry*
+  - **State 3 (00:00:03):** *Other integrations*
 * **The 3 Coordinated Windows Below:**
   1. **Window A (The Edge AR HUD / Scientist POV):**  
      - Stylized dark glass card representing the smart glasses field of view.
@@ -108,7 +108,7 @@ The new LabCoat website is engineered for sophisticated pharmaceutical and biote
   2. **Window B (The Central Audit Ledger / 21 CFR Part 11):**  
      - Clean white data table window.
      - Shows the immutable row being created in real time: `event_id`, `timestamp_utc`, `operator_id`, `action_type: COMPOUND_MOVED`, and the cryptographic `SHA-256 hash`.
-  3. **Window C (Facility & LIMS Inventory):**  
+  3. **Window C (Other Integrations / Facility & LIMS Inventory):**  
      - Displays the live facility map floorplan showing operator presence in Cleanroom Suite A, alongside the automatic lot balance deduction in the central LIMS database.
 * **Interactive Control:** Clicking any step in the scrubber smoothly highlights the corresponding state across all 3 windows with crisp micro-transitions.
 
@@ -118,23 +118,23 @@ The new LabCoat website is engineered for sophisticated pharmaceutical and biote
 * **Pattern:** Claude Product Overview style. Quiet, restrained, editorial elegance with subtle horizontal hairline borders and numbered markers.
 * **Grid:** 4-column layout on desktop, single-column on mobile.
 * **Content:**
-  - **01 / The Outdated Paradigm:** Decades-old paper binders, clipboards, and retroactive manual transcription at shift end that introduce fatal human transcription errors.
-  - **02 / The Missing Personal Link:** The human interacts with dangerous reagents and million-dollar instruments, but remains completely isolated from the digital system—causing cognitive friction and stressful investigations.
-  - **03 / Severe Lost Productivity:** The "degloving penalty" (up to 35% of an operator's shift lost to removing gloves, typing at kiosks, and re-sterilizing) plus administrative documentation backlog.
-  - **04 / ALCOA+ Violations:** Post-hoc manual entry fails FDA contemporaneous and original data integrity requirements, leaving laboratories exposed to Form 483 warning letters.
+  - **01 / The Outdated Paradigm:** High-containment environments producing life-saving therapies still rely on paper clipboards and physical logbooks. Researchers are forced to upload critical values hours after the fact under mental fatigue, introducing additional risks and audit discrepancies.
+  - **02 / The Missing Personal Link:** While operating complex equipment and handling delicate reagent lots, scientists remain completely isolated from digital SOPs. Key insights, procedure steps and further information are hidden away and inaccessible where they need it the most, during regular every-day field tasks.
+  - **03 / Severe Lost Productivity:** Operators waste a considerable amount of time interacting with technological interfaces while complying with sterility procedures. In some cases, users must step away, remove gloves, log in, sanitize, and reglove. This repetitive bottleneck stalls research velocity and overall productivity.
+  - **04 / ALCOA+ Violations:** Post-hoc retrospective entries violate US FDA guidelines, as well as ALCOA+ standards. Events must be recorded and saved while they are taking place, not afterwards where illegible handwriting or unverified manual notes leave manufacturers vulnerable without evidence.
 
 ---
 
 ### Section 5: The 4 Core Solution Pillars (High-Density Bento Cards)
 * **Pattern:** 2x2 asymmetric bento grid with crisp white card containers (`bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow`).
 * **Pillars:**
-  1. **Pillar 1: Hands-Free AR & Edge Vision (Wearable Intelligence)**  
-     - Lightweight smart glasses (Meta Ray-Ban form factor), eyes-up protocol guidance, and a passive 5-second circular "dashcam" buffer that stores video proof only when milestones occur.
-  2. **Pillar 2: Regulatory Integrity & 21 CFR Part 11 Electronic Signatures**  
+  1. **Pillar 1: Regulatory Integrity & 21 CFR Part 11 Electronic Signatures**  
      - Dual-factor electronic signatures, append-only immutable event streams, formal revision workflows with QA signoff, and client-side SHA-256 cryptographic hashing.
+  2. **Pillar 2: Hands-Free AR & Edge Vision (Wearable Intelligence)**  
+     - Lightweight smart glasses (Meta Ray-Ban form factor), eyes-up protocol guidance, and a passive 5-second circular "dashcam" buffer that stores video proof only when milestones occur.
   3. **Pillar 3: The Interconnected Network & Global Record of Every Lab**  
      - Real-time 2D/3D spatial lab map, live batch monitoring, end-to-end batch genealogy trees linking every lot to finished vials, and automated calibration lockouts.
-  4. **Pillar 4: Real-Time LIMS Integration & Continuous Data Flow**  
+  4. **Pillar 4: Third-Party Integrations & Continuous Data Flow**  
      - Seamless bidirectional synchronization with existing LIMS, ELN, and MES platforms—eliminating the manual data bridge and generating locked, auditor-ready PDF batch records.
 
 ---
