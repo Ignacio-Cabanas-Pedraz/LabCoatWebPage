@@ -234,8 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const bar = item.querySelector('.timer-bar');
                 const num = item.querySelector('.point-num');
                 const title = item.querySelector('.point-title');
-                const body = item.querySelector('.point-body');
-                const footer = item.querySelector('.point-footer');
 
                 if (i === index) {
                     item.classList.add('is-active', 'opacity-100', 'bg-white', 'shadow-sm', 'border-slate-200/80', 'p-4', 'sm:p-5', 'flex-1');
@@ -328,169 +326,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // 1. "TIME-EVENTS" MULTI-WINDOW STATE CONTROLLER
+    // 1. "TIME-EVENTS" SYNCHRONIZED 15-SECOND VIDEO & TIMELINE CONTROLLER
     // ==========================================
     const timeStepButtons = document.querySelectorAll('.time-step-btn');
-    const arHud = document.getElementById('ar-hud-content');
-    const ledger = document.getElementById('ledger-content');
-    const lims = document.getElementById('lims-content');
-
-    const timeEventStates = {
-        1: {
-            ar: `
-                <div class="flex items-center justify-between text-indigo-900 pb-2 border-b border-slate-200 font-semibold">
-                    <span>STEP 04: BUFFER ADDITION</span>
-                    <span class="text-emerald-600 font-bold">TARGET LOCKED</span>
-                </div>
-                <div class="p-3 bg-slate-50 rounded-lg border border-emerald-500/40 space-y-1.5">
-                    <div class="flex justify-between text-emerald-800 font-semibold">
-                        <span>[QR: LOT-4491-B]</span>
-                        <span class="text-emerald-700">PASS (EXP: 2027-11)</span>
-                    </div>
-                    <div class="text-slate-600 text-[11px]">Reagent: High-Affinity Elution Buffer B</div>
-                    <div class="text-slate-500 text-[11px]">Vol: 50.0 mL • Storage: 4°C Verified</div>
-                </div>
-                <div class="text-slate-500 text-xs flex items-center justify-between pt-1">
-                    <span>Reticle: Stable on Workstation</span>
-                    <span class="text-indigo-600 font-medium animate-pulse">Ready for trigger</span>
-                </div>
-            `,
-            ledger: `
-                <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 space-y-1">
-                    <div class="flex justify-between font-semibold text-slate-800">
-                        <span>EVT-90412-A</span>
-                        <span class="text-slate-500">10:14:02.102 UTC</span>
-                    </div>
-                    <div class="text-slate-600">ACTION: SCAN_VERIFIED</div>
-                    <div class="text-slate-500 text-[10px]">LOT-4491-B verified against approved SOP recipe.</div>
-                    <div class="text-[10px] text-indigo-600 truncate">HASH: 4b29c910fa8e018a...</div>
-                </div>
-                <div class="p-3 bg-white rounded-lg border border-dashed border-slate-300 text-slate-400 text-center py-4">
-                    Awaiting operator wristband sign-off...
-                </div>
-            `,
-            lims: `
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-                    <div class="flex justify-between items-center">
-                        <span class="font-semibold text-slate-800">Inventory Status</span>
-                        <span class="px-2 py-0.5 rounded-full text-[10px] bg-amber-50 text-amber-700 font-semibold border border-amber-200">HOLD APPLIED</span>
-                    </div>
-                    <div class="text-slate-600 text-xs">Reagent B (500mL Bottle #12) marked in active use by Dr. Thorne in Cleanroom A.</div>
-                </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                    <div class="font-semibold text-slate-800">Room Status: Cleanroom A</div>
-                    <div class="text-slate-500 text-xs">ISO 7 • Temp: 20.4°C • Differential: 18.2 Pa</div>
-                </div>
-            `
-        },
-        2: {
-            ar: `
-                <div class="flex items-center justify-between text-indigo-900 pb-2 border-b border-slate-200 font-semibold">
-                    <span>STEP 04: E-SIGNATURE</span>
-                    <span class="text-emerald-600 font-bold">HASH COMMITTED</span>
-                </div>
-                <div class="p-3 bg-indigo-50/70 rounded-lg border border-indigo-400 space-y-1.5">
-                    <div class="flex justify-between text-indigo-950 font-semibold">
-                        <span>OPERATOR PIN: [****]</span>
-                        <span class="text-emerald-600 font-bold">AUTHENTICATED</span>
-                    </div>
-                    <div class="text-slate-700 text-[11px]">Wristband click confirmed. E-Signature stamped.</div>
-                    <div class="text-indigo-700 text-[11px] font-medium">5s Pre/Post Dashcam Clip Cached.</div>
-                </div>
-                <div class="text-slate-500 text-xs flex items-center justify-between pt-1">
-                    <span>Local PGlite: Written (&lt;0.8ms)</span>
-                    <span class="text-indigo-600 font-medium">Syncing to Cloud...</span>
-                </div>
-            `,
-            ledger: `
-                <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 space-y-1">
-                    <div class="flex justify-between font-semibold text-slate-800">
-                        <span>EVT-90412-A</span>
-                        <span class="text-slate-500">10:14:02.102 UTC</span>
-                    </div>
-                    <div class="text-slate-600">ACTION: SCAN_VERIFIED</div>
-                    <div class="text-[10px] text-indigo-600 truncate">HASH: 4b29c910fa8e018a...</div>
-                </div>
-                <div class="p-3 bg-indigo-50/70 rounded-lg border-2 border-indigo-500 space-y-1">
-                    <div class="flex justify-between font-semibold text-indigo-950">
-                        <span>EVT-90413-B</span>
-                        <span class="text-indigo-700">10:14:03.204 UTC</span>
-                    </div>
-                    <div class="text-indigo-900 font-bold">ACTION: 21_CFR_PART_11_SIGNOFF</div>
-                    <div class="text-slate-600 text-[10px]">Reason: "Step completed in sterile biosafety hood"</div>
-                    <div class="text-[10px] text-indigo-700 font-bold truncate">SHA-256: 8f4a102c91b8a7f4...</div>
-                </div>
-            `,
-            lims: `
-                <div class="p-3.5 bg-indigo-50/50 rounded-xl border border-indigo-200 space-y-2">
-                    <div class="flex justify-between items-center">
-                        <span class="font-semibold text-indigo-950">Central LIMS Bridge</span>
-                        <span class="px-2 py-0.5 rounded-full text-[10px] bg-indigo-100 text-indigo-800 font-semibold">EVENT RECEIVED</span>
-                    </div>
-                    <div class="text-slate-700 text-xs">Batch Record #BTH-2026-09 Step 04 marked COMPLETED with dual-factor verification.</div>
-                </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                    <div class="font-semibold text-slate-800">Evidence S3 Video Pipeline</div>
-                    <div class="text-slate-500 text-xs">Streaming WebM chunk: <code>video_bth_step04.webm</code></div>
-                </div>
-            `
-        },
-        3: {
-            ar: `
-                <div class="flex items-center justify-between text-emerald-800 pb-2 border-b border-slate-200 font-semibold">
-                    <span>STEP 04: VERIFIED</span>
-                    <span class="text-white bg-emerald-600 px-2 py-0.5 rounded text-[10px] font-semibold">NEXT STEP READY</span>
-                </div>
-                <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 space-y-1.5">
-                    <div class="text-slate-700 font-semibold">Advancing to Step 05:</div>
-                    <div class="text-indigo-600 text-xs font-bold">"Incubate reaction vessel at 37°C for 45 min"</div>
-                    <div class="text-slate-500 text-[11px]">Timer and incubator telemetry auto-synced.</div>
-                </div>
-                <div class="text-emerald-600 text-xs font-medium flex items-center justify-between pt-1">
-                    <span>Global Sync: 100% Up to Date</span>
-                    <span class="font-semibold">Zero Data Loss</span>
-                </div>
-            `,
-            ledger: `
-                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-[11px] text-slate-600 flex justify-between">
-                    <span>EVT-90412-A • SCAN_VERIFIED</span>
-                    <span class="text-emerald-600 font-semibold">SYNCHRONIZED</span>
-                </div>
-                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-[11px] text-slate-600 flex justify-between">
-                    <span>EVT-90413-B • E-SIGNATURE</span>
-                    <span class="text-emerald-600 font-semibold">SYNCHRONIZED</span>
-                </div>
-                <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-300 space-y-1">
-                    <div class="flex justify-between font-semibold text-emerald-950">
-                        <span>EVT-90414-C</span>
-                        <span class="text-emerald-700">10:14:03.882 UTC</span>
-                    </div>
-                    <div class="text-emerald-900 font-bold">ACTION: BATCH_GENEALOGY_LINKED</div>
-                    <div class="text-[10px] text-slate-600">Lot LOT-4491-B permanently bound to Batch #BTH-2026-09.</div>
-                </div>
-            `,
-            lims: `
-                <div class="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200 space-y-2">
-                    <div class="flex justify-between items-center">
-                        <span class="font-semibold text-emerald-950">LIMS Inventory Updated</span>
-                        <span class="px-2 py-0.5 rounded-full text-[10px] bg-emerald-600 text-white font-semibold">RECONCILED</span>
-                    </div>
-                    <div class="text-emerald-900 text-xs">Bottle #12 deducted: <strong>-50.0 mL</strong>. Current balance: 450.0 mL.</div>
-                </div>
-                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                    <div class="font-semibold text-slate-800">Locked PDF Audit Record</div>
-                    <div class="text-slate-500 text-xs">Batch certificate compiled with 21 CFR Part 11 electronic seal.</div>
-                </div>
-            `
-        }
+    const stepPanes = {
+        1: document.getElementById('step-pane-1'),
+        2: document.getElementById('step-pane-2'),
+        3: document.getElementById('step-pane-3')
     };
 
-    function updateTimeState(step) {
-        if (!timeEventStates[step]) return;
+    const timeVideos = {
+        1: document.getElementById('time-video-1'),
+        2: document.getElementById('time-video-2'),
+        3: document.getElementById('time-video-3')
+    };
 
+    const STEP_DURATION = 15.0; // Strictly 15.0 seconds per pill button
+    const POINT_INTERVAL = 5.0; // 5.0 seconds per point (0s-5s, 5s-10s, 10s-15s)
+    let currentStep = 1;
+    let playbackTime = 0.0;
+    let isHoverPaused = false;
+    let lastAnimFrameTime = null;
+
+    function getActiveVideo() {
+        return timeVideos[currentStep];
+    }
+
+    function updateCardViews(stepIndex, time) {
+        const pane = stepPanes[stepIndex];
+        if (!pane) return;
+
+        const cards = pane.querySelectorAll('.event-card-item');
+        // Active card: 1 for [0-5s), 2 for [5-10s), 3 for [10-15s]
+        const activeCardNum = time < 5.0 ? 1 : (time < 10.0 ? 2 : 3);
+
+        cards.forEach(card => {
+            const cardNum = parseInt(card.getAttribute('data-card'));
+            const numSpan = card.querySelector('.event-card-num');
+            const titleEl = card.querySelector('.event-card-title') || card.querySelector('h4');
+            const descEl = card.querySelector('.event-card-desc') || card.querySelector('p');
+            const bar = card.querySelector('.card-progress-bar');
+
+            if (cardNum === activeCardNum) {
+                // UN-SHADED: Only the selected cell is un-shaded and active
+                card.classList.add('is-active', 'border-2', 'border-indigo-600', 'bg-white', 'shadow-sm', 'opacity-100');
+                card.classList.remove('border', 'border-slate-200/80', 'border-slate-200/90', 'border-slate-200/60', 'bg-slate-100/70', 'bg-slate-100/80', 'bg-slate-100/90', 'bg-white/80', 'bg-white/40', 'bg-white/90', 'shadow-none', 'shadow-xs', 'opacity-40', 'opacity-45', 'opacity-50', 'opacity-60', 'opacity-90');
+                
+                if (numSpan) {
+                    numSpan.classList.add('text-indigo-600');
+                    numSpan.classList.remove('text-slate-400', 'text-slate-500', 'text-slate-600');
+                }
+                if (titleEl) {
+                    titleEl.classList.add('text-slate-900');
+                    titleEl.classList.remove('text-slate-500', 'text-slate-400');
+                }
+                if (descEl) {
+                    descEl.classList.add('text-slate-600');
+                    descEl.classList.remove('text-slate-400', 'text-slate-500');
+                }
+
+                // Progress for active card's 5s window
+                const cardStart = (cardNum - 1) * POINT_INTERVAL;
+                const progress = Math.min(Math.max((time - cardStart) / POINT_INTERVAL, 0), 1);
+                if (bar) {
+                    bar.style.width = (progress * 100) + '%';
+                }
+            } else {
+                // GREYED OUT: The other 2 non-selected cells are greyed out
+                card.classList.remove('is-active', 'border-2', 'border-indigo-600', 'bg-white', 'shadow-sm', 'opacity-100');
+                card.classList.add('border', 'border-slate-200/80', 'bg-slate-100/70', 'shadow-none', 'opacity-45');
+
+                if (numSpan) {
+                    numSpan.classList.remove('text-indigo-600', 'text-slate-600');
+                    numSpan.classList.add('text-slate-400');
+                }
+                if (titleEl) {
+                    titleEl.classList.remove('text-slate-900');
+                    titleEl.classList.add('text-slate-500');
+                }
+                if (descEl) {
+                    descEl.classList.remove('text-slate-600');
+                    descEl.classList.add('text-slate-400');
+                }
+                if (bar) {
+                    bar.style.width = '0%';
+                }
+            }
+        });
+    }
+
+    function switchStep(step, resetTime = true) {
+        currentStep = step;
+        if (resetTime) {
+            playbackTime = 0.0;
+            lastAnimFrameTime = performance.now();
+        }
+
+        // Update Pill Buttons
         timeStepButtons.forEach(btn => {
             const btnStep = parseInt(btn.getAttribute('data-step'));
-            if (btnStep === step) {
+            if (btnStep === currentStep) {
                 btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm', 'border-slate-900');
                 btn.classList.remove('bg-white', 'text-slate-600', 'hover:text-slate-900', 'border-slate-200');
             } else {
@@ -499,22 +434,149 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        if (arHud) arHud.innerHTML = timeEventStates[step].ar;
-        if (ledger) ledger.innerHTML = timeEventStates[step].ledger;
-        if (lims) lims.innerHTML = timeEventStates[step].lims;
+        // Show active pane, hide other panes
+        [1, 2, 3].forEach(s => {
+            const pane = stepPanes[s];
+            const video = timeVideos[s];
+
+            if (pane) {
+                if (s === currentStep) {
+                    pane.classList.remove('hidden');
+                    pane.classList.add('block');
+                } else {
+                    pane.classList.remove('block');
+                    pane.classList.add('hidden');
+                }
+            }
+
+            if (video) {
+                if (s === currentStep) {
+                    if (resetTime) {
+                        try { video.currentTime = 0; } catch (e) {}
+                    }
+                    if (!isHoverPaused) {
+                        video.play().catch(() => {});
+                    }
+                } else {
+                    try {
+                        video.pause();
+                        video.currentTime = 0;
+                    } catch (e) {}
+                }
+            }
+        });
+
+        updateCardViews(currentStep, playbackTime);
     }
 
-    if (timeStepButtons.length > 0) {
-        timeStepButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
+    // Attach click listeners to Scrubber Pills
+    timeStepButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const step = parseInt(btn.getAttribute('data-step'));
+            switchStep(step, true);
+        });
+    });
+
+    // Attach click listeners to cards across all panes for instant scrubbing
+    [1, 2, 3].forEach(s => {
+        const pane = stepPanes[s];
+        if (!pane) return;
+
+        const cards = pane.querySelectorAll('.event-card-item');
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
                 e.preventDefault();
-                const step = parseInt(btn.getAttribute('data-step'));
-                updateTimeState(step);
+                const cardNum = parseInt(card.getAttribute('data-card'));
+                const targetTime = (cardNum - 1) * POINT_INTERVAL;
+                playbackTime = targetTime;
+                lastAnimFrameTime = performance.now();
+
+                const video = timeVideos[s];
+                if (video) {
+                    try {
+                        video.currentTime = targetTime;
+                        if (!isHoverPaused) {
+                            video.play().catch(() => {});
+                        }
+                    } catch (err) {}
+                }
+
+                updateCardViews(currentStep, playbackTime);
             });
         });
 
-        updateTimeState(1);
+        // Hover pause on card stacks: allow unlimited comfortable reading
+        const cardsStack = pane.querySelector('.step-cards-stack');
+        if (cardsStack) {
+            cardsStack.addEventListener('mouseenter', () => {
+                isHoverPaused = true;
+                const video = getActiveVideo();
+                if (video && !video.paused) {
+                    video.pause();
+                }
+            });
+            cardsStack.addEventListener('mouseleave', () => {
+                isHoverPaused = false;
+                lastAnimFrameTime = performance.now();
+                const video = getActiveVideo();
+                if (video && video.paused) {
+                    video.play().catch(() => {});
+                }
+            });
+        }
+    });
+
+    // Auto-detect when real video file is present and hide placeholder
+    Object.values(timeVideos).forEach(video => {
+        if (!video) return;
+        video.addEventListener('playing', () => {
+            const container = video.parentElement;
+            const placeholder = container ? container.querySelector('.video-placeholder') : null;
+            if (placeholder) placeholder.classList.add('opacity-0');
+        });
+        video.addEventListener('pause', () => {
+            if (video.currentTime === 0 || video.ended) {
+                const container = video.parentElement;
+                const placeholder = container ? container.querySelector('.video-placeholder') : null;
+                if (placeholder) placeholder.classList.remove('opacity-0');
+            }
+        });
+    });
+
+    // Main animation & sync ticker
+    function tickShowcase(now) {
+        if (!lastAnimFrameTime) lastAnimFrameTime = now;
+        // Cap max delta at 0.1s to avoid jump if tab lost focus
+        const delta = Math.min((now - lastAnimFrameTime) / 1000.0, 0.1);
+        lastAnimFrameTime = now;
+
+        if (!isHoverPaused) {
+            const video = getActiveVideo();
+
+            // Only sync to video timecode if valid video is playing and has duration >= 14.5s
+            if (video && !video.paused && !video.ended && video.duration >= 14.5 && video.currentTime > 0) {
+                playbackTime = video.currentTime;
+            } else {
+                // Reliable virtual clock running at exactly 1.0x speed
+                playbackTime += delta;
+            }
+
+            // Exactly 15.0 seconds per pill button before advancing
+            if (playbackTime >= STEP_DURATION) {
+                const nextStep = (currentStep % 3) + 1;
+                switchStep(nextStep, true);
+            } else {
+                updateCardViews(currentStep, playbackTime);
+            }
+        }
+
+        requestAnimationFrame(tickShowcase);
     }
+
+    // Initialize showcase
+    switchStep(1, true);
+    requestAnimationFrame(tickShowcase);
 
 
     // ==========================================

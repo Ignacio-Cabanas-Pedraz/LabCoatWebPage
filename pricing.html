@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Transparent deployment packages and pricing for LabCoat — from exploratory pilot cleanrooms to global biomanufacturing enterprise networks. Guaranteed 21 CFR Part 11 compliance.">
+    <title>Pricing &amp; Deployment Packages — LabCoat</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-500 selection:text-white">
+
+    <!-- 1. Glassmorphic Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-10 sm:px-16 lg:px-24 xl:px-32 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="flex items-center gap-2.5 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg py-1 px-1.5">
+                <div
+                    class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-600/20">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+                    </svg>
+                </div>
+                <span class="tracking-tight">LabCoat</span>
+            </a>
+
+            <!-- Desktop Nav Anchors -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html#problem" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How It Works</a>
+                <a href="index.html#platform"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Platform</a>
+                <a href="index.html#impact"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Our Value</a>
+                <a href="index.html#compliance"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Compliance</a>
+                <a href="index.html#offerings"
+                    class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors">Offerings</a>
+            </nav>
+
+            <!-- Action Pill -->
+            <div class="flex items-center">
+                <a href="/demo/"
+                    class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm border border-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">
+                    Interactive Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- Pricing Hero & Tier Cards Section -->
+        <section
+            class="relative z-10 pt-20 pb-20 lg:pt-24 lg:pb-28 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-white to-slate-100/90 overflow-hidden"
+            id="pricing-tiers">
+            <!-- Ambient depth aura -->
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[550px] bg-indigo-500/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Subpage Back Navigation & Breadcrumb -->
+                <div class="mb-8 flex items-center justify-between">
+                    <a href="index.html#offerings"
+                        class="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-white hover:bg-slate-50 border border-slate-200 px-4 py-2 rounded-full transition-all shadow-xs group">
+                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                        <span>Back to Offerings</span>
+                    </a>
+                    <div class="hidden sm:flex items-center gap-1.5 text-xs text-slate-400 font-mono">
+                        <a href="index.html" class="hover:text-slate-700 transition-colors">Home</a>
+                        <span>/</span>
+                        <a href="index.html#offerings" class="hover:text-slate-700 transition-colors">Offerings</a>
+                        <span>/</span>
+                        <span class="text-slate-900 font-medium">Pricing</span>
+                    </div>
+                </div>
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 tracking-tight leading-tight">
+                        Predictable Deployment Tiers for Regulated Science
+                    </h1>
+                    <p class="text-sm sm:text-base text-slate-600 font-sans mt-3.5 leading-relaxed">
+                        Scale seamlessly from single-hood containment pilots to multi-facility global biomanufacturing networks. Every tier includes zero-latency edge execution and verified US FDA 21 CFR Part 11 integrity.
+                    </p>
+                </div>
+
+                <!-- 3 Pricing Tier Cards (Claude / SaaS Refined Style) -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-24">
+
+                    <!-- Tier 1: Lab Starter -->
+                    <div id="starter"
+                        class="bg-white rounded-3xl p-7 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                        <div>
+                            <h2 class="text-xl font-display font-bold text-slate-900 mb-3">Lab Starter</h2>
+                            <p class="text-xs text-slate-500 leading-relaxed min-h-[38px]">
+                                Designed for pilot feasibility validation, exploratory R&amp;D hoods, and single containment suites.
+                            </p>
+
+                            <div class="mt-6 pt-6 border-t border-slate-100">
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">$2,450</span>
+                                    <span class="text-xs font-sans text-slate-500">/ month</span>
+                                </div>
+                                <div class="text-[11px] font-mono text-slate-400 mt-1">Billed annually, or $2,950 quarterly</div>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div class="mt-8 space-y-3 text-xs text-slate-700">
+                                <div class="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                                    Key Capabilities
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Up to 5</strong> smart glasses devices</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>1 cleanroom suite</strong> or pilot hood</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Offline PGlite local ledger sync</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>21 CFR Part 11 compliant audit logs</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Immutable PDF batch certificate release</span>
+                                </div>
+                                <div class="flex items-start gap-2.5 text-slate-400">
+                                    <span class="w-4 text-center font-mono font-semibold text-slate-300 select-none shrink-0">—</span>
+                                    <span>No circular video forensic buffer</span>
+                                </div>
+                                <div class="flex items-start gap-2.5 text-slate-400">
+                                    <span class="w-4 text-center font-mono font-semibold text-slate-300 select-none shrink-0">—</span>
+                                    <span>No dual witness e-signoff workflows</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-100">
+                            <a href="index.html#contact"
+                                class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 transition-all shadow-sm">
+                                Start Pilot Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2: Cleanroom Professional (Highlighted / Recommended) -->
+                    <div id="pro"
+                        class="bg-white rounded-3xl p-7 lg:p-8 border-2 border-indigo-600 shadow-xl shadow-indigo-500/10 flex flex-col justify-between relative ring-1 ring-indigo-600/20">
+                        <!-- Recommended Badge -->
+                        <div
+                            class="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30">
+                            <svg class="w-3.5 h-3.5 text-indigo-200" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
+                            Recommended
+                        </div>
+
+                        <div>
+                            <h2 class="text-xl font-display font-bold text-slate-900 mb-3">Cleanroom Pro</h2>
+                            <p class="text-xs text-slate-500 leading-relaxed min-h-[38px]">
+                                Full-featured operational compliance backbone for multi-line clinical manufacturing and commercial cleanrooms.
+                            </p>
+
+                            <div class="mt-6 pt-6 border-t border-slate-100">
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">$5,850</span>
+                                    <span class="text-xs font-sans text-slate-500">/ month</span>
+                                </div>
+                                <div class="text-[11px] font-mono text-indigo-600 font-medium mt-1">Includes GAMP 5 validation starter pack</div>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div class="mt-8 space-y-3 text-xs text-slate-700">
+                                <div class="font-mono text-[11px] font-semibold uppercase tracking-wider text-indigo-700 mb-2">
+                                    Everything in Starter, plus:
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Up to 20</strong> smart glasses devices</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Up to 5 cleanroom suites</strong> / active lines</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>5-second circular video buffer</strong> forensic retention</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Dual e-signatures</strong> &amp; witness signoff workflows</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Bidirectional LIMS / ELN REST &amp; Webhooks sync</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>WorkOS Enterprise SAML 2.0 / Okta SSO</span>
+                                </div>
+                                <div class="flex items-start gap-2.5 text-slate-400">
+                                    <span class="w-4 text-center font-mono font-semibold text-slate-300 select-none shrink-0">—</span>
+                                    <span>No 3D spatial cleanroom digital twin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-100">
+                            <a href="index.html#contact"
+                                class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-md shadow-indigo-600/25">
+                                Deploy Cleanroom Suite
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3: Global Enterprise -->
+                    <div id="enterprise"
+                        class="bg-white rounded-3xl p-7 lg:p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                        <div>
+                            <h2 class="text-xl font-display font-bold text-slate-900 mb-3">Global Enterprise</h2>
+                            <p class="text-xs text-slate-500 leading-relaxed min-h-[38px]">
+                                Custom enterprise deployment for multi-site biopharma conglomerates requiring MES/ERP integration and air-gapped hosting.
+                            </p>
+
+                            <div class="mt-6 pt-6 border-t border-slate-100">
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">Custom</span>
+                                </div>
+                                <div class="text-[11px] font-mono text-slate-400 mt-1">Multi-site enterprise volume licensing</div>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div class="mt-8 space-y-3 text-xs text-slate-700">
+                                <div class="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                                    Everything in Pro, plus:
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Unlimited</strong> devices &amp; global cleanroom suites</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>2D &amp; 3D spatial cleanroom digital twins</strong></span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Custom SAP, Veeva &amp; Siemens MES connectors</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Dedicated GAMP 5 CSV validation engineer</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Air-gapped on-premise or dedicated VPC option</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>24/7/365 dedicated engineer &amp; 99.99% SLA</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Permanent immutable regulatory archive</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-100">
+                            <a href="index.html#contact"
+                                class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs font-semibold text-white bg-slate-900 hover:bg-black transition-all shadow-sm">
+                                Contact Solutions Architect
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Feature Comparison Matrix Title -->
+                <div class="text-center max-w-3xl mx-auto mb-10" id="matrix">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 tracking-tight">
+                        Compare Capabilities &amp; Inclusions
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-500 font-sans mt-2">
+                        A detailed line-by-line breakdown explicitly showing what is and isn't included in each package.
+                    </p>
+                </div>
+
+                <!-- Comparison Table (Claude / Modern B2B SaaS Matrix) -->
+                <div class="border border-slate-200/90 rounded-2xl bg-white shadow-sm overflow-hidden mb-24">
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[760px] text-left border-collapse">
+                            <!-- Table Header -->
+                            <thead>
+                                <tr class="border-b border-slate-200 bg-slate-50/80">
+                                    <th class="py-4 px-6 text-xs font-mono font-bold uppercase tracking-wider text-slate-700 w-2/5">
+                                        System Capabilities
+                                    </th>
+                                    <th class="py-4 px-4 text-xs font-mono font-bold uppercase tracking-wider text-slate-700 w-1/5 text-center">
+                                        Lab Starter
+                                    </th>
+                                    <th class="py-4 px-4 text-xs font-mono font-bold uppercase tracking-wider text-indigo-700 w-1/5 text-center bg-indigo-50/60 border-x border-indigo-100">
+                                        Cleanroom Pro
+                                    </th>
+                                    <th class="py-4 px-4 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 w-1/5 text-center">
+                                        Global Enterprise
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-xs">
+
+                                <!-- Group 1: Wearable Execution & Edge AI -->
+                                <tr class="bg-slate-100/70 border-t border-slate-200">
+                                    <td colspan="4" class="py-2.5 px-6 font-mono text-[11px] font-bold uppercase tracking-wider text-slate-900">
+                                        1. Wearable Execution &amp; Edge Vision
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Smart Glasses Hardware Support
+                                        <div class="text-[11px] text-slate-400 font-normal">Active concurrent head-worn units</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-slate-700">Up to 5 devices</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Up to 20 devices</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">Unlimited</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Cleanroom Suites &amp; Containment Hoods
+                                        <div class="text-[11px] text-slate-400 font-normal">Configured physical cleanroom zones</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-slate-700">1 suite / hood</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Up to 5 suites</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">Unlimited global sites</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Offline PGlite Edge Database
+                                        <div class="text-[11px] text-slate-400 font-normal">Operate through complete Wi-Fi loss with zero data loss</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        5-Second Circular Video Forensic Buffer
+                                        <div class="text-[11px] text-slate-400 font-normal">Retrospective clip storage upon event trigger or anomaly</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Hands-Free Voice Protocol Dictation
+                                        <div class="text-[11px] text-slate-400 font-normal">Degloving-free step navigation and spoken observations</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center text-slate-600">Standard commands</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Voice notes + Audio replay</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">Custom facility lexicon</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        2D / 3D Spatial Cleanroom Digital Twins
+                                        <div class="text-[11px] text-slate-400 font-normal">Interactive spatial coordinates of active equipment &amp; assays</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none bg-indigo-50/20 border-x border-indigo-100" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+
+                                <!-- Group 2: Compliance & Regulatory Rigor -->
+                                <tr class="bg-slate-100/70 border-t border-slate-200">
+                                    <td colspan="4" class="py-2.5 px-6 font-mono text-[11px] font-bold uppercase tracking-wider text-slate-900">
+                                        2. Compliance &amp; Regulatory Rigor (21 CFR Part 11)
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        US FDA 21 CFR Part 11 &amp; EU Annex 11 Compliance
+                                        <div class="text-[11px] text-slate-400 font-normal">Audit trails, attribution, and tamper-resistant controls</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Cryptographic SHA-256 Ledger &amp; Merkle Root
+                                        <div class="text-[11px] text-slate-400 font-normal">Mathematically provable record sequence integrity</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Dual E-Signatures &amp; Witness Verification
+                                        <div class="text-[11px] text-slate-400 font-normal">Segregated operator execution and supervisor release signoffs</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Hardware NTP Timestamp Attestation
+                                        <div class="text-[11px] text-slate-400 font-normal">Cryptographic hardware-anchored clock synchronization</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-slate-900">Dedicated atomic clock</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Automated Deviation &amp; Out-of-Spec (OOS) Flags
+                                        <div class="text-[11px] text-slate-400 font-normal">Instant cleanroom notifications upon tolerance breaches</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-slate-900">Automated CAPA triggers</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        GAMP 5 CSV Validation Package (IQ / OQ / PQ)
+                                        <div class="text-[11px] text-slate-400 font-normal">Pre-executed testing protocols and qualification traceability matrix</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center text-slate-500">Add-on ($)</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Starter Pack Included</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">Dedicated CSV Lead</td>
+                                </tr>
+
+                                <!-- Group 3: Systems & Data Integration -->
+                                <tr class="bg-slate-100/70 border-t border-slate-200">
+                                    <td colspan="4" class="py-2.5 px-6 font-mono text-[11px] font-bold uppercase tracking-wider text-slate-900">
+                                        3. Systems &amp; Enterprise Integration
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Immutable PDF Batch Release Certificates
+                                        <div class="text-[11px] text-slate-400 font-normal">Cryptographically signed batch release documentation</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">Standard template</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Custom branded</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">Automated eCTD dossier</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        REST API &amp; Webhooks Sync
+                                        <div class="text-[11px] text-slate-400 font-normal">Automated bidirectional sync to external software stacks</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center text-slate-600">Read-only export</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Full bidirectional</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">Streaming Webhooks</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Native LIMS &amp; ELN Connectors (Benchling, Dotmatics)
+                                        <div class="text-[11px] text-slate-400 font-normal">Zero-code synchronization with leading electronic lab notebooks</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Enterprise MES &amp; ERP Connectors (SAP, Veeva, Siemens)
+                                        <div class="text-[11px] text-slate-400 font-normal">Direct plant-floor MES and enterprise resource data ingestion</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none bg-indigo-50/20 border-x border-indigo-100" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Deployment Model
+                                        <div class="text-[11px] text-slate-400 font-normal">Hosting environment and physical tenancy architecture</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center text-slate-600">Multi-tenant Cloud</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Dedicated Tenant Cloud</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">Dedicated VPC / Air-Gapped</td>
+                                </tr>
+
+                                <!-- Group 4: Security, Support & SLA -->
+                                <tr class="bg-slate-100/70 border-t border-slate-200">
+                                    <td colspan="4" class="py-2.5 px-6 font-mono text-[11px] font-bold uppercase tracking-wider text-slate-900">
+                                        4. Security, Governance &amp; Support
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Role-Based Access Control (RBAC)
+                                        <div class="text-[11px] text-slate-400 font-normal">Cleanroom authorization boundaries and permission levels</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center text-slate-600">Standard (3 roles)</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">Granular (Unlimited)</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">Attribute-based (ABAC)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Enterprise SSO &amp; Directory Sync
+                                        <div class="text-[11px] text-slate-400 font-normal">WorkOS SAML 2.0, Okta, Microsoft Entra, Google Workspace</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-base font-semibold text-slate-300 select-none" aria-label="Not included">—</td>
+                                    <td class="py-3.5 px-4 text-center bg-indigo-50/20 border-x border-indigo-100">
+                                        <svg class="w-4 h-4 text-emerald-600 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-slate-900">SAML + SCIM provisioning</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Compliance Audit Log Retention
+                                        <div class="text-[11px] text-slate-400 font-normal">Storage window for raw immutable ledger entries and sensor telemetries</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-slate-700">1 Year</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">7 Years (US FDA)</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">Permanent archive</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        Technical Support &amp; Response SLA
+                                        <div class="text-[11px] text-slate-400 font-normal">Dedicated support channels and guaranteed response velocity</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center text-slate-600">Email (24h SLA)</td>
+                                    <td class="py-3.5 px-4 text-center font-medium text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">24/7 Priority (4h SLA)</td>
+                                    <td class="py-3.5 px-4 text-center font-semibold text-slate-900">24/7/365 TAM (15m SLA)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="py-3.5 px-6 font-medium text-slate-800">
+                                        High-Availability Uptime SLA
+                                        <div class="text-[11px] text-slate-400 font-normal">Platform infrastructure availability guarantee</div>
+                                    </td>
+                                    <td class="py-3.5 px-4 text-center font-mono text-slate-700">99.5%</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-indigo-900 bg-indigo-50/20 border-x border-indigo-100">99.9%</td>
+                                    <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">99.99% Financially-backed</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Table Footer Note -->
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+                        <div class="flex items-center gap-4">
+                            <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Included in tier</span>
+                            <span class="inline-flex items-center gap-1.5"><span class="font-mono text-slate-400 font-bold select-none">—</span> Not included</span>
+                        </div>
+                        <a href="index.html#contact" class="font-medium text-indigo-600 hover:text-indigo-800 transition-colors inline-flex items-center gap-1">
+                            Need a custom multi-facility proposal? Talk to our architects &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Frequently Asked Questions / Procurement Assurance -->
+                <div class="max-w-4xl mx-auto mb-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight">
+                            Procurement &amp; Validation Assurance
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                            <h3 class="font-display font-bold text-slate-900 text-sm mb-2">How does hardware procurement work for smart glasses?</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                                LabCoat software runs on enterprise-certified lightweight smart glasses (including Vuzix, RealWear, and Meta Ray-Ban Enterprise). You can either bring your own qualified hardware or procure turnkey pre-provisioned glasses through our hardware fulfillment partners.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                            <h3 class="font-display font-bold text-slate-900 text-sm mb-2">What is included in the GAMP 5 CSV Validation Package?</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                                The Cleanroom Pro and Enterprise packages include standard Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ) executed protocol templates along with our 21 CFR Part 11 Traceability Matrix to fast-track internal QA signoff.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                            <h3 class="font-display font-bold text-slate-900 text-sm mb-2">Can we host LabCoat on-premise or in an isolated VPC?</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                                Yes. For Global Enterprise clients with strict sovereign data residency or air-gapped facility requirements, we support self-contained Kubernetes clusters deployed inside your private AWS/Azure/GCP VPC or local server racks.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                            <h3 class="font-display font-bold text-slate-900 text-sm mb-2">How does LabCoat protect data integrity if Wi-Fi drops?</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                                Our architecture uses embedded PGlite on the edge device. Every observation, barcode scan, and timestamp is cryptographically hashed and stored locally first. Once network connectivity re-establishes, the local ledger synchronizes via conflict-free consensus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Conversion Card & Contact Section -->
+        <section
+            class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100 via-slate-200/60 to-slate-200/90 overflow-hidden"
+            id="contact">
+            <!-- Ambient depth aura behind conversion card -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-indigo-600/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="bg-slate-900 text-white rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10">
+                    <div class="space-y-4 max-w-lg">
+                        <h2
+                            class="text-xl sm:text-2xl lg:text-3xl font-display font-bold tracking-tight text-white leading-snug">
+                            Eliminate Paper Binders and Empower Your Scientists.
+                        </h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Schedule a 20-minute tailored demonstration with our laboratory execution engineers to see
+                            the live AR simulator and enterprise dashboard.
+                        </p>
+                        <div class="flex items-center gap-6 text-xs text-slate-400 font-mono pt-1">
+                            <span>✓ 100% US FDA 21 CFR Part 11 Compliant</span>
+                            <span>✓ WorkOS Enterprise SSO</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-auto bg-slate-800/80 p-6 rounded-2xl border border-slate-700/60 backdrop-blur-sm shadow-inner min-w-[320px] sm:min-w-[360px]">
+                        <h3 class="text-base font-display font-semibold text-white mb-2">Request an Enterprise Assessment</h3>
+                        <p class="text-xs text-slate-400 mb-4 leading-relaxed font-sans">
+                            Receive a customized deployment timeline, hardware guidance, and validation packet for your cleanrooms.
+                        </p>
+                        <form class="space-y-3" onsubmit="event.preventDefault(); window.location.href='index.html#contact';">
+                            <input type="email" placeholder="scientist@biopharma.com"
+                                class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button type="submit"
+                                class="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-xs transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                                Talk to Solutions Architect
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Minimalist Streamlined Footer -->
+    <footer
+        class="relative z-10 bg-slate-200/90 border-t border-slate-300/80 py-12 px-10 sm:px-16 lg:px-24 xl:px-32 font-sans">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <!-- Left: Single-phrase summary -->
+            <div class="space-y-2 md:col-span-1">
+                <div class="flex items-center gap-2 text-slate-900 font-display font-bold text-lg">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <path
+                                d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+                        </svg>
+                    </div>
+                    <span>LabCoat</span>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Audit-Proof Science Personally Integrated
+                </p>
+            </div>
+
+            <!-- Platform -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Platform</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="index.html#hero" class="hover:text-indigo-600 transition-colors">Overview</a></li>
+                    <li><a href="index.html#problem" class="hover:text-indigo-600 transition-colors">How It Works</a></li>
+                    <li><a href="index.html#platform" class="hover:text-indigo-600 transition-colors">Platform</a></li>
+                    <li><a href="index.html#offerings" class="hover:text-indigo-600 transition-colors">Offerings</a></li>
+                </ul>
+            </div>
+
+            <!-- Compliance -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Compliance</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="index.html#compliance" class="hover:text-indigo-600 transition-colors">21 CFR Part 11</a></li>
+                    <li><a href="index.html#compliance" class="hover:text-indigo-600 transition-colors">Data Integrity</a></li>
+                    <li><a href="dpa.html" class="hover:text-indigo-600 transition-colors">Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Inquiries -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Legal &amp; Inquiries</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="privacy_policy.html" class="hover:text-indigo-600 transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-indigo-600 transition-colors">Terms of Service</a></li>
+                    <li><a href="index.html#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Clean Bottom Bar with copyright on the right -->
+        <div
+            class="max-w-7xl mx-auto pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div>
+                <span>Audit-Proof Science Personally Integrated</span>
+            </div>
+            <div>
+                <span>© 2026 LabCoat Inc. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner"
+        class="fixed bottom-6 right-6 max-w-sm bg-white p-5 rounded-2xl border border-slate-200 shadow-2xl z-50 transition-all duration-300 transform translate-y-32 opacity-0 [&.show]:translate-y-0 [&.show]:opacity-100">
+        <div class="text-sm font-display font-semibold text-slate-900 mb-1">Cookie Preferences</div>
+        <p class="text-xs text-slate-500 mb-4 font-sans leading-relaxed">
+            We use essential cookies to maintain system integrity and analyze enterprise traffic.
+        </p>
+        <div class="flex items-center gap-2">
+            <button id="accept-cookies"
+                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Accept
+            </button>
+            <button id="decline-cookies"
+                class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Decline
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

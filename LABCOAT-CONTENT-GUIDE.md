@@ -98,19 +98,15 @@ The new LabCoat website is engineered for sophisticated pharmaceutical and biote
 ### Section 3: The Multi-Window "Time-Events" Showcase (Clay / Synchronized State Engine)
 * **Core Concept:** LabCoat connects everyday interactions to digital compliance in real time, providing a cloud based audit-proof platform that synchronizes across AR devices, regulatory ledgers, and other systems.
 * **Layout:** A clean, horizontal timeline scrubber at the top with 3 time states:
-  - **State 1 (00:00:01):** *Event detection*
+  - **State 1 (00:00:01):** *Event detection* (Live Real Screenshots Showcase)
+    - Sub-view 1: **Master Ledger Stream** (Chronological real-time fleet event log across equipment, zones, and personnel)
+    - Sub-view 2: **Event Specifics & Attestation** (Headset optical tracking attestation, SHA-256 cryptographic signature, and full context binding)
   - **State 2 (00:00:02):** *Ledger Entry*
   - **State 3 (00:00:03):** *Other integrations*
-* **The 3 Coordinated Windows Below:**
-  1. **Window A (The Edge AR HUD / Scientist POV):**  
-     - Stylized dark glass card representing the smart glasses field of view.
-     - Displays: Active SOP step (`"Add 50μL Reagent B"`), live green bounding box locking onto a QR code (`LOT-4491-B`), and a wristband trigger confirmation (`"Click to Sign"`).
-  2. **Window B (The Central Audit Ledger / 21 CFR Part 11):**  
-     - Clean white data table window.
-     - Shows the immutable row being created in real time: `event_id`, `timestamp_utc`, `operator_id`, `action_type: COMPOUND_MOVED`, and the cryptographic `SHA-256 hash`.
-  3. **Window C (Other Integrations / Facility & LIMS Inventory):**  
-     - Displays the live facility map floorplan showing operator presence in Cleanroom Suite A, alongside the automatic lot balance deduction in the central LIMS database.
-* **Interactive Control:** Clicking any step in the scrubber smoothly highlights the corresponding state across all 3 windows with crisp micro-transitions.
+* **Architecture Highlights:** 
+  1. *Zero-Input Event Capture:* Autonomous detection of 800+ operational actions without manual touch.
+  2. *Headset Sensor Attestation:* Point-of-origin SHA-256 hash sealing spatial optical tracking and device telemetry.
+  3. *Complete Entity Binding:* Simultaneous immutable binding of Personnel, Facility, Equipment Unit, and Reagent Lot.
 
 ---
 

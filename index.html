@@ -15,8 +15,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="css/tailwind.css">
 </head>
@@ -24,12 +26,17 @@
 <body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-500 selection:text-white">
 
     <!-- 1. Glassmorphic Sticky Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
+    <header
+        class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-10 sm:px-16 lg:px-24 xl:px-32 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg py-1 px-1.5">
-                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-600/20">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+            <a href="index.html"
+                class="flex items-center gap-2.5 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg py-1 px-1.5">
+                <div
+                    class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-600/20">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
                     </svg>
                 </div>
                 <span class="tracking-tight">LabCoat</span>
@@ -37,24 +44,22 @@
 
             <!-- Desktop Nav Anchors in Intuitive Order -->
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#problem" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">The Problem</a>
-                <a href="#time-events" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-1.5">
-                    <span>Time-Events</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-                </a>
-                <a href="#platform" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Platform</a>
-                <a href="#impact" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Impact & ROI</a>
-                <a href="#compliance" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Compliance</a>
+                <a href="#problem" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How It Works</a>
+                <a href="#platform"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Platform</a>
+                <a href="#impact"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Our Value</a>
+                <a href="#compliance"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Compliance</a>
+                <a href="#offerings"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Offerings</a>
             </nav>
 
             <!-- Action Pill -->
-            <div class="flex items-center gap-3">
-                <a href="/demo/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-indigo-600 hover:text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 px-3.5 py-1.5 rounded-full transition-all duration-200">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Live Sandbox
-                </a>
-                <a href="#contact" class="text-sm font-medium bg-slate-900 hover:bg-indigo-600 text-white px-4 py-2 rounded-full transition-all duration-200 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
-                    Request a Demo
+            <div class="flex items-center">
+                <a href="/demo/"
+                    class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm border border-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">
+                    Interactive Demo
                 </a>
             </div>
         </div>
@@ -63,7 +68,9 @@
     <main class="pt-16">
 
         <!-- 2. Hero Section (Benchling-Inspired Split with Fixed Animated Grid & Text Cover Effect) -->
-        <section class="relative border-b border-slate-200 bg-transparent min-h-[calc(100vh-4rem)] flex items-center py-12 px-10 sm:px-16 lg:px-24 xl:px-32" id="hero">
+        <section
+            class="relative border-b border-slate-200 bg-transparent min-h-[calc(100vh-4rem)] flex items-center py-12 px-10 sm:px-16 lg:px-24 xl:px-32"
+            id="hero">
             <!-- Animated Fixed Grid Canvas: stays fixed in viewport so next sections slide over and cover it -->
             <canvas id="hero-grid-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
@@ -71,10 +78,13 @@
                 <!-- Left: Authoritative Typography, Stats & Actions (with subtle legibility backdrop glow) -->
                 <div class="flex-1 space-y-5 text-left relative z-10 lg:pl-4">
                     <!-- Soft white ambient backdrop to ensure absolute legibility over grid -->
-                    <div class="absolute -inset-6 sm:-inset-10 rounded-3xl -z-10 pointer-events-none" style="background: radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 60%, rgba(255,255,255,0) 100%);"></div>
+                    <div class="absolute -inset-6 sm:-inset-10 rounded-3xl -z-10 pointer-events-none"
+                        style="background: radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 60%, rgba(255,255,255,0) 100%);">
+                    </div>
 
                     <!-- Main Hero Title with vibrant indigo color restored -->
-                    <h1 class="text-3xl sm:text-4xl lg:text-[2.65rem] font-display font-bold text-slate-900 tracking-tight leading-[1.18]">
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-[2.65rem] font-display font-bold text-slate-900 tracking-tight leading-[1.18]">
                         Audit-Proof Science
                         <span class="text-indigo-600 block underline decoration-indigo-200 underline-offset-8">
                             Personally Integrated
@@ -82,32 +92,38 @@
                     </h1>
 
                     <p class="text-sm sm:text-base text-slate-600 font-sans max-w-lg leading-relaxed">
-                        Personal and zero-latency audit platform with instantaneous, hands-free compliance via the use of the latest in AR glasses.
+                        Personal and zero-latency audit platform with instantaneous, hands-free compliance via the use
+                        of the latest in AR glasses.
                     </p>
 
                     <!-- Key Proof Metrics Bar (Above Buttons) -->
                     <div class="grid grid-cols-3 gap-6 pt-3 pb-1 border-t border-slate-200/80 max-w-md">
                         <div>
                             <div class="text-2xl font-display font-bold text-slate-900">&lt; 1 ms</div>
-                            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide mt-0.5">Local Write Latency</div>
+                            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide mt-0.5">Local
+                                Write Latency</div>
                         </div>
                         <div>
                             <div class="text-2xl font-display font-bold text-slate-900">+40%</div>
-                            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide mt-0.5">Bench Throughput</div>
+                            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide mt-0.5">Bench
+                                Throughput</div>
                         </div>
                         <div>
                             <div class="text-2xl font-display font-bold text-slate-900">100%</div>
-                            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide mt-0.5">FDA Part 11 Ready</div>
+                            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide mt-0.5">FDA
+                                Part 11 Ready</div>
                         </div>
                     </div>
 
                     <!-- Action Buttons -->
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-1">
-                        <a href="/demo/" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-indigo-500/25 text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
+                        <a href="/demo/"
+                            class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-indigo-500/25 text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                             <span>Explore Live Snapshot</span>
                         </a>
-                        <a href="#contact" class="inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full font-medium transition-all shadow-sm text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
+                        <a href="#contact"
+                            class="inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full font-medium transition-all shadow-sm text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
                             Request Tailored Demo
                         </a>
                     </div>
@@ -115,16 +131,19 @@
 
                 <!-- Right: High-Density Floating Batch Run Window -->
                 <div class="flex-1 w-full max-w-xl lg:max-w-none flex justify-center lg:justify-end">
-                    <div class="w-full bg-white/95 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-xl overflow-hidden font-sans">
+                    <div
+                        class="w-full bg-white/95 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-xl overflow-hidden font-sans">
                         <!-- Window Chrome Topbar -->
                         <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center justify-between">
                             <div class="flex items-center gap-2">
                                 <div class="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                                <span class="text-xs text-slate-500 font-mono ml-2">Cleanroom Suite B / Procedures / BTH-2026-09</span>
+                                <span class="text-xs text-slate-500 font-mono ml-2">Cleanroom Suite B / Procedures /
+                                    BTH-2026-09</span>
                             </div>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                                 Live Sync Active
                             </span>
@@ -134,8 +153,10 @@
                         <div class="p-5 space-y-4">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <div class="text-[11px] font-semibold text-indigo-600 uppercase tracking-wider">Active Standard Operating Procedure</div>
-                                    <h3 class="text-sm sm:text-base font-display font-bold text-slate-900 mt-0.5">SOP-BIO-449: Monoclonal Antibody Purification</h3>
+                                    <div class="text-[11px] font-semibold text-indigo-600 uppercase tracking-wider">
+                                        Active Standard Operating Procedure</div>
+                                    <h3 class="text-sm sm:text-base font-display font-bold text-slate-900 mt-0.5">
+                                        SOP-BIO-449: Monoclonal Antibody Purification</h3>
                                 </div>
                                 <div class="text-right">
                                     <span class="text-[11px] font-mono text-slate-500">Operator</span>
@@ -145,46 +166,59 @@
 
                             <!-- Step Progress Pipeline -->
                             <div class="space-y-2 font-mono text-xs">
-                                <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between text-slate-600">
+                                <div
+                                    class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between text-slate-600">
                                     <div class="flex items-center gap-2.5">
-                                        <span class="w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px]">✓</span>
+                                        <span
+                                            class="w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px]">✓</span>
                                         <span>01. Verify Column Integrity (AKTA-Pure-02)</span>
                                     </div>
                                     <span class="text-emerald-600 font-semibold text-[11px]">Signed & Hashed</span>
                                 </div>
 
-                                <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between text-slate-600">
+                                <div
+                                    class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between text-slate-600">
                                     <div class="flex items-center gap-2.5">
-                                        <span class="w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px]">✓</span>
+                                        <span
+                                            class="w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px]">✓</span>
                                         <span>02. Equilibrate Resin with 5CV Buffer A</span>
                                     </div>
                                     <span class="text-emerald-600 font-semibold text-[11px]">Signed & Hashed</span>
                                 </div>
 
                                 <!-- Current Active Step (In Progress via Glasses) -->
-                                <div class="p-3 rounded-xl bg-indigo-50/70 border-2 border-indigo-500 text-slate-900 shadow-sm relative">
+                                <div
+                                    class="p-3 rounded-xl bg-indigo-50/70 border-2 border-indigo-500 text-slate-900 shadow-sm relative">
                                     <div class="flex items-center justify-between mb-1.5">
-                                        <div class="flex items-center gap-2 font-sans font-semibold text-indigo-900 text-xs">
-                                            <span class="w-4 h-4 rounded-full bg-indigo-600 text-white flex items-center justify-center text-[9px] animate-pulse">●</span>
+                                        <div
+                                            class="flex items-center gap-2 font-sans font-semibold text-indigo-900 text-xs">
+                                            <span
+                                                class="w-4 h-4 rounded-full bg-indigo-600 text-white flex items-center justify-center text-[9px] animate-pulse">●</span>
                                             <span>03. Inject Elution Buffer (LOT-ELU-9021)</span>
                                         </div>
-                                        <span class="text-[10px] font-semibold bg-indigo-600 text-white px-2 py-0.5 rounded-full font-mono">AR HUD ACTIVE</span>
+                                        <span
+                                            class="text-[10px] font-semibold bg-indigo-600 text-white px-2 py-0.5 rounded-full font-mono">AR
+                                            HUD ACTIVE</span>
                                     </div>
-                                    <div class="grid grid-cols-2 gap-1.5 text-[11px] text-slate-600 bg-white/80 p-2 rounded-lg border border-indigo-100">
+                                    <div
+                                        class="grid grid-cols-2 gap-1.5 text-[11px] text-slate-600 bg-white/80 p-2 rounded-lg border border-indigo-100">
                                         <div><span class="text-slate-400">Flow:</span> 1.50 mL/min</div>
                                         <div><span class="text-slate-400">UV:</span> 280 nm (0.84 AU)</div>
                                         <div><span class="text-slate-400">Temp:</span> 4.2°C (Cold Room)</div>
                                         <div><span class="text-slate-400">Scan:</span> QR Authenticated</div>
                                     </div>
-                                    <div class="mt-2 flex items-center justify-between text-[10px] text-indigo-700 font-sans">
+                                    <div
+                                        class="mt-2 flex items-center justify-between text-[10px] text-indigo-700 font-sans">
                                         <span>Wristband confirmation ready</span>
                                         <span class="font-semibold underline">Auto-recording 5s Dashcam Clip</span>
                                     </div>
                                 </div>
 
-                                <div class="p-2.5 rounded-lg bg-slate-50/50 border border-slate-200/60 flex items-center justify-between text-slate-400">
+                                <div
+                                    class="p-2.5 rounded-lg bg-slate-50/50 border border-slate-200/60 flex items-center justify-between text-slate-400">
                                     <div class="flex items-center gap-2.5">
-                                        <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center text-[9px]">04</span>
+                                        <span
+                                            class="w-4 h-4 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center text-[9px]">04</span>
                                         <span>04. Collect Peak Fraction in Sterile Vessel</span>
                                     </div>
                                     <span class="text-[11px]">Pending</span>
@@ -192,10 +226,13 @@
                             </div>
 
                             <!-- Footer verification chip -->
-                            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <div
+                                class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                                 <span class="flex items-center gap-1.5 text-[11px]">
                                     <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     SHA-256 Cryptographic Hash Stamped
                                 </span>
@@ -208,140 +245,136 @@
         </section>
 
         <!-- 3. The 4 Pain Points: Vertical List with Shifting Timer Bar & Wider Image -->
-        <section class="relative z-10 py-14 lg:py-16 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-200/90 via-slate-100 to-slate-100/90 border-t border-slate-300/80 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] overflow-hidden" id="problem">
+        <section
+            class="relative z-10 py-14 lg:py-16 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-200/90 via-slate-100 to-slate-100/90 border-t border-slate-300/80 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] overflow-hidden"
+            id="problem">
             <div class="max-w-7xl mx-auto">
                 <!-- Shortened Section Title -->
                 <div class="max-w-3xl mb-6 lg:mb-8">
-                    <h2 class="text-2xl sm:text-3xl lg:text-[2rem] font-display font-bold text-slate-900 tracking-tight">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-[2rem] font-display font-bold text-slate-900 tracking-tight">
                         Stalled by Yesterday's Tools
                     </h2>
                     <p class="text-sm sm:text-base text-slate-600 font-sans mt-1.5 leading-relaxed">
-                        Despite operating at the bleeding edge of science, laboratory workflows remain bound by outdated documentation methods.
+                        Despite operating at the bleeding edge of science, laboratory workflows remain bound by outdated
+                        documentation methods.
                     </p>
                 </div>
 
                 <!-- 2-Column Layout: Left Vertical Points (5 cols) + Right Wider Image (7 cols) -->
                 <div id="problem-showcase" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
-                    
+
                     <!-- Left: Vertical 4 Points Accordion Stack (Locked to exact image height) -->
                     <div id="problem-list" class="lg:col-span-5 flex flex-col gap-2.5 lg:h-[490px]">
-                        
+
                         <!-- Point 01 -->
-                        <div class="problem-point-item is-active cursor-pointer p-4 sm:p-5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex-1 flex flex-col justify-between" data-index="0">
+                        <div class="problem-point-item is-active cursor-pointer p-4 sm:p-5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex-1 flex flex-col justify-start overflow-hidden"
+                            data-index="0">
                             <div>
                                 <!-- Timer Separator Bar -->
-                                <div class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2.5">
+                                <div
+                                    class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2.5">
                                     <div class="timer-bar absolute top-0 left-0 h-full bg-indigo-600 w-0"></div>
                                 </div>
                                 <div class="flex items-center gap-2.5">
-                                    <span class="point-num font-mono text-xs font-bold text-indigo-600 transition-colors">01</span>
-                                    <h3 class="point-title text-sm sm:text-base font-display font-bold text-slate-900 transition-colors">
+                                    <span
+                                        class="point-num font-mono text-xs sm:text-sm font-bold text-indigo-600 transition-colors">01</span>
+                                    <h3
+                                        class="point-title text-base sm:text-lg lg:text-[1.125rem] font-display font-bold text-slate-900 transition-colors">
                                         The Outdated Paradigm
                                     </h3>
                                 </div>
                             </div>
                             <div class="problem-content-grid">
-                                <div class="problem-content-inner flex flex-col justify-between">
-                                    <p class="point-desc text-xs sm:text-[13px] text-slate-600 font-sans leading-relaxed mt-2.5">
-                                        High-containment environments producing life-saving therapies still rely on paper clipboards and physical logbooks. Researchers are forced to upload critical values hours after the fact under mental fatigue, introducing additional risks and audit discrepancies
+                                <div class="problem-content-inner">
+                                    <p
+                                        class="point-desc text-sm sm:text-[14.5px] lg:text-[15px] text-slate-600 font-sans leading-relaxed mt-2.5 sm:mt-3">
+                                        High-containment cleanrooms producing life-saving therapies still rely on paper clipboards and physical logbooks. Critical values are entered hours after the fact under fatigue, introducing documentation discrepancies and audit vulnerability.
                                     </p>
-                                    <div class="point-footer pt-3 mt-3 border-t border-slate-100/80 flex items-center justify-between">
-                                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-rose-50 border border-rose-200/70 text-[10px] font-mono font-medium text-rose-700">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                                            3-8% Transcription Error Rate
-                                        </span>
-                                        <span class="text-[11px] font-mono text-slate-400">Legacy Friction</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Point 02 -->
-                        <div class="problem-point-item cursor-pointer px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl opacity-70 hover:opacity-100 bg-white/50 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm min-h-[64px] sm:min-h-[68px] flex-none flex flex-col justify-between" data-index="1">
+                        <div class="problem-point-item cursor-pointer px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl opacity-70 hover:opacity-100 bg-white/50 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm min-h-[64px] sm:min-h-[68px] flex-none flex flex-col justify-start overflow-hidden"
+                            data-index="1">
                             <div>
                                 <!-- Timer Separator Bar -->
-                                <div class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2">
+                                <div
+                                    class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2">
                                     <div class="timer-bar absolute top-0 left-0 h-full bg-indigo-600 w-0"></div>
                                 </div>
                                 <div class="flex items-center gap-2.5">
-                                    <span class="point-num font-mono text-xs font-bold text-slate-400 transition-colors">02</span>
-                                    <h3 class="point-title text-sm sm:text-base font-display font-semibold text-slate-700 transition-colors">
+                                    <span
+                                        class="point-num font-mono text-xs sm:text-sm font-bold text-slate-400 transition-colors">02</span>
+                                    <h3
+                                        class="point-title text-base sm:text-lg lg:text-[1.125rem] font-display font-semibold text-slate-700 transition-colors">
                                         The Missing Personal Link
                                     </h3>
                                 </div>
                             </div>
                             <div class="problem-content-grid">
-                                <div class="problem-content-inner flex flex-col justify-between">
-                                    <p class="point-desc text-xs sm:text-[13px] text-slate-600 font-sans leading-relaxed mt-2.5">
-                                        While operating complex equipment and handling delicate reagent lots, scientists remain completely isolated from digital SOPs. Key insights, procedure steps and further information are hidden away and inaccesible where they need it the most, during regular every-day field tasks.
+                                <div class="problem-content-inner">
+                                    <p
+                                        class="point-desc text-sm sm:text-[14.5px] lg:text-[15px] text-slate-600 font-sans leading-relaxed mt-2.5 sm:mt-3">
+                                        While operating complex equipment and handling delicate reagent lots, scientists remain isolated from digital SOPs. Key insights, procedure steps, and critical parameters are hidden away in remote kiosks rather than in the operator's direct field of view.
                                     </p>
-                                    <div class="point-footer pt-3 mt-3 border-t border-slate-100/80 flex items-center justify-between">
-                                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200/70 text-[10px] font-mono font-medium text-amber-700">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                                            Disconnected Operator &amp; Instruments
-                                        </span>
-                                        <span class="text-[11px] font-mono text-slate-400">Cognitive Drag</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Point 03 -->
-                        <div class="problem-point-item cursor-pointer px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl opacity-70 hover:opacity-100 bg-white/50 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm min-h-[64px] sm:min-h-[68px] flex-none flex flex-col justify-between" data-index="2">
+                        <div class="problem-point-item cursor-pointer px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl opacity-70 hover:opacity-100 bg-white/50 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm min-h-[64px] sm:min-h-[68px] flex-none flex flex-col justify-start overflow-hidden"
+                            data-index="2">
                             <div>
                                 <!-- Timer Separator Bar -->
-                                <div class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2">
+                                <div
+                                    class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2">
                                     <div class="timer-bar absolute top-0 left-0 h-full bg-indigo-600 w-0"></div>
                                 </div>
                                 <div class="flex items-center gap-2.5">
-                                    <span class="point-num font-mono text-xs font-bold text-slate-400 transition-colors">03</span>
-                                    <h3 class="point-title text-sm sm:text-base font-display font-semibold text-slate-700 transition-colors">
+                                    <span
+                                        class="point-num font-mono text-xs sm:text-sm font-bold text-slate-400 transition-colors">03</span>
+                                    <h3
+                                        class="point-title text-base sm:text-lg lg:text-[1.125rem] font-display font-semibold text-slate-700 transition-colors">
                                         Severe Lost Productivity
                                     </h3>
                                 </div>
                             </div>
                             <div class="problem-content-grid">
-                                <div class="problem-content-inner flex flex-col justify-between">
-                                    <p class="point-desc text-xs sm:text-[13px] text-slate-600 font-sans leading-relaxed mt-2.5">
-                                        Operators waste a considerable amount of time interacting with technological interfaces while complying with sterility procedures. In some cases, users must step away, remove gloves, log in, sanitize, and reglove. This repetitive bottleneck stalls research velocity and overall productivity.
+                                <div class="problem-content-inner">
+                                    <p
+                                        class="point-desc text-sm sm:text-[14.5px] lg:text-[15px] text-slate-600 font-sans leading-relaxed mt-2.5 sm:mt-3">
+                                        Operators waste valuable hours interacting with stationary interfaces while complying with sterility procedures. In cleanrooms, stepping away, degloving, and re-sanitizing stalls research velocity and drains active bench throughput.
                                     </p>
-                                    <div class="point-footer pt-3 mt-3 border-t border-slate-100/80 flex items-center justify-between">
-                                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200/70 text-[10px] font-mono font-medium text-amber-700">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                                            Degloving Penalty • Up to 35% Lost
-                                        </span>
-                                        <span class="text-[11px] font-mono text-slate-400">Throughput Drain</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Point 04 -->
-                        <div class="problem-point-item cursor-pointer px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl opacity-70 hover:opacity-100 bg-white/50 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm min-h-[64px] sm:min-h-[68px] flex-none flex flex-col justify-between" data-index="3">
+                        <div class="problem-point-item cursor-pointer px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl opacity-70 hover:opacity-100 bg-white/50 hover:bg-white border border-transparent hover:border-slate-200/80 shadow-none hover:shadow-sm min-h-[64px] sm:min-h-[68px] flex-none flex flex-col justify-start overflow-hidden"
+                            data-index="3">
                             <div>
                                 <!-- Timer Separator Bar -->
-                                <div class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2">
+                                <div
+                                    class="relative w-full h-[2.5px] bg-slate-200/80 rounded-full overflow-hidden mb-2">
                                     <div class="timer-bar absolute top-0 left-0 h-full bg-indigo-600 w-0"></div>
                                 </div>
                                 <div class="flex items-center gap-2.5">
-                                    <span class="point-num font-mono text-xs font-bold text-slate-400 transition-colors">04</span>
-                                    <h3 class="point-title text-sm sm:text-base font-display font-semibold text-slate-700 transition-colors">
+                                    <span
+                                        class="point-num font-mono text-xs sm:text-sm font-bold text-slate-400 transition-colors">04</span>
+                                    <h3
+                                        class="point-title text-base sm:text-lg lg:text-[1.125rem] font-display font-semibold text-slate-700 transition-colors">
                                         ALCOA+ Violations
                                     </h3>
                                 </div>
                             </div>
                             <div class="problem-content-grid">
-                                <div class="problem-content-inner flex flex-col justify-between">
-                                    <p class="point-desc text-xs sm:text-[13px] text-slate-600 font-sans leading-relaxed mt-2.5">
-                                        Post-hoc retrospective entries violate US FDA guidelines, as well as ALCOA+ standards. Events must be recorded and saved while they are taking place, not afterwards where illegible handwriting or unverified manual notes leave manufacturers vulnerable without evidence
+                                <div class="problem-content-inner">
+                                    <p
+                                        class="point-desc text-sm sm:text-[14.5px] lg:text-[15px] text-slate-600 font-sans leading-relaxed mt-2.5 sm:mt-3">
+                                        Post-hoc retrospective entries systematically violate US FDA guidelines and ALCOA+ data integrity rules. Critical actions must be recorded contemporaneously at the moment of execution, not reconstructed hours later from memory or scratch paper.
                                     </p>
-                                    <div class="point-footer pt-3 mt-3 border-t border-slate-100/80 flex items-center justify-between">
-                                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-rose-50 border border-rose-200/70 text-[10px] font-mono font-medium text-rose-700">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                                            Form 483 Risk • Non-Contemporaneous
-                                        </span>
-                                        <span class="text-[11px] font-mono text-slate-400">Audit Exposure</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -350,12 +383,17 @@
 
                     <!-- Right: Dynamic Image (Height locked to exactly match left stack) -->
                     <div class="lg:col-span-7 flex flex-col lg:h-[490px]">
-                        <div class="relative w-full h-[320px] lg:h-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 flex-1">
+                        <div
+                            class="relative w-full h-[320px] lg:h-full rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 flex-1">
                             <!-- 4 Crossfading Images -->
-                            <img src="assets/problem-outdated-paradigm.jpg" alt="Paper binders on cleanroom bench" class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-100 z-10">
-                            <img src="assets/problem-missing-link.jpg" alt="Scientist isolated from computer screens" class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-0 z-0">
-                            <img src="assets/problem-degloving.jpg" alt="Degloving penalty in cleanroom" class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-0 z-0">
-                            <img src="assets/problem-alcoa.jpg" alt="Manual paper batch records in lab" class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-0 z-0">
+                            <img src="assets/problem-outdated-paradigm.jpg" alt="Paper binders on cleanroom bench"
+                                class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-100 z-10">
+                            <img src="assets/problem-missing-link.jpg" alt="Scientist isolated from computer screens"
+                                class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-0 z-0">
+                            <img src="assets/problem-degloving.jpg" alt="Degloving penalty in cleanroom"
+                                class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-0 z-0">
+                            <img src="assets/problem-alcoa.jpg" alt="Manual paper batch records in lab"
+                                class="problem-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out opacity-0 z-0">
                         </div>
                     </div>
 
@@ -364,119 +402,327 @@
         </section>
 
         <!-- 4. The Multi-Window "Time-Events" Showcase (Reduced Title Size) -->
-        <section class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-indigo-50 to-indigo-100/30 overflow-hidden" id="time-events">
+        <section
+            class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-indigo-50 to-indigo-100/30 overflow-hidden"
+            id="time-events">
             <!-- Noticeable ambient glow symbolizing the cryptographic transformation -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-tr from-indigo-500/15 via-purple-500/10 to-transparent blur-3xl rounded-full pointer-events-none -z-10"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-tr from-indigo-500/15 via-purple-500/10 to-transparent blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
             <div class="max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-10">
-                    <h2 class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
-                        Transforming Action into Immutable Records
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
+                        Bridging real-world actions to interactive datapoints
                     </h2>
                     <p class="text-sm sm:text-base text-slate-600 font-sans mt-2.5 leading-relaxed">
-                        LabCoat connects everyday interactions to digital compliance in real time, providing a cloud based audit-proof platform that synchronizes across AR devices, regulatory ledgers, and other systems.
+                        LabCoat connects everyday interactions to digital compliance in real time, providing an
+                        audit-proof platform that synchronizes across your existing platform and its devices.
                     </p>
 
                     <!-- Interactive Time Scrubber: Pill-Shaped Buttons -->
                     <div class="mt-6 flex flex-wrap items-center justify-center gap-2 max-w-2xl mx-auto">
-                        <button class="time-step-btn active px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-slate-900 text-white shadow-sm border border-slate-900 cursor-pointer" data-step="1">
+                        <button
+                            class="time-step-btn active px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-slate-900 text-white shadow-sm border border-slate-900 cursor-pointer"
+                            data-step="1">
                             Event detection
                         </button>
-                        <button class="time-step-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer" data-step="2">
+                        <button
+                            class="time-step-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer"
+                            data-step="2">
                             Ledger Entry
                         </button>
-                        <button class="time-step-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer" data-step="3">
+                        <button
+                            class="time-step-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer"
+                            data-step="3">
                             Other integrations
                         </button>
                     </div>
                 </div>
 
-                <!-- 3 Synchronized Windows with Locked Identical Heights -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+                <!-- Dynamic Content Container Driven by Scrubber Pills -->
+                <div id="time-events-showcase" class="max-w-7xl mx-auto">
 
-                    <!-- Window A: Edge AR HUD (Scientist Point of View) -->
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xl flex flex-col justify-between h-[380px] relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 bg-indigo-600 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-bl-xl uppercase tracking-wider text-white">
-                            Window A: Wearable AR HUD
-                        </div>
+                    <!-- STEP 1: EVENT DETECTION -->
+                    <div id="step-pane-1" class="step-pane block" data-step-index="1">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                            <!-- Left: 3 Minimalist Rectangular Cards (0X number + Title + Description ONLY + subtle 5s progress bar) -->
+                            <div class="step-cards-stack lg:col-span-5 flex flex-col gap-3 justify-between">
+                                <!-- Card 1 (0s - 5s) - Selected / Un-shaded -->
+                                <div class="event-card-item relative overflow-hidden is-active cursor-pointer p-4 sm:p-5 rounded-2xl bg-white shadow-sm border-2 border-indigo-600 transition-all duration-300 flex-1 flex flex-col justify-center opacity-100"
+                                    data-card="1" data-start="0" data-end="5">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-indigo-600 transition-colors duration-200">01</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-900 text-sm sm:text-base transition-colors duration-200">
+                                            Zero-Input Event Capture
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans transition-colors duration-200">
+                                        Smart glasses autonomously log cleanroom events, reagent usage, and protocol states without manual input.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
 
-                        <div>
-                            <div class="flex items-center gap-2 mb-3">
-                                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></div>
-                                <span class="text-xs font-mono text-slate-500">POV: Meta Wearables Edge Model</span>
+                                <!-- Card 2 (5s - 10s) - Greyed out -->
+                                <div class="event-card-item relative overflow-hidden cursor-pointer p-4 sm:p-5 rounded-2xl bg-slate-100/70 hover:bg-slate-100/90 border border-slate-200/80 shadow-none transition-all duration-300 flex-1 flex flex-col justify-center opacity-45 hover:opacity-75"
+                                    data-card="2" data-start="5" data-end="10">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-slate-400 transition-colors duration-200">02</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-500 text-sm sm:text-base transition-colors duration-200">
+                                            Headset Sensor Attestation
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-400 leading-relaxed font-sans transition-colors duration-200">
+                                        Cryptographically sealed with optical tracking proof, device telemetry, and an immutable SHA-256 edge hash.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 (10s - 15s) - Greyed out -->
+                                <div class="event-card-item relative overflow-hidden cursor-pointer p-4 sm:p-5 rounded-2xl bg-slate-100/70 hover:bg-slate-100/90 border border-slate-200/80 shadow-none transition-all duration-300 flex-1 flex flex-col justify-center opacity-45 hover:opacity-75"
+                                    data-card="3" data-start="10" data-end="15">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-slate-400 transition-colors duration-200">03</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-500 text-sm sm:text-base transition-colors duration-200">
+                                            Complete Entity Binding
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-400 leading-relaxed font-sans transition-colors duration-200">
+                                        Contemporaneously binds operator identity, cleanroom zone classification, instrument ID, and lot metrics.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Dynamic AR Display Area -->
-                            <div id="ar-hud-content" class="space-y-2.5 font-mono text-xs h-[235px] flex flex-col justify-between overflow-hidden">
-                                <!-- Dynamic State Content Injected by script.js -->
+                            <!-- Right: Standardized 15s Video Frame (Locked aspect-[16/10]) -->
+                            <div class="lg:col-span-7 flex flex-col justify-center">
+                                <div class="relative w-full rounded-2xl border border-slate-200/90 shadow-lg overflow-hidden bg-slate-950 select-none aspect-[16/10] flex items-center justify-center">
+                                    <video id="time-video-1" class="time-showcase-video w-full h-full object-cover block"
+                                        playsinline muted preload="auto">
+                                        <source src="assets/time-events-step1.mp4" type="video/mp4">
+                                    </video>
+                                    <!-- Standardized placeholder while awaiting time-events-step1.mp4 -->
+                                    <div class="video-placeholder absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950/40 text-center p-6 select-none pointer-events-none transition-opacity duration-300">
+                                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-3">
+                                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-widest mb-1">
+                                            Event Detection • 15s Showcase
+                                        </div>
+                                        <div class="text-sm font-display font-semibold text-white/90">
+                                            Autonomous AR Protocol &amp; Sensor Stream
+                                        </div>
+                                        <div class="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-400">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                                            <span>Ready for time-events-step1.mp4</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                            <span>IMU: <span class="text-emerald-600 font-semibold">Head Stable</span></span>
-                            <span>Buffer: <span class="text-indigo-600 font-mono">5s Dashcam Active</span></span>
                         </div>
                     </div>
 
-                    <!-- Window B: Central Audit Ledger (FDA 21 CFR Part 11) -->
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xl flex flex-col justify-between h-[380px] relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-slate-900 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-bl-xl uppercase tracking-wider text-white">
-                            Window B: 21 CFR Part 11 Ledger
-                        </div>
+                    <!-- STEP 2: LEDGER ENTRY -->
+                    <div id="step-pane-2" class="step-pane hidden" data-step-index="2">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                            <!-- Left: 3 Minimalist Rectangular Cards -->
+                            <div class="step-cards-stack lg:col-span-5 flex flex-col gap-3 justify-between">
+                                <!-- Card 1 (0s - 5s) - Selected / Un-shaded -->
+                                <div class="event-card-item relative overflow-hidden is-active cursor-pointer p-4 sm:p-5 rounded-2xl bg-white shadow-sm border-2 border-indigo-600 transition-all duration-300 flex-1 flex flex-col justify-center opacity-100"
+                                    data-card="1" data-start="0" data-end="5">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-indigo-600 transition-colors duration-200">01</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-900 text-sm sm:text-base transition-colors duration-200">
+                                            Append-Only Immutable Stream
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans transition-colors duration-200">
+                                        Continuous cryptographic hashing seals every raw interaction in real time, preventing retroactive log alteration.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
 
-                        <div>
-                            <div class="flex items-center gap-2 mb-3">
-                                <div class="w-2 h-2 rounded-full bg-indigo-600 shrink-0"></div>
-                                <span class="text-xs font-mono text-slate-500">Append-Only Event Stream</span>
+                                <!-- Card 2 (5s - 10s) - Greyed out -->
+                                <div class="event-card-item relative overflow-hidden cursor-pointer p-4 sm:p-5 rounded-2xl bg-slate-100/70 hover:bg-slate-100/90 border border-slate-200/80 shadow-none transition-all duration-300 flex-1 flex flex-col justify-center opacity-45 hover:opacity-75"
+                                    data-card="2" data-start="5" data-end="10">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-slate-400 transition-colors duration-200">02</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-500 text-sm sm:text-base transition-colors duration-200">
+                                            Contemporaneous Dual-Signoff
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-400 leading-relaxed font-sans transition-colors duration-200">
+                                        Dual-factor electronic signatures bind supervisor approvals and second-analyst verifications without leaving the cleanroom.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 (10s - 15s) - Greyed out -->
+                                <div class="event-card-item relative overflow-hidden cursor-pointer p-4 sm:p-5 rounded-2xl bg-slate-100/70 hover:bg-slate-100/90 border border-slate-200/80 shadow-none transition-all duration-300 flex-1 flex flex-col justify-center opacity-45 hover:opacity-75"
+                                    data-card="3" data-start="10" data-end="15">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-slate-400 transition-colors duration-200">03</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-500 text-sm sm:text-base transition-colors duration-200">
+                                            Automated Anomaly Triaging
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-400 leading-relaxed font-sans transition-colors duration-200">
+                                        Algorithmic verification instantly flags out-of-spec reagent temperatures, missed steps, or protocol deviations.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Dynamic Audit Ledger Area -->
-                            <div id="ledger-content" class="space-y-2.5 font-mono text-xs h-[235px] flex flex-col justify-between overflow-hidden">
-                                <!-- Dynamic State Content Injected by script.js -->
+                            <!-- Right: Standardized 15s Video Frame (Locked aspect-[16/10]) -->
+                            <div class="lg:col-span-7 flex flex-col justify-center">
+                                <div class="relative w-full rounded-2xl border border-slate-200/90 shadow-lg overflow-hidden bg-slate-950 select-none aspect-[16/10] flex items-center justify-center">
+                                    <video id="time-video-2" class="time-showcase-video w-full h-full object-cover block"
+                                        playsinline muted preload="auto">
+                                        <source src="assets/time-events-step2.mp4" type="video/mp4">
+                                    </video>
+                                    <!-- Standardized placeholder while awaiting time-events-step2.mp4 -->
+                                    <div class="video-placeholder absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950/40 text-center p-6 select-none pointer-events-none transition-opacity duration-300">
+                                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-3">
+                                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-widest mb-1">
+                                            Ledger Entry • 15s Showcase
+                                        </div>
+                                        <div class="text-sm font-display font-semibold text-white/90">
+                                            Immutable Audit Trail &amp; Electronic Signatures
+                                        </div>
+                                        <div class="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-400">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                                            <span>Ready for time-events-step2.mp4</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                            <span>ALCOA+: <span class="text-emerald-600 font-semibold">Contemporaneous</span></span>
-                            <span class="font-mono">NTP Epoch Milliseconds</span>
                         </div>
                     </div>
 
-                    <!-- Window C: Live LIMS & Facility Floorplan Sync -->
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xl flex flex-col justify-between h-[380px] relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-emerald-600 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-bl-xl uppercase tracking-wider text-white">
-                            Window C: Other Integrations
-                        </div>
+                    <!-- STEP 3: OTHER INTEGRATIONS -->
+                    <div id="step-pane-3" class="step-pane hidden" data-step-index="3">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                            <!-- Left: 3 Minimalist Rectangular Cards -->
+                            <div class="step-cards-stack lg:col-span-5 flex flex-col gap-3 justify-between">
+                                <!-- Card 1 (0s - 5s) - Selected / Un-shaded -->
+                                <div class="event-card-item relative overflow-hidden is-active cursor-pointer p-4 sm:p-5 rounded-2xl bg-white shadow-sm border-2 border-indigo-600 transition-all duration-300 flex-1 flex flex-col justify-center opacity-100"
+                                    data-card="1" data-start="0" data-end="5">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-indigo-600 transition-colors duration-200">01</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-900 text-sm sm:text-base transition-colors duration-200">
+                                            Bi-Directional LIMS &amp; ELN Sync
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans transition-colors duration-200">
+                                        Real-time API bridges eliminate manual double-entry, synchronizing sample metadata directly with enterprise databases.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
 
-                        <div>
-                            <div class="flex items-center gap-2 mb-3">
-                                <div class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></div>
-                                <span class="text-xs font-mono text-slate-500">Enterprise Database Bridge</span>
+                                <!-- Card 2 (5s - 10s) - Greyed out -->
+                                <div class="event-card-item relative overflow-hidden cursor-pointer p-4 sm:p-5 rounded-2xl bg-slate-100/70 hover:bg-slate-100/90 border border-slate-200/80 shadow-none transition-all duration-300 flex-1 flex flex-col justify-center opacity-45 hover:opacity-75"
+                                    data-card="2" data-start="5" data-end="10">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-slate-400 transition-colors duration-200">02</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-500 text-sm sm:text-base transition-colors duration-200">
+                                            Spatial Facility Digital Twin
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-400 leading-relaxed font-sans transition-colors duration-200">
+                                        Maps operator telemetry, environmental sensors, and cleanroom zones into a unified spatial intelligence layer.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 (10s - 15s) - Greyed out -->
+                                <div class="event-card-item relative overflow-hidden cursor-pointer p-4 sm:p-5 rounded-2xl bg-slate-100/70 hover:bg-slate-100/90 border border-slate-200/80 shadow-none transition-all duration-300 flex-1 flex flex-col justify-center opacity-45 hover:opacity-75"
+                                    data-card="3" data-start="10" data-end="15">
+                                    <div class="flex items-center gap-2.5 mb-1.5">
+                                        <span class="event-card-num font-mono text-xs font-bold text-slate-400 transition-colors duration-200">03</span>
+                                        <h4 class="event-card-title font-display font-bold text-slate-500 text-sm sm:text-base transition-colors duration-200">
+                                            One-Click Validated Dossier
+                                        </h4>
+                                    </div>
+                                    <p class="event-card-desc text-xs sm:text-[13px] text-slate-400 leading-relaxed font-sans transition-colors duration-200">
+                                        Compiles locked, audit-proof batch release PDFs with cryptographic verification seals for FDA inspectors.
+                                    </p>
+                                    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-slate-100 overflow-hidden">
+                                        <div class="card-progress-bar h-full bg-indigo-600 transition-all duration-75" style="width: 0%;"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Dynamic LIMS / Map Area -->
-                            <div id="lims-content" class="space-y-3 font-sans text-xs h-[235px] flex flex-col justify-between overflow-hidden">
-                                <!-- Dynamic State Content Injected by script.js -->
+                            <!-- Right: Standardized 15s Video Frame (Locked aspect-[16/10]) -->
+                            <div class="lg:col-span-7 flex flex-col justify-center">
+                                <div class="relative w-full rounded-2xl border border-slate-200/90 shadow-lg overflow-hidden bg-slate-950 select-none aspect-[16/10] flex items-center justify-center">
+                                    <video id="time-video-3" class="time-showcase-video w-full h-full object-cover block"
+                                        playsinline muted preload="auto">
+                                        <source src="assets/time-events-step3.mp4" type="video/mp4">
+                                    </video>
+                                    <!-- Standardized placeholder while awaiting time-events-step3.mp4 -->
+                                    <div class="video-placeholder absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950/40 text-center p-6 select-none pointer-events-none transition-opacity duration-300">
+                                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-3">
+                                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-widest mb-1">
+                                            Other Integrations • 15s Showcase
+                                        </div>
+                                        <div class="text-sm font-display font-semibold text-white/90">
+                                            Enterprise LIMS, ELN &amp; Facility Digital Twin
+                                        </div>
+                                        <div class="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-400">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                                            <span>Ready for time-events-step3.mp4</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                            <span>Inventory: <span class="text-emerald-600 font-semibold">Auto-Deducted</span></span>
-                            <span>Calibration: <span class="text-indigo-600 font-semibold">Verified Active</span></span>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <!-- 5. The 4 Core Solution Pillars (Reduced Heading Size) -->
-        <section class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-indigo-100/30 via-sky-50 to-slate-100 overflow-hidden" id="platform">
+        <section
+            class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-indigo-100/30 via-sky-50 to-slate-100 overflow-hidden"
+            id="platform">
             <!-- Ambient sky tech aura symbolizing cleanroom architecture -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-sky-400/10 blur-3xl rounded-full pointer-events-none -z-10"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-sky-400/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
             <div class="max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-8 lg:mb-10">
-                    <h2 class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
                         Four Pillars of Personal Laboratory Intelligence
                     </h2>
                 </div>
@@ -485,89 +731,114 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
 
                     <!-- Pillar 1: Regulatory Integrity -->
-                    <div class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                                <div
+                                    class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
                                     <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
                                 </div>
                                 <span class="text-xs font-mono font-semibold text-indigo-600 uppercase">Pillar 01</span>
                             </div>
-                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Regulatory Integrity & E-Signatures</h3>
+                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Regulatory Integrity &
+                                E-Signatures</h3>
                             <p class="text-slate-600 font-sans text-xs leading-relaxed mb-3">
-                                Built for FDA 21 CFR Part 11 and GAMP 5. Features dual-factor e-signatures, SHA-256 edge hashing, and audited revision request workflows with supervisor review.
+                                Built for FDA 21 CFR Part 11 and GAMP 5. Features dual-factor e-signatures, SHA-256 edge
+                                hashing, and audited revision request workflows with supervisor review.
                             </p>
                         </div>
-                        <div class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
+                        <div
+                            class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
                             <span class="bg-slate-100 px-2 py-0.5 rounded">Part 11 § 11.10(e)</span>
                             <span class="bg-slate-100 px-2 py-0.5 rounded">SHA-256 Tamper-Proof</span>
                         </div>
                     </div>
 
                     <!-- Pillar 2: Hands-Free AR & Edge Vision -->
-                    <div class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                                <div
+                                    class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
                                     <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                     </svg>
                                 </div>
                                 <span class="text-xs font-mono font-semibold text-indigo-600 uppercase">Pillar 02</span>
                             </div>
-                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Hands-Free AR & Edge Vision</h3>
+                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Hands-Free AR & Edge
+                                Vision</h3>
                             <p class="text-slate-600 font-sans text-xs leading-relaxed mb-3">
-                                Standalone smart glasses project SOP guidance in peripheral view. A 5-second circular dashcam buffer captures objective proof only when procedural milestones occur.
+                                Standalone smart glasses project SOP guidance in peripheral view. A 5-second circular
+                                dashcam buffer captures objective proof only when procedural milestones occur.
                             </p>
                         </div>
-                        <div class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
+                        <div
+                            class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
                             <span class="bg-slate-100 px-2 py-0.5 rounded">Standalone Meta SDK</span>
                             <span class="bg-slate-100 px-2 py-0.5 rounded">100% Offline PGlite</span>
                         </div>
                     </div>
 
                     <!-- Pillar 3: Interconnected Network & Global Record -->
-                    <div class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                                <div
+                                    class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
                                     <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                     </svg>
                                 </div>
                                 <span class="text-xs font-mono font-semibold text-indigo-600 uppercase">Pillar 03</span>
                             </div>
-                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Interconnected Network & Global Record</h3>
+                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Interconnected Network &
+                                Global Record</h3>
                             <p class="text-slate-600 font-sans text-xs leading-relaxed mb-3">
-                                Single source of truth across facilities. Live 2D/3D spatial floorplan, batch genealogy trees linking lots to finished vials, and automated calibration lockouts.
+                                Single source of truth across facilities. Live 2D/3D spatial floorplan, batch genealogy
+                                trees linking lots to finished vials, and automated calibration lockouts.
                             </p>
                         </div>
-                        <div class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
+                        <div
+                            class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
                             <span class="bg-slate-100 px-2 py-0.5 rounded">2D/3D Spatial Map</span>
                             <span class="bg-slate-100 px-2 py-0.5 rounded">Batch Genealogy Tree</span>
                         </div>
                     </div>
 
                     <!-- Pillar 4: Third-Party Integrations -->
-                    <div class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl p-5 lg:p-6 border border-slate-200 hover:border-indigo-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
-                                <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                                <div
+                                    class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
                                     <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                     </svg>
                                 </div>
                                 <span class="text-xs font-mono font-semibold text-indigo-600 uppercase">Pillar 04</span>
                             </div>
-                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Third-Party Integrations</h3>
+                            <h3 class="text-base font-display font-bold text-slate-900 mb-1.5">Third-Party Integrations
+                            </h3>
                             <p class="text-slate-600 font-sans text-xs leading-relaxed mb-3">
-                                Eliminate manual data bridges. Bi-directional sync with existing LIMS, ELN, and ERP platforms automates stock deductions and compiles locked batch PDFs with one click.
+                                Eliminate manual data bridges. Bi-directional sync with existing LIMS, ELN, and ERP
+                                platforms automates stock deductions and compiles locked batch PDFs with one click.
                             </p>
                         </div>
-                        <div class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
+                        <div
+                            class="border-t border-slate-100 pt-2.5 flex flex-wrap gap-2 text-[11px] text-slate-500 font-mono">
                             <span class="bg-slate-100 px-2 py-0.5 rounded">Zero Post-Shift Lag</span>
                             <span class="bg-slate-100 px-2 py-0.5 rounded">Locked PDF Release</span>
                         </div>
@@ -578,54 +849,75 @@
         </section>
 
         <!-- 6. Data-Backed Proof & WorkOS-Style Elevated Story Card -->
-        <section class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100 via-white to-emerald-50/60 overflow-hidden" id="impact">
+        <section
+            class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100 via-white to-emerald-50/60 overflow-hidden"
+            id="impact">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-10">
-                    <h2 class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
                         Proven ROI for Regulated Operations
                     </h2>
                     <p class="text-sm sm:text-base text-slate-600 font-sans mt-2.5 leading-relaxed">
-                        Explore how shifting from passive binders to intelligent personal execution transforms laboratory efficiency and audit readiness.
+                        Explore how shifting from passive binders to intelligent personal execution transforms
+                        laboratory efficiency and audit readiness.
                     </p>
 
                     <!-- Statsig-Style Metric Category Switcher -->
                     <div class="mt-6 flex flex-wrap justify-center gap-2 max-w-3xl mx-auto">
-                        <button class="metric-tab-btn active px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-slate-900 text-white shadow-sm border border-slate-900 cursor-pointer" data-metric="throughput">
+                        <button
+                            class="metric-tab-btn active px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-slate-900 text-white shadow-sm border border-slate-900 cursor-pointer"
+                            data-metric="throughput">
                             Cleanroom Throughput
                         </button>
-                        <button class="metric-tab-btn px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer" data-metric="audit">
+                        <button
+                            class="metric-tab-btn px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer"
+                            data-metric="audit">
                             Audit Defense Speed
                         </button>
-                        <button class="metric-tab-btn px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer" data-metric="batch">
+                        <button
+                            class="metric-tab-btn px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer"
+                            data-metric="batch">
                             Batch Release Cycle
                         </button>
-                        <button class="metric-tab-btn px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer" data-metric="integrity">
+                        <button
+                            class="metric-tab-btn px-3.5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:text-slate-900 border border-slate-200 cursor-pointer"
+                            data-metric="integrity">
                             ALCOA+ Data Integrity
                         </button>
                     </div>
                 </div>
 
                 <!-- Active Metric Showcase Card with Constant Height -->
-                <div id="metric-showcase" class="bg-slate-50 rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm max-w-5xl mx-auto mb-10 transition-all duration-300 min-h-[290px] lg:h-[290px] flex flex-col justify-center">
+                <div id="metric-showcase"
+                    class="bg-slate-50 rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm max-w-5xl mx-auto mb-10 transition-all duration-300 min-h-[290px] lg:h-[290px] flex flex-col justify-center">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center w-full">
                         <div class="lg:col-span-5 flex flex-col justify-between h-full min-h-[210px]">
                             <div>
-                                <div id="metric-badge" class="text-xs font-mono font-semibold text-indigo-600 uppercase tracking-wider">
+                                <div id="metric-badge"
+                                    class="text-xs font-mono font-semibold text-indigo-600 uppercase tracking-wider">
                                     Cleanroom Throughput
                                 </div>
-                                <div id="metric-value" class="text-4xl lg:text-5xl font-display font-extrabold text-slate-900 tracking-tight my-1">
+                                <div id="metric-value"
+                                    class="text-4xl lg:text-5xl font-display font-extrabold text-slate-900 tracking-tight my-1">
                                     +40%
                                 </div>
-                                <h3 id="metric-title" class="text-lg font-display font-bold text-slate-900 min-h-[3.25rem] flex items-center">
+                                <h3 id="metric-title"
+                                    class="text-lg font-display font-bold text-slate-900 min-h-[3.25rem] flex items-center">
                                     Increase in Active Bench Throughput
                                 </h3>
                             </div>
-                            <p id="metric-desc" class="text-slate-600 font-sans leading-relaxed text-xs min-h-[4.25rem] flex items-center">
-                                By eliminating the constant degloving penalty and keyboard transcription inside laminar hoods, operators execute protocols smoothly without stepping away from biosafety cabinets.
+                            <p id="metric-desc"
+                                class="text-slate-600 font-sans leading-relaxed text-xs min-h-[4.25rem] flex items-center">
+                                By eliminating the constant degloving penalty and keyboard transcription inside laminar
+                                hoods, operators execute protocols smoothly without stepping away from biosafety
+                                cabinets.
                             </p>
                         </div>
-                        <div class="lg:col-span-7 bg-white rounded-xl border border-slate-200 font-mono text-xs shadow-sm overflow-hidden divide-y divide-slate-100">
-                            <div class="grid grid-cols-12 gap-2 items-center text-slate-500 bg-slate-50/80 px-4 py-2.5 font-medium border-b border-slate-200">
+                        <div
+                            class="lg:col-span-7 bg-white rounded-xl border border-slate-200 font-mono text-xs shadow-sm overflow-hidden divide-y divide-slate-100">
+                            <div
+                                class="grid grid-cols-12 gap-2 items-center text-slate-500 bg-slate-50/80 px-4 py-2.5 font-medium border-b border-slate-200">
                                 <span class="col-span-5">Operation</span>
                                 <span class="col-span-4">Legacy Paper / Kiosk</span>
                                 <span class="col-span-3 text-right text-indigo-600 font-semibold">LabCoat AR</span>
@@ -633,17 +925,20 @@
                             <div class="grid grid-cols-12 gap-2 items-center px-4 py-2.5">
                                 <span class="col-span-5 text-slate-700">Protocol Data Entry</span>
                                 <span class="col-span-4 text-rose-500">22 min / run (Delayed)</span>
-                                <span class="col-span-3 text-right text-emerald-600 font-semibold">&lt; 1 sec (Heads-Up)</span>
+                                <span class="col-span-3 text-right text-emerald-600 font-semibold">&lt; 1 sec
+                                    (Heads-Up)</span>
                             </div>
                             <div class="grid grid-cols-12 gap-2 items-center px-4 py-2.5">
                                 <span class="col-span-5 text-slate-700">Reagent Lot Verification</span>
                                 <span class="col-span-4 text-rose-500">Manual Lookup &amp; Transcription</span>
-                                <span class="col-span-3 text-right text-emerald-600 font-semibold">Instant CV Scan</span>
+                                <span class="col-span-3 text-right text-emerald-600 font-semibold">Instant CV
+                                    Scan</span>
                             </div>
                             <div class="grid grid-cols-12 gap-2 items-center px-4 py-2.5">
                                 <span class="col-span-5 text-slate-700">Second-Person Verification</span>
                                 <span class="col-span-4 text-rose-500">Physical Supervisor Wait</span>
-                                <span class="col-span-3 text-right text-emerald-600 font-semibold">Dashcam Video Proof</span>
+                                <span class="col-span-3 text-right text-emerald-600 font-semibold">Dashcam Video
+                                    Proof</span>
                             </div>
                         </div>
                     </div>
@@ -653,19 +948,25 @@
                 <div class="mt-14 max-w-4xl mx-auto pt-6">
                     <!-- Centered Testimonial Quote with Locked Constant Height -->
                     <div class="text-center px-4 h-[210px] sm:h-[185px] flex flex-col justify-between">
-                        <blockquote id="quote-text" class="text-xl sm:text-2xl lg:text-[1.35rem] font-sans font-normal text-slate-800 leading-relaxed max-w-3xl mx-auto h-[100px] sm:h-[84px] flex items-center justify-center">
-                            &ldquo;Before LabCoat, our cleanroom operators spent a third of their shifts degloving to type into stationary computers. LabCoat gave our team their hands back, eliminated paper logbooks, and made our batch records 100% audit-proof on day one.&rdquo;
+                        <blockquote id="quote-text"
+                            class="text-xl sm:text-2xl lg:text-[1.35rem] font-sans font-normal text-slate-800 leading-relaxed max-w-3xl mx-auto h-[100px] sm:h-[84px] flex items-center justify-center">
+                            &ldquo;Before LabCoat, our cleanroom operators spent a third of their shifts degloving to
+                            type into stationary computers. LabCoat gave our team their hands back, eliminated paper
+                            logbooks, and made our batch records 100% audit-proof on day one.&rdquo;
                         </blockquote>
 
                         <div>
                             <!-- Author Attribution -->
                             <div class="text-sm font-sans text-slate-600 h-6 flex items-center justify-center">
-                                <span id="quote-author" class="font-semibold text-slate-900">Dr. Marcus Vance</span>, <span id="quote-role" class="ml-1 text-slate-600">VP of Quality Assurance &amp; Manufacturing, Resilience Bio</span>
+                                <span id="quote-author" class="font-semibold text-slate-900">Dr. Marcus Vance</span>,
+                                <span id="quote-role" class="ml-1 text-slate-600">VP of Quality Assurance &amp;
+                                    Manufacturing, Resilience Bio</span>
                             </div>
 
                             <!-- Read Story Link -->
                             <div class="mt-2.5">
-                                <a href="#contact" class="text-xs font-semibold text-indigo-600 hover:text-indigo-700 inline-flex items-center gap-1 group">
+                                <a href="#contact"
+                                    class="text-xs font-semibold text-indigo-600 hover:text-indigo-700 inline-flex items-center gap-1 group">
                                     <span>Read the story</span>
                                     <span class="group-hover:translate-x-0.5 transition-transform">&rsaquo;</span>
                                 </a>
@@ -677,45 +978,63 @@
                     <div class="mt-12 border-t border-slate-200">
                         <div class="grid grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto -mt-[1px]">
                             <!-- Logo 1: Resilience -->
-                            <button class="segment-btn active border-t-2 border-indigo-600 opacity-100 text-slate-900 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer" data-segment="cdmo">
-                                <div class="flex items-center gap-2 font-display font-bold tracking-wider text-xs sm:text-sm">
-                                    <svg class="w-4 h-4 text-indigo-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            <button
+                                class="segment-btn active border-t-2 border-indigo-600 opacity-100 text-slate-900 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer"
+                                data-segment="cdmo">
+                                <div
+                                    class="flex items-center gap-2 font-display font-bold tracking-wider text-xs sm:text-sm">
+                                    <svg class="w-4 h-4 text-indigo-600 shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                     </svg>
                                     <span>RESILIENCE</span>
                                 </div>
                             </button>
 
                             <!-- Logo 2: Genentech -->
-                            <button class="segment-btn border-t-2 border-transparent opacity-40 hover:opacity-80 text-slate-500 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer" data-segment="biopharma">
-                                <div class="flex items-center gap-1.5 font-display font-semibold text-xs sm:text-sm tracking-tight">
-                                    <svg class="w-4 h-4 text-slate-700 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                        <circle cx="6" cy="6" r="3"/>
-                                        <circle cx="18" cy="18" r="3"/>
-                                        <path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>
+                            <button
+                                class="segment-btn border-t-2 border-transparent opacity-40 hover:opacity-80 text-slate-500 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer"
+                                data-segment="biopharma">
+                                <div
+                                    class="flex items-center gap-1.5 font-display font-semibold text-xs sm:text-sm tracking-tight">
+                                    <svg class="w-4 h-4 text-slate-700 shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.2">
+                                        <circle cx="6" cy="6" r="3" />
+                                        <circle cx="18" cy="18" r="3" />
+                                        <path d="M8.5 8.5l7 7M15.5 8.5l-7 7" />
                                     </svg>
                                     <span>Genentech</span>
                                 </div>
                             </button>
 
                             <!-- Logo 3: ElevateBio -->
-                            <button class="segment-btn border-t-2 border-transparent opacity-40 hover:opacity-80 text-slate-500 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer" data-segment="cellgene">
-                                <div class="flex items-center gap-1.5 font-display font-bold text-xs sm:text-sm tracking-tight">
-                                    <svg class="w-4 h-4 text-slate-700 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2zm0 3.2L6 8.5v6.9l6 3.4 6-3.4V8.5L12 5.2z"/>
+                            <button
+                                class="segment-btn border-t-2 border-transparent opacity-40 hover:opacity-80 text-slate-500 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer"
+                                data-segment="cellgene">
+                                <div
+                                    class="flex items-center gap-1.5 font-display font-bold text-xs sm:text-sm tracking-tight">
+                                    <svg class="w-4 h-4 text-slate-700 shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path
+                                            d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2zm0 3.2L6 8.5v6.9l6 3.4 6-3.4V8.5L12 5.2z" />
                                     </svg>
                                     <span>Elevate<span class="font-normal text-slate-400">Bio</span></span>
                                 </div>
                             </button>
 
                             <!-- Logo 4: Quest Diagnostics -->
-                            <button class="segment-btn border-t-2 border-transparent opacity-40 hover:opacity-80 text-slate-500 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer" data-segment="diagnostics">
-                                <div class="flex items-center gap-1.5 font-display font-bold text-xs sm:text-sm tracking-tight">
-                                    <svg class="w-4 h-4 text-slate-700 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                        <circle cx="12" cy="12" r="8"/>
-                                        <path d="M12 8v8M8 12h8"/>
+                            <button
+                                class="segment-btn border-t-2 border-transparent opacity-40 hover:opacity-80 text-slate-500 h-16 px-4 flex items-center justify-center transition-all duration-200 cursor-pointer"
+                                data-segment="diagnostics">
+                                <div
+                                    class="flex items-center gap-1.5 font-display font-bold text-xs sm:text-sm tracking-tight">
+                                    <svg class="w-4 h-4 text-slate-700 shrink-0" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.2">
+                                        <circle cx="12" cy="12" r="8" />
+                                        <path d="M12 8v8M8 12h8" />
                                     </svg>
-                                    <span>Quest<span class="font-normal text-slate-400 hidden sm:inline ml-0.5">Diag.</span></span>
+                                    <span>Quest<span
+                                            class="font-normal text-slate-400 hidden sm:inline ml-0.5">Diag.</span></span>
                                 </div>
                             </button>
                         </div>
@@ -726,128 +1045,169 @@
         </section>
 
         <!-- 7. US Regulatory Rigor (FDA 21 CFR Part 11 & ALCOA+) -->
-        <section class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-emerald-50/70 via-emerald-100/40 to-slate-100 overflow-hidden" id="compliance">
+        <section
+            class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-emerald-50/70 via-emerald-100/40 to-slate-100 overflow-hidden"
+            id="compliance">
             <!-- Noticeable trust aura symbolizing ALCOA+ data integrity -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-emerald-500/15 blur-3xl rounded-full pointer-events-none -z-10"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-emerald-500/15 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
             <div class="max-w-7xl mx-auto">
                 <div class="max-w-3xl mx-auto text-center mb-10">
-                    <h2 class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-[1.85rem] font-display font-bold text-slate-900 tracking-tight">
                         Engineered for FDA 21 CFR Part 11 &amp; ALCOA+
                     </h2>
                     <p class="text-sm sm:text-base text-slate-600 font-sans mt-2.5 leading-relaxed">
-                        LabCoat guarantees compliance by design. We turn data integrity from an administrative vulnerability into mathematical certainty.
+                        LabCoat guarantees compliance by design. We turn data integrity from an administrative
+                        vulnerability into mathematical certainty.
                     </p>
                 </div>
 
                 <!-- ALCOA+ Continual Looping Carousel (Pauses on Hover) -->
                 <div class="relative w-full overflow-hidden py-2">
                     <!-- Gradient edge fades -->
-                    <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-emerald-50 to-transparent z-10"></div>
-                    <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-emerald-50 to-transparent z-10"></div>
+                    <div
+                        class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-emerald-50 to-transparent z-10">
+                    </div>
+                    <div
+                        class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-emerald-50 to-transparent z-10">
+                    </div>
 
                     <!-- Marquee Track (Seamless Continuous Loop) -->
                     <div class="animate-marquee flex gap-4">
                         <!-- Set 1 -->
                         <!-- Card 1: Attributable -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">A • Attributable</div>
                                 <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Operator Binding</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every action uniquely tied to verified operator badge and device serial number.</p>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every action uniquely
+                                    tied to verified operator badge and device serial number.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Audit Trail</span>
                                 <span class="text-emerald-600 font-semibold">100% Bound</span>
                             </div>
                         </div>
 
                         <!-- Card 2: Legible -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">L • Legible</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Standardized Digital</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Eliminates illegible handwriting, crossed-out notes, and ambiguous binder entries.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Standardized Digital
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Eliminates illegible
+                                    handwriting, crossed-out notes, and ambiguous binder entries.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Record Integrity</span>
                                 <span class="text-indigo-600 font-semibold">Optical Verified</span>
                             </div>
                         </div>
 
                         <!-- Card 3: Contemporaneous -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">C • Contemporaneous</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Sub-Millisecond Edge</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Logged at the exact millisecond of physical action via embedded PGlite WASM storage.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Sub-Millisecond Edge
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Logged at the exact
+                                    millisecond of physical action via embedded PGlite WASM storage.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Latency</span>
                                 <span class="text-emerald-600 font-semibold">&lt; 1ms Write</span>
                             </div>
                         </div>
 
                         <!-- Card 4: Original -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">O • Original</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Point-of-Origin Capture</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Primary record captured directly at the biosafety hood without secondary transcription.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Point-of-Origin
+                                    Capture</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Primary record captured
+                                    directly at the biosafety hood without secondary transcription.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Transcription Error</span>
                                 <span class="text-emerald-600 font-semibold">0.0%</span>
                             </div>
                         </div>
 
                         <!-- Card 5: Accurate -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">A • Accurate</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Cryptographic Proof</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every payload hashed with SHA-256 to prove zero offline client-side tampering.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Cryptographic Proof
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every payload hashed
+                                    with SHA-256 to prove zero offline client-side tampering.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Hash Standard</span>
                                 <span class="text-indigo-600 font-semibold">SHA-256 Validated</span>
                             </div>
                         </div>
 
                         <!-- Card 6: Complete (+) -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">+ • Complete</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Full Audit Footprint</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Includes operator telemetry, IMU head orientation, and 5s video verification buffers.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Full Audit Footprint
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Includes operator
+                                    telemetry, IMU head orientation, and 5s video verification buffers.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Context Scope</span>
                                 <span class="text-emerald-600 font-semibold">Full Surround</span>
                             </div>
                         </div>
 
                         <!-- Card 7: Consistent (+) -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">+ • Consistent</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">NTP Epoch Time-Lock</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Unified chronological sequencing across edge wearables and enterprise LIMS instances.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">NTP Epoch Time-Lock
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Unified chronological
+                                    sequencing across edge wearables and enterprise LIMS instances.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Clock Drift</span>
                                 <span class="text-emerald-600 font-semibold">&lt; 0.05ms NTP</span>
                             </div>
                         </div>
 
                         <!-- Card 8: Enduring (+) -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">+ • Enduring</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Offline-First Durability</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Zero data loss during network blackouts; commits to local flash and syncs when online.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Offline-First
+                                    Durability</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Zero data loss during
+                                    network blackouts; commits to local flash and syncs when online.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Persistence</span>
                                 <span class="text-emerald-600 font-semibold">100% Guaranteed</span>
                             </div>
@@ -855,104 +1215,135 @@
 
                         <!-- Set 2 (Exact duplicate for seamless infinite loop) -->
                         <!-- Card 1: Attributable -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">A • Attributable</div>
                                 <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Operator Binding</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every action uniquely tied to verified operator badge and device serial number.</p>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every action uniquely
+                                    tied to verified operator badge and device serial number.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Audit Trail</span>
                                 <span class="text-emerald-600 font-semibold">100% Bound</span>
                             </div>
                         </div>
 
                         <!-- Card 2: Legible -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">L • Legible</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Standardized Digital</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Eliminates illegible handwriting, crossed-out notes, and ambiguous binder entries.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Standardized Digital
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Eliminates illegible
+                                    handwriting, crossed-out notes, and ambiguous binder entries.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Record Integrity</span>
                                 <span class="text-indigo-600 font-semibold">Optical Verified</span>
                             </div>
                         </div>
 
                         <!-- Card 3: Contemporaneous -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">C • Contemporaneous</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Sub-Millisecond Edge</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Logged at the exact millisecond of physical action via embedded PGlite WASM storage.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Sub-Millisecond Edge
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Logged at the exact
+                                    millisecond of physical action via embedded PGlite WASM storage.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Latency</span>
                                 <span class="text-emerald-600 font-semibold">&lt; 1ms Write</span>
                             </div>
                         </div>
 
                         <!-- Card 4: Original -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">O • Original</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Point-of-Origin Capture</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Primary record captured directly at the biosafety hood without secondary transcription.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Point-of-Origin
+                                    Capture</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Primary record captured
+                                    directly at the biosafety hood without secondary transcription.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Transcription Error</span>
                                 <span class="text-emerald-600 font-semibold">0.0%</span>
                             </div>
                         </div>
 
                         <!-- Card 5: Accurate -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">A • Accurate</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Cryptographic Proof</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every payload hashed with SHA-256 to prove zero offline client-side tampering.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Cryptographic Proof
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Every payload hashed
+                                    with SHA-256 to prove zero offline client-side tampering.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Hash Standard</span>
                                 <span class="text-indigo-600 font-semibold">SHA-256 Validated</span>
                             </div>
                         </div>
 
                         <!-- Card 6: Complete (+) -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">+ • Complete</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Full Audit Footprint</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Includes operator telemetry, IMU head orientation, and 5s video verification buffers.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Full Audit Footprint
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Includes operator
+                                    telemetry, IMU head orientation, and 5s video verification buffers.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Context Scope</span>
                                 <span class="text-emerald-600 font-semibold">Full Surround</span>
                             </div>
                         </div>
 
                         <!-- Card 7: Consistent (+) -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">+ • Consistent</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">NTP Epoch Time-Lock</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Unified chronological sequencing across edge wearables and enterprise LIMS instances.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">NTP Epoch Time-Lock
+                                </h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Unified chronological
+                                    sequencing across edge wearables and enterprise LIMS instances.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Clock Drift</span>
                                 <span class="text-emerald-600 font-semibold">&lt; 0.05ms NTP</span>
                             </div>
                         </div>
 
                         <!-- Card 8: Enduring (+) -->
-                        <div class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
+                        <div
+                            class="alcoa-card w-[280px] sm:w-[310px] h-[195px] flex-shrink-0 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-md transition-all">
                             <div>
                                 <div class="font-mono text-xs font-bold text-indigo-600">+ • Enduring</div>
-                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Offline-First Durability</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Zero data loss during network blackouts; commits to local flash and syncs when online.</p>
+                                <h4 class="font-display font-bold text-slate-900 text-base mt-1.5">Offline-First
+                                    Durability</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-sans mt-2">Zero data loss during
+                                    network blackouts; commits to local flash and syncs when online.</p>
                             </div>
-                            <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                            <div
+                                class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400">
                                 <span>Persistence</span>
                                 <span class="text-emerald-600 font-semibold">100% Guaranteed</span>
                             </div>
@@ -961,41 +1352,223 @@
                 </div>
 
                 <!-- Clean 21 CFR § 11.10(e) Compliance Verified Tab -->
-                <div class="mt-10 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-5 max-w-4xl mx-auto">
+                <div
+                    class="mt-10 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-5 max-w-4xl mx-auto">
                     <div class="flex items-center gap-3.5">
-                        <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0 border border-indigo-100">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0 border border-indigo-100">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                             </svg>
                         </div>
                         <div>
                             <div class="flex items-center gap-2">
-                                <span class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider">21 CFR § 11.10(e) Compliance Verified</span>
-                                <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Audit-Proof</span>
+                                <span class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider">21 CFR
+                                    § 11.10(e) Compliance Verified</span>
+                                <span
+                                    class="px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Audit-Proof</span>
                             </div>
-                            <p class="text-xs text-slate-500 font-sans mt-0.5 leading-relaxed">Full support for computer-generated audit trails, dual-signoff revision requests, and locked PDF batch releases.</p>
+                            <p class="text-xs text-slate-500 font-sans mt-0.5 leading-relaxed">Full support for
+                                computer-generated audit trails, dual-signoff revision requests, and locked PDF batch
+                                releases.</p>
                         </div>
                     </div>
-                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-slate-900 text-white font-medium text-xs hover:bg-indigo-600 transition-all shadow-sm hover:shadow-indigo-500/20 whitespace-nowrap shrink-0">
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-slate-900 text-white font-medium text-xs hover:bg-indigo-600 transition-all shadow-sm hover:shadow-indigo-500/20 whitespace-nowrap shrink-0">
                         Request Compliance Whitepaper
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 8. Conversion Card & Contact Section -->
-        <section class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100 via-slate-200/60 to-slate-200/90 overflow-hidden" id="contact">
+        <!-- 8. Offerings & Deployment Tiers Section -->
+        <section
+            class="relative z-10 py-20 lg:py-28 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-white to-slate-100/90 border-t border-slate-200/80 overflow-hidden"
+            id="offerings">
+            <!-- Ambient depth aura -->
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[550px] bg-indigo-500/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-[2.65rem] font-display font-bold text-slate-900 tracking-tight leading-tight">
+                        Tailored for Every Stage of Regulated Science
+                    </h2>
+                    <p class="text-sm sm:text-base text-slate-600 font-sans mt-3.5 leading-relaxed">
+                        Scale seamlessly from single-hood containment pilots to multi-facility global biomanufacturing networks. Every tier includes edge execution and guaranteed 21 CFR Part 11 integrity.
+                    </p>
+                </div>
+
+                <!-- 3 Deployment Tier Cards (Overview without pricing figures) -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-12">
+
+                    <!-- Tier 1: Lab Starter -->
+                    <div
+                        class="bg-white rounded-3xl p-7 lg:p-8 border border-slate-200 shadow-sm flex flex-col hover:shadow-md transition-shadow">
+                        <div>
+                            <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Lab Starter</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed min-h-[38px]">
+                                Designed for pilot feasibility validation, exploratory R&amp;D hoods, and single containment suites.
+                            </p>
+
+                            <!-- Highlights -->
+                            <div class="mt-6 pt-6 border-t border-slate-100 space-y-3 text-xs text-slate-700">
+                                <div class="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                                    Key Capabilities
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Up to 5</strong> smart glasses devices</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>1 cleanroom suite</strong> or pilot hood</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Offline PGlite local ledger sync</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>21 CFR Part 11 compliant audit logs</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Immutable PDF batch certificate release</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2: Cleanroom Professional (Highlighted / Recommended) -->
+                    <div
+                        class="bg-white rounded-3xl p-7 lg:p-8 border-2 border-indigo-600 shadow-xl shadow-indigo-500/10 flex flex-col relative ring-1 ring-indigo-600/20">
+                        <!-- Recommended Badge -->
+                        <div
+                            class="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30">
+                            <svg class="w-3.5 h-3.5 text-indigo-200" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
+                            Recommended
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Cleanroom Pro</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed min-h-[38px]">
+                                Full-featured operational compliance backbone for multi-line clinical manufacturing and commercial cleanrooms.
+                            </p>
+
+                            <!-- Highlights -->
+                            <div class="mt-6 pt-6 border-t border-slate-100 space-y-3 text-xs text-slate-700">
+                                <div class="font-mono text-[11px] font-semibold uppercase tracking-wider text-indigo-700 mb-2">
+                                    Everything in Starter, plus:
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Up to 20</strong> smart glasses devices</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Up to 5 cleanroom suites</strong> / active lines</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>5-second circular video buffer</strong> forensic retention</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Dual e-signatures</strong> &amp; witness signoff workflows</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Bidirectional LIMS / ELN REST &amp; Webhooks sync</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3: Global Enterprise -->
+                    <div
+                        class="bg-white rounded-3xl p-7 lg:p-8 border border-slate-200 shadow-sm flex flex-col hover:shadow-md transition-shadow">
+                        <div>
+                            <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Global Enterprise</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed min-h-[38px]">
+                                Custom enterprise deployment for multi-site biopharma conglomerates requiring MES/ERP integration and air-gapped hosting.
+                            </p>
+
+                            <!-- Highlights -->
+                            <div class="mt-6 pt-6 border-t border-slate-100 space-y-3 text-xs text-slate-700">
+                                <div class="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                                    Everything in Pro, plus:
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>Unlimited</strong> devices &amp; global cleanroom suites</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span><strong>2D &amp; 3D spatial cleanroom digital twins</strong></span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Custom SAP, Veeva &amp; Siemens MES connectors</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>Dedicated GAMP 5 CSV validation engineer</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <span>24/7/365 dedicated engineer &amp; 99.99% SLA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sleek Callout Banner linking to Dedicated Pricing & Feature Matrix Page -->
+                <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-1.5 text-center md:text-left">
+                        <h3 class="text-lg sm:text-xl font-display font-bold text-slate-900">
+                            Looking for detailed pricing estimates and feature comparisons?
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-500 font-sans max-w-xl">
+                            Explore our comprehensive comparison table covering edge video retention, 21 CFR Part 11 ledger specifications, LIMS integrations, and SLA guarantees.
+                        </p>
+                    </div>
+                    <a href="pricing.html"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-black text-white text-xs font-semibold transition-all shadow-sm hover:shadow-md whitespace-nowrap shrink-0 group">
+                        <span>Learn more</span>
+                        <svg class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 9. Conversion Card & Contact Section -->
+        <section
+            class="relative z-10 py-16 lg:py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100 via-slate-200/60 to-slate-200/90 overflow-hidden"
+            id="contact">
             <!-- Ambient depth aura behind conversion card -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-indigo-600/10 blur-3xl rounded-full pointer-events-none -z-10"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-indigo-600/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
             <div class="max-w-5xl mx-auto">
-                <div class="bg-slate-900 text-white rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10">
+                <div
+                    class="bg-slate-900 text-white rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-10">
                     <div class="space-y-4 max-w-lg">
-                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-display font-bold tracking-tight text-white leading-snug">
+                        <h2
+                            class="text-xl sm:text-2xl lg:text-3xl font-display font-bold tracking-tight text-white leading-snug">
                             Eliminate Paper Binders and Empower Your Scientists.
                         </h2>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Schedule a 20-minute tailored demonstration with our laboratory execution engineers to see the live AR simulator and enterprise dashboard.
+                            Schedule a 20-minute tailored demonstration with our laboratory execution engineers to see
+                            the live AR simulator and enterprise dashboard.
                         </p>
                         <div class="flex items-center gap-6 text-xs text-slate-400 font-mono pt-1">
                             <span>✓ 100% US FDA 21 CFR Part 11 Compliant</span>
@@ -1005,25 +1578,33 @@
 
                     <!-- Contact Form -->
                     <div class="w-full lg:max-w-md bg-white text-slate-900 rounded-2xl p-6 lg:p-8 shadow-xl">
-                        <h3 class="text-lg sm:text-xl font-display font-bold text-slate-900 mb-1">Schedule an Audit Demo</h3>
-                        <p class="text-xs text-slate-500 mb-5 font-sans">We'll prepare an interactive run tailored to your facility type.</p>
-                        
+                        <h3 class="text-lg sm:text-xl font-display font-bold text-slate-900 mb-1">Schedule an Audit Demo
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-5 font-sans">We'll prepare an interactive run tailored to
+                            your facility type.</p>
+
                         <form action="https://formspree.io/f/mvzaaqbp" method="POST" class="space-y-3.5">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
-                                <input type="text" name="name" placeholder="Dr. Jane Doe" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <input type="text" name="name" placeholder="Dr. Jane Doe" required
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1">Work Email</label>
-                                <input type="email" name="email" placeholder="jane.doe@biopharma.com" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <input type="email" name="email" placeholder="jane.doe@biopharma.com" required
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-slate-700 mb-1">Organization / Facility</label>
-                                <input type="text" name="organization" placeholder="e.g. Lonza / Thermo Fisher / BioNTech" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Organization /
+                                    Facility</label>
+                                <input type="text" name="organization"
+                                    placeholder="e.g. Lonza / Thermo Fisher / BioNTech" required
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1">Facility Segment</label>
-                                <select name="interest" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <select name="interest" required
+                                    class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                     <option value="CDMO">CDMO / CMO Cleanroom</option>
                                     <option value="Biopharma">Biopharmaceuticals & Therapeutics</option>
                                     <option value="CellGene">Cell & Gene Therapy</option>
@@ -1031,7 +1612,8 @@
                                     <option value="Other">Other Regulated Laboratory</option>
                                 </select>
                             </div>
-                            <button type="submit" class="w-full mt-2 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <button type="submit"
+                                class="w-full mt-2 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
                                 Confirm Demo Request
                             </button>
                         </form>
@@ -1043,14 +1625,17 @@
     </main>
 
     <!-- 9. Minimalist Streamlined Footer -->
-    <footer class="relative z-10 bg-slate-200/90 border-t border-slate-300/80 py-12 px-10 sm:px-16 lg:px-24 xl:px-32 font-sans">
+    <footer
+        class="relative z-10 bg-slate-200/90 border-t border-slate-300/80 py-12 px-10 sm:px-16 lg:px-24 xl:px-32 font-sans">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <!-- Left: Single-phrase summary -->
             <div class="space-y-2 md:col-span-1">
                 <div class="flex items-center gap-2 text-slate-900 font-display font-bold text-lg">
                     <div class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                            <path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <path
+                                d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
                         </svg>
                     </div>
                     <span>LabCoat</span>
@@ -1060,19 +1645,22 @@
                 </p>
             </div>
 
-            <!-- Platform (Generic, 3 links) -->
+            <!-- Platform -->
             <div>
                 <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Platform</h4>
                 <ul class="space-y-1.5 text-xs text-slate-500">
                     <li><a href="#hero" class="hover:text-indigo-600 transition-colors">Overview</a></li>
-                    <li><a href="#time-events" class="hover:text-indigo-600 transition-colors">Time-Events</a></li>
-                    <li><a href="#platform" class="hover:text-indigo-600 transition-colors">Architecture</a></li>
+                    <li><a href="#problem" class="hover:text-indigo-600 transition-colors">How It Works</a></li>
+                    <li><a href="#platform" class="hover:text-indigo-600 transition-colors">Platform</a></li>
+                    <li><a href="#offerings" class="hover:text-indigo-600 transition-colors">Offerings</a></li>
+                    <li><a href="pricing.html" class="hover:text-indigo-600 transition-colors">Pricing &amp; Matrix</a></li>
                 </ul>
             </div>
 
             <!-- Compliance (Generic, 3 links) -->
             <div>
-                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Compliance</h4>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Compliance
+                </h4>
                 <ul class="space-y-1.5 text-xs text-slate-500">
                     <li><a href="#compliance" class="hover:text-indigo-600 transition-colors">21 CFR Part 11</a></li>
                     <li><a href="#compliance" class="hover:text-indigo-600 transition-colors">Data Integrity</a></li>
@@ -1082,9 +1670,11 @@
 
             <!-- Legal & Inquiries (Generic, 3 links) -->
             <div>
-                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Legal & Inquiries</h4>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Legal &
+                    Inquiries</h4>
                 <ul class="space-y-1.5 text-xs text-slate-500">
-                    <li><a href="privacy_policy.html" class="hover:text-indigo-600 transition-colors">Privacy Policy</a></li>
+                    <li><a href="privacy_policy.html" class="hover:text-indigo-600 transition-colors">Privacy Policy</a>
+                    </li>
                     <li><a href="terms.html" class="hover:text-indigo-600 transition-colors">Terms of Service</a></li>
                     <li><a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
                 </ul>
@@ -1092,7 +1682,8 @@
         </div>
 
         <!-- Clean Bottom Bar with copyright on the right -->
-        <div class="max-w-7xl mx-auto pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div
+            class="max-w-7xl mx-auto pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
             <div>
                 <span>Audit-Proof Science Personally Integrated</span>
             </div>
@@ -1102,17 +1693,21 @@
         </div>
     </footer>
 
+
     <!-- Cookie Consent Banner -->
-    <div id="cookie-consent-banner" class="fixed bottom-6 right-6 max-w-sm bg-white p-5 rounded-2xl border border-slate-200 shadow-2xl z-50 transition-all duration-300 transform translate-y-32 opacity-0 [&.show]:translate-y-0 [&.show]:opacity-100">
+    <div id="cookie-consent-banner"
+        class="fixed bottom-6 right-6 max-w-sm bg-white p-5 rounded-2xl border border-slate-200 shadow-2xl z-50 transition-all duration-300 transform translate-y-32 opacity-0 [&.show]:translate-y-0 [&.show]:opacity-100">
         <div class="text-sm font-display font-semibold text-slate-900 mb-1">Cookie Preferences</div>
         <p class="text-xs text-slate-500 mb-4 font-sans leading-relaxed">
             We use essential cookies to maintain system integrity and analyze enterprise traffic.
         </p>
         <div class="flex items-center gap-2">
-            <button id="accept-cookies" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors cursor-pointer">
+            <button id="accept-cookies"
+                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors cursor-pointer">
                 Accept
             </button>
-            <button id="decline-cookies" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-medium transition-colors cursor-pointer">
+            <button id="decline-cookies"
+                class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-medium transition-colors cursor-pointer">
                 Decline
             </button>
         </div>
@@ -1121,4 +1716,5 @@
     <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
