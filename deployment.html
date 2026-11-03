@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LabCoat Onboarding & Deployment Process: Phased 4-week rollout, cleanroom-grade hardware sanitization protocols, GAMP 5 IQ/OQ execution, and zero-downtime operator training.">
+    <title>Deployment &amp; Onboarding — LabCoat</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-500 selection:text-white">
+
+    <!-- Glassmorphic Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-10 sm:px-16 lg:px-24 xl:px-32 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="flex items-center gap-2.5 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg py-1 px-1.5">
+                <div
+                    class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-600/20">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+                    </svg>
+                </div>
+                <span class="tracking-tight">LabCoat</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="platform.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Platform</a>
+                <a href="compliance.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Compliance</a>
+                <a href="deployment.html"
+                    class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors">Deployment</a>
+                <a href="pricing.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
+            </nav>
+
+            <!-- Action Pill -->
+            <div class="flex items-center">
+                <a href="/demo/"
+                    class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm border border-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">
+                    Interactive Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- Hero Section -->
+        <section
+            class="relative z-10 pt-20 pb-16 lg:pt-24 lg:pb-24 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-white to-slate-100/90 overflow-hidden">
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[550px] bg-indigo-500/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Breadcrumbs -->
+                <div class="mb-8 flex items-center justify-between">
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-white hover:bg-slate-50 border border-slate-200 px-4 py-2 rounded-full transition-all shadow-xs group">
+                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                        <span>Back to Overview</span>
+                    </a>
+                    <div class="hidden sm:flex items-center gap-1.5 text-xs text-slate-400 font-mono">
+                        <a href="index.html" class="hover:text-slate-700 transition-colors">Home</a>
+                        <span>/</span>
+                        <span class="text-slate-900 font-medium">Deployment</span>
+                    </div>
+                </div>
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200/60 text-indigo-700 text-xs font-mono font-medium mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></span>
+                        TIME TO VALUE
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 tracking-tight leading-tight">
+                        From SOP Ingestion to Production Go-Live in 4 Weeks
+                    </h1>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
+                        Cleanroom operations cannot afford multi-month deployment freezes. LabCoat’s turn-key rollout framework delivers rapid onboarding, automated validation, and zero production downtime.
+                    </p>
+                </div>
+
+                <!-- Core Pillars Preview -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-1">ZERO DOWNTIME</div>
+                        <h3 class="text-base font-display font-bold text-slate-900 mb-2">Parallel Shadow Run</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Operators test LabCoat alongside existing paper records during non-critical runs, eliminating cutover risk before full sign-off.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-1">CLEANROOM SANITIZATION</div>
+                        <h3 class="text-base font-display font-bold text-slate-900 mb-2">ISO 5 / Grade A Grade</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Hardware conforms to rigorous 70% IPA chemical wipe-down and UV-C sterilization routines without fogging or lens degradation.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-1">OPERATOR ADOPTION</div>
+                        <h3 class="text-base font-display font-bold text-slate-900 mb-2">1-Shift Training Curve</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Because LabCoat projects contextual guidance directly into the sightline, technicians master the system in under 4 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4-Week Phased Timeline -->
+        <section class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-white border-y border-slate-200/80">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider">Phased Implementation</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight mt-1 mb-3">
+                        The 4-Week Rollout Blueprint
+                    </h2>
+                    <p class="text-sm text-slate-600">
+                        A structured, low-risk roadmap managed collaboratively between your QA/Operations teams and LabCoat Solutions Engineers.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Week 1 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                        <div class="md:w-48 shrink-0">
+                            <span class="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-mono font-bold mb-1">WEEK 01</span>
+                            <div class="text-sm font-display font-bold text-slate-900">Facility &amp; SOP Ingestion</div>
+                            <div class="text-xs text-slate-500 font-mono mt-0.5">Scoping &amp; Mapping</div>
+                        </div>
+                        <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+                            <p class="font-medium text-slate-900">Digital twin mapping and Master Batch Record (MBR) digitization.</p>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Spatial scan of biosafety cabinets, incubators, cold storage, and gowning airlocks.</li>
+                                <li>Ingestion of core Standard Operating Procedures into structured, step-by-step guidance models.</li>
+                                <li>Asset tag generation and QR pairing for all target instruments and reagent shelving.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Week 2 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                        <div class="md:w-48 shrink-0">
+                            <span class="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-mono font-bold mb-1">WEEK 02</span>
+                            <div class="text-sm font-display font-bold text-slate-900">Hardware &amp; Edge Gateway</div>
+                            <div class="text-xs text-slate-500 font-mono mt-0.5">Infrastructure Setup</div>
+                        </div>
+                        <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+                            <p class="font-medium text-slate-900">Fleet staging, local edge hub installation, and LIMS connector configuration.</p>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Provisioning of wearable AR smart glasses with custom prescription lens inserts as needed.</li>
+                                <li>Deployment of the on-premises or private VPC Edge Gateway and offline PGlite synchronization nodes.</li>
+                                <li>Configuration of SSO / SAML 2.0 and bidirectional API webhooks with your LIMS/ELN instance.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Week 3 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                        <div class="md:w-48 shrink-0">
+                            <span class="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-mono font-bold mb-1">WEEK 03</span>
+                            <div class="text-sm font-display font-bold text-slate-900">GAMP 5 IQ/OQ Execution</div>
+                            <div class="text-xs text-slate-500 font-mono mt-0.5">QA Qualification</div>
+                        </div>
+                        <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+                            <p class="font-medium text-slate-900">Formal validation package execution alongside your Quality Assurance department.</p>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Installation Qualification (IQ) scripts executed to verify hardware, encryption, and system boundaries.</li>
+                                <li>Operational Qualification (OQ) tests executed for 21 CFR Part 11 e-signatures and tamper-evident audit trails.</li>
+                                <li>QA sign-off on the Requirements Traceability Matrix (RTM) and system risk assessments.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Week 4 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition-all">
+                        <div class="md:w-48 shrink-0">
+                            <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-bold mb-1">WEEK 04</span>
+                            <div class="text-sm font-display font-bold text-slate-900">Operator Training &amp; Go-Live</div>
+                            <div class="text-xs text-slate-500 font-mono mt-0.5">Production Cutover</div>
+                        </div>
+                        <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+                            <p class="font-medium text-slate-900">Technician certification, parallel shadow runs, and official commercial batch cutover.</p>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Hands-on training session (under 4 hours per technician shift) covering voice and wristband controls.</li>
+                                <li>First live batch execution under LabCoat guidance with dedicated on-site support engineers.</li>
+                                <li>Official transition to 100% paperless, contemporaneous batch records.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hardware & Cleanroom Protocols -->
+        <section class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider">Sterility Assurance</span>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight mt-1 mb-4">
+                            Engineered for ISO Cleanroom Sanitization
+                        </h2>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            Life sciences cleanrooms require non-negotiable sterilization protocols. LabCoat hardware and docking bays are purpose-built to survive sterile wipe-downs and gowning routines.
+                        </p>
+                        <ul class="space-y-3 text-xs text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">70% IPA &amp; Sporicidal Wipe Resistance:</strong> Smooth, non-porous frame coatings tested against sterile isopropyl alcohol and hydrogen peroxide wipes.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Anti-Fog Optical Coating:</strong> Specialty hydrophobic coatings prevent condensation during breathing mask exhaust in biosafety containment hoods.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Hot-Swappable Charging Docks:</strong> Magnetic UV-C sanitizing docking stations ensure that devices recharge and sterilize between technician shifts.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400">CLEANROOM COMPLIANCE CERTIFICATIONS</div>
+                        <div class="grid grid-cols-2 gap-4 text-xs">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                                <div class="font-display font-bold text-slate-900 text-sm">ISO 14644-1</div>
+                                <div class="text-slate-500 text-[11px] mt-1">Class 5 through Class 8 airborne particulate rating</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                                <div class="font-display font-bold text-slate-900 text-sm">EU GMP Annex 1</div>
+                                <div class="text-slate-500 text-[11px] mt-1">Grade A/B laminar flow and Grade C/D background suites</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                                <div class="font-display font-bold text-slate-900 text-sm">IP65 Rating</div>
+                                <div class="text-slate-500 text-[11px] mt-1">Hermetically sealed against cleanroom sanitizing aerosols</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                                <div class="font-display font-bold text-slate-900 text-sm">Battery Autonomy</div>
+                                <div class="text-slate-500 text-[11px] mt-1">8-hour shift capacity with rapid 30-min magnetic recharge</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-4">
+                    Ready to Plan Your Cleanroom Pilot?
+                </h2>
+                <p class="text-base text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                    Schedule an exploratory scoping session with our Solutions Engineering team. We will review your SOPs, facility layout, and draft a tailored 4-week rollout timeline.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="index.html#contact"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm font-semibold bg-white text-slate-900 hover:bg-slate-100 px-7 py-3.5 rounded-full transition-all shadow-md">
+                        Schedule Scoping Session
+                    </a>
+                    <a href="pricing.html"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-3.5 rounded-full transition-all shadow-md">
+                        View Deployment Tiers
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-10 sm:px-16 lg:px-24 xl:px-32 text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 pb-12">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <a href="index.html" class="flex items-center gap-2 text-slate-900 font-display font-bold text-lg">
+                    <div class="w-6 h-6 rounded bg-indigo-600 flex items-center justify-center text-white">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" /></svg>
+                    </div>
+                    <span>LabCoat</span>
+                </a>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    The world’s first intelligent, personal audit platform. Wearable AR, edge computer vision, and guaranteed 21 CFR Part 11 integrity.
+                </p>
+            </div>
+
+            <!-- Platform -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Platform</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="platform.html" class="hover:text-indigo-600 transition-colors">Platform Overview</a></li>
+                    <li><a href="index.html#problem" class="hover:text-indigo-600 transition-colors">How It Works</a></li>
+                    <li><a href="deployment.html" class="hover:text-indigo-600 transition-colors font-medium text-slate-900">Deployment &amp; Rollout</a></li>
+                    <li><a href="pricing.html" class="hover:text-indigo-600 transition-colors">Pricing &amp; Tiers</a></li>
+                </ul>
+            </div>
+
+            <!-- Compliance -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Compliance</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="compliance.html" class="hover:text-indigo-600 transition-colors">21 CFR Part 11</a></li>
+                    <li><a href="compliance.html#alcoa" class="hover:text-indigo-600 transition-colors">ALCOA+ Integrity</a></li>
+                    <li><a href="compliance.html#gamp" class="hover:text-indigo-600 transition-colors">GAMP 5 Validation</a></li>
+                    <li><a href="dpa.html" class="hover:text-indigo-600 transition-colors">Security &amp; DPA</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Contact -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Legal &amp; Inquiries</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="privacy_policy.html" class="hover:text-indigo-600 transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-indigo-600 transition-colors">Terms of Service</a></li>
+                    <li><a href="index.html#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div><span>Audit-Proof Science Personally Integrated</span></div>
+            <div><span>© 2026 LabCoat Inc. All rights reserved.</span></div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner"
+        class="fixed bottom-6 right-6 max-w-sm bg-white p-5 rounded-2xl border border-slate-200 shadow-2xl z-50 transition-all duration-300 transform translate-y-32 opacity-0 [&.show]:translate-y-0 [&.show]:opacity-100">
+        <div class="text-sm font-display font-semibold text-slate-900 mb-1">Cookie Preferences</div>
+        <p class="text-xs text-slate-500 mb-4 font-sans leading-relaxed">
+            We use essential cookies to maintain system integrity and analyze enterprise traffic.
+        </p>
+        <div class="flex items-center gap-2">
+            <button id="accept-cookies"
+                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Accept
+            </button>
+            <button id="decline-cookies"
+                class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Decline
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

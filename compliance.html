@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LabCoat Regulatory Rigor & Compliance Architecture: Built for US FDA 21 CFR Part 11, EU Annex 11, GAMP 5 CSV validation protocols, and ALCOA+ data integrity in regulated biopharma.">
+    <title>Regulatory Rigor &amp; Compliance — LabCoat</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-500 selection:text-white">
+
+    <!-- Glassmorphic Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-10 sm:px-16 lg:px-24 xl:px-32 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="flex items-center gap-2.5 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg py-1 px-1.5">
+                <div
+                    class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-600/20">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+                    </svg>
+                </div>
+                <span class="tracking-tight">LabCoat</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="platform.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Platform</a>
+                <a href="compliance.html"
+                    class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors">Compliance</a>
+                <a href="deployment.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Deployment</a>
+                <a href="pricing.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
+            </nav>
+
+            <!-- Action Pill -->
+            <div class="flex items-center">
+                <a href="/demo/"
+                    class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm border border-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">
+                    Interactive Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- Hero Section -->
+        <section
+            class="relative z-10 pt-20 pb-16 lg:pt-24 lg:pb-24 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-white to-slate-100/90 overflow-hidden">
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[550px] bg-indigo-500/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Breadcrumbs -->
+                <div class="mb-8 flex items-center justify-between">
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-white hover:bg-slate-50 border border-slate-200 px-4 py-2 rounded-full transition-all shadow-xs group">
+                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                        <span>Back to Overview</span>
+                    </a>
+                    <div class="hidden sm:flex items-center gap-1.5 text-xs text-slate-400 font-mono">
+                        <a href="index.html" class="hover:text-slate-700 transition-colors">Home</a>
+                        <span>/</span>
+                        <span class="text-slate-900 font-medium">Compliance</span>
+                    </div>
+                </div>
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-emerald-700 text-xs font-mono font-medium mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                        REGULATORY INTEGRITY ENGINE
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 tracking-tight leading-tight">
+                        Built for FDA 21 CFR Part 11 &amp; GAMP 5 from Day One
+                    </h1>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
+                        In biopharma manufacturing, bad data integrity is a catastrophic risk. LabCoat eliminates retrofitted paper checklists with mathematically provable, contemporaneous electronic records.
+                    </p>
+                </div>
+
+                <!-- 4 Regulatory Foundations Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-2">21 CFR PART 11</div>
+                        <h3 class="text-sm font-display font-bold text-slate-900 mb-1.5">Electronic Signatures</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Dual-factor authenticated e-signatures capturing user credentials, timestamp, and explicit statement of intent (§ 11.50, § 11.70).
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-2">GAMP 5 CSV/CSA</div>
+                        <h3 class="text-sm font-display font-bold text-slate-900 mb-1.5">Validation Package</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Complete ready-to-execute IQ/OQ/PQ qualification protocols and traceability matrices that reduce validation from 6 months to 2 weeks.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-2">ALCOA+ STANDARD</div>
+                        <h3 class="text-sm font-display font-bold text-slate-900 mb-1.5">Contemporaneous Proof</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Records recorded at the exact millisecond of physical bench execution via embedded edge storage, eliminating retroactive documentation.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+                        <div class="text-xs font-mono font-bold text-indigo-600 mb-2">CRYPTOGRAPHY</div>
+                        <h3 class="text-sm font-display font-bold text-slate-900 mb-1.5">SHA-256 Ledger</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Immutable, append-only event hashing that mathematically guarantees offline records cannot be backdated or modified after creation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALCOA+ Framework Deep Dive -->
+        <section id="alcoa" class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-white border-y border-slate-200/80">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider">FDA Core Benchmark</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight mt-1 mb-3">
+                        How LabCoat Solves the ALCOA+ Matrix
+                    </h2>
+                    <p class="text-sm text-slate-600">
+                        The FDA’s data integrity framework is the benchmark for cleanroom inspection. Compare legacy manual vulnerabilities with LabCoat’s automated controls.
+                    </p>
+                </div>
+
+                <div class="overflow-hidden rounded-2xl border border-slate-200 shadow-xs">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100/80 border-b border-slate-200 text-slate-700 font-mono">
+                                <th class="p-4 font-semibold w-1/4">ALCOA+ Principle</th>
+                                <th class="p-4 font-semibold w-3/8 text-rose-700">Legacy Paper &amp; Kiosk Failure</th>
+                                <th class="p-4 font-semibold w-3/8 text-emerald-800">LabCoat Intelligent Defense</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 bg-white">
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">
+                                    <span class="font-display font-bold text-sm block">Attributable</span>
+                                    <span class="text-slate-500 text-[11px]">Who performed the action?</span>
+                                </td>
+                                <td class="p-4 text-slate-600">Shared workstation logins, scribbled initials, and unverifiable badge loans.</td>
+                                <td class="p-4 text-slate-800 bg-emerald-50/30 font-medium">Biometric and PIN badge sign-on locked to personalized wearable glasses and authenticated wristband ID.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">
+                                    <span class="font-display font-bold text-sm block">Legible</span>
+                                    <span class="text-slate-500 text-[11px]">Can the data be clearly read?</span>
+                                </td>
+                                <td class="p-4 text-slate-600">Crossed-out pen entries, unapproved strike-throughs, and smudged chemical spills.</td>
+                                <td class="p-4 text-slate-800 bg-emerald-50/30 font-medium">100% digital, structured, machine-parsable JSON event payloads compiled into pristine locked PDF records.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">
+                                    <span class="font-display font-bold text-sm block">Contemporaneous</span>
+                                    <span class="text-slate-500 text-[11px]">Was data recorded at the time?</span>
+                                </td>
+                                <td class="p-4 text-slate-600">Technicians jot notes on scrap wipes, typing hours later after exiting the cleanroom.</td>
+                                <td class="p-4 text-slate-800 bg-emerald-50/30 font-medium">Recorded at the exact microsecond of pipetting or reagent addition via local edge storage with verified UTC clock sync.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">
+                                    <span class="font-display font-bold text-sm block">Original</span>
+                                    <span class="text-slate-500 text-[11px]">Is it the primary record?</span>
+                                </td>
+                                <td class="p-4 text-slate-600">Secondary manual data transcription from instrument screens into paper binders or ELN.</td>
+                                <td class="p-4 text-slate-800 bg-emerald-50/30 font-medium">Direct point-of-origin optical capture and automated sensor ingestion as primary electronic records.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">
+                                    <span class="font-display font-bold text-sm block">Accurate</span>
+                                    <span class="text-slate-500 text-[11px]">Is the value error-free?</span>
+                                </td>
+                                <td class="p-4 text-slate-600">3% to 8% human transcription error rate during manual lot number and volume entry.</td>
+                                <td class="p-4 text-slate-800 bg-emerald-50/30 font-medium">Zero-touch automated QR asset recognition, dynamic volume validation bounds, and automated lockout.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">
+                                    <span class="font-display font-bold text-sm block">Complete &amp; Enduring</span>
+                                    <span class="text-slate-500 text-[11px]">Is the full history retained?</span>
+                                </td>
+                                <td class="p-4 text-slate-600">Lost binder pages, water damage, and unrecorded secondary deviations.</td>
+                                <td class="p-4 text-slate-800 bg-emerald-50/30 font-medium">Immutable append-only ledger preserved indefinitely in encrypted WORM (Write Once, Read Many) storage.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMP 5 & Validation Section -->
+        <section id="gamp" class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider">Fast-Tracked Validation</span>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight mt-1 mb-4">
+                            GAMP 5 Computer Software Assurance (CSA) Validation Suite
+                        </h2>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            Life sciences enterprises often reject new software simply because manual Computer System Validation (CSV) requires 6 to 9 months of engineering time. We deliver a turn-key GAMP 5 Category 4 validation package with every deployment.
+                        </p>
+                        <div class="space-y-4 text-xs">
+                            <div class="p-4 rounded-xl bg-white border border-slate-200">
+                                <h4 class="font-display font-bold text-slate-900 mb-1">Installation Qualification (IQ)</h4>
+                                <p class="text-slate-600">Automated verification scripts verifying edge hardware binaries, encryption algorithms, server dependencies, and network handshake security.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white border border-slate-200">
+                                <h4 class="font-display font-bold text-slate-900 mb-1">Operational Qualification (OQ)</h4>
+                                <p class="text-slate-600">Executed test scripts validating 21 CFR Part 11 e-signatures, timeout security locks, audit trail immutability, and boundary condition failure triggers.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white border border-slate-200">
+                                <h4 class="font-display font-bold text-slate-900 mb-1">Performance Qualification (PQ) Templates</h4>
+                                <p class="text-slate-600">Ready-to-customize cleanroom operational protocol templates mapping directly to your facility’s specific SOPs and assay flows.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl border border-slate-800">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <span>INSPECTOR AUDIT REPLAY INTERFACE</span>
+                            <span class="text-emerald-400">FDA 483 SHIELD</span>
+                        </div>
+                        <div class="mt-6 space-y-4 font-mono text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60">
+                                <div class="text-[10px] text-slate-400">AUDITOR VIEW ACCESS MODE</div>
+                                <div class="text-slate-100 font-sans font-semibold text-sm mt-0.5">Filtered Read-Only Inspector Sandbox</div>
+                                <div class="text-[11px] text-slate-400 mt-1 font-sans">Restricts auditor visibility strictly to subpoenaed batch runs, protecting unrelated IP and proprietary facility data.</div>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60 space-y-2">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span>E-Signature Integrity:</span>
+                                    <span class="text-emerald-400 font-bold">VERIFIED (21 CFR §11.50)</span>
+                                </div>
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span>Audit Trail Tamper Check:</span>
+                                    <span class="text-emerald-400 font-bold">SHA-256 MATCH</span>
+                                </div>
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span>Locked PDF Generation:</span>
+                                    <span class="text-indigo-300">READY (1-CLICK)</span>
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-lg bg-indigo-950/50 border border-indigo-700/40 text-indigo-200 text-[11px] font-sans">
+                                "During our last FDA inspection, the agency requested proof of contemporaneous temperature verification. With LabCoat, we pulled the timestamped video clip and calibrated telemetry in under 45 seconds. Zero observations."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-4">
+                    Request our GAMP 5 &amp; 21 CFR Part 11 Validation Pack
+                </h2>
+                <p class="text-base text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                    Review our complete regulatory whitepaper, requirements traceability matrix (RTM), and sample IQ/OQ execution protocols with your Quality Assurance team.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="index.html#contact"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm font-semibold bg-white text-slate-900 hover:bg-slate-100 px-7 py-3.5 rounded-full transition-all shadow-md">
+                        Request QA Validation Pack
+                    </a>
+                    <a href="platform.html"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-3.5 rounded-full transition-all shadow-md">
+                        Explore Platform Specs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-10 sm:px-16 lg:px-24 xl:px-32 text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 pb-12">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <a href="index.html" class="flex items-center gap-2 text-slate-900 font-display font-bold text-lg">
+                    <div class="w-6 h-6 rounded bg-indigo-600 flex items-center justify-center text-white">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" /></svg>
+                    </div>
+                    <span>LabCoat</span>
+                </a>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    The world’s first intelligent, personal audit platform. Wearable AR, edge computer vision, and guaranteed 21 CFR Part 11 integrity.
+                </p>
+            </div>
+
+            <!-- Platform -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Platform</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="platform.html" class="hover:text-indigo-600 transition-colors">Platform Overview</a></li>
+                    <li><a href="index.html#problem" class="hover:text-indigo-600 transition-colors">How It Works</a></li>
+                    <li><a href="deployment.html" class="hover:text-indigo-600 transition-colors">Deployment &amp; Rollout</a></li>
+                    <li><a href="pricing.html" class="hover:text-indigo-600 transition-colors">Pricing &amp; Tiers</a></li>
+                </ul>
+            </div>
+
+            <!-- Compliance -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Compliance</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="compliance.html" class="hover:text-indigo-600 transition-colors font-medium text-slate-900">21 CFR Part 11</a></li>
+                    <li><a href="#alcoa" class="hover:text-indigo-600 transition-colors">ALCOA+ Integrity</a></li>
+                    <li><a href="#gamp" class="hover:text-indigo-600 transition-colors">GAMP 5 Validation</a></li>
+                    <li><a href="dpa.html" class="hover:text-indigo-600 transition-colors">Security &amp; DPA</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Contact -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Legal &amp; Inquiries</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="privacy_policy.html" class="hover:text-indigo-600 transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-indigo-600 transition-colors">Terms of Service</a></li>
+                    <li><a href="index.html#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div><span>Audit-Proof Science Personally Integrated</span></div>
+            <div><span>© 2026 LabCoat Inc. All rights reserved.</span></div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner"
+        class="fixed bottom-6 right-6 max-w-sm bg-white p-5 rounded-2xl border border-slate-200 shadow-2xl z-50 transition-all duration-300 transform translate-y-32 opacity-0 [&.show]:translate-y-0 [&.show]:opacity-100">
+        <div class="text-sm font-display font-semibold text-slate-900 mb-1">Cookie Preferences</div>
+        <p class="text-xs text-slate-500 mb-4 font-sans leading-relaxed">
+            We use essential cookies to maintain system integrity and analyze enterprise traffic.
+        </p>
+        <div class="flex items-center gap-2">
+            <button id="accept-cookies"
+                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Accept
+            </button>
+            <button id="decline-cookies"
+                class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Decline
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

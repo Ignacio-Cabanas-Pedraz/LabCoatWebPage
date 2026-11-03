@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LabCoat Platform Architecture: Heads-up wearable AR, edge computer vision, local PGlite storage, and real-time bidirectional LIMS/ELN integrations for regulated life sciences.">
+    <title>Platform &amp; Architecture — LabCoat</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-indigo-500 selection:text-white">
+
+    <!-- Glassmorphic Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-10 sm:px-16 lg:px-24 xl:px-32 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="flex items-center gap-2.5 text-slate-900 font-display font-bold text-xl hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg py-1 px-1.5">
+                <div
+                    class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm shadow-indigo-600/20">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" />
+                    </svg>
+                </div>
+                <span class="tracking-tight">LabCoat</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="platform.html"
+                    class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors">Platform</a>
+                <a href="compliance.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Compliance</a>
+                <a href="deployment.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Deployment</a>
+                <a href="pricing.html"
+                    class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
+            </nav>
+
+            <!-- Action Pill -->
+            <div class="flex items-center">
+                <a href="/demo/"
+                    class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm border border-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900">
+                    Interactive Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- Hero Section -->
+        <section
+            class="relative z-10 pt-20 pb-16 lg:pt-24 lg:pb-24 px-10 sm:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-slate-100/90 via-white to-slate-100/90 overflow-hidden">
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[550px] bg-indigo-500/10 blur-3xl rounded-full pointer-events-none -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Breadcrumbs -->
+                <div class="mb-8 flex items-center justify-between">
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-white hover:bg-slate-50 border border-slate-200 px-4 py-2 rounded-full transition-all shadow-xs group">
+                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                        <span>Back to Overview</span>
+                    </a>
+                    <div class="hidden sm:flex items-center gap-1.5 text-xs text-slate-400 font-mono">
+                        <a href="index.html" class="hover:text-slate-700 transition-colors">Home</a>
+                        <span>/</span>
+                        <span class="text-slate-900 font-medium">Platform</span>
+                    </div>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200/60 text-indigo-700 text-xs font-mono font-medium mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></span>
+                        FULL-STACK ARCHITECTURE
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 tracking-tight leading-tight">
+                        The World’s First Intelligent, Personal Audit Platform
+                    </h1>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
+                        Traditional software treats the lab as disconnected terminals. LabCoat integrates directly with the scientist through standalone wearable AR, local edge computer vision, and bidirectional LIMS synchronization.
+                    </p>
+                </div>
+
+                <!-- Quick Architectural Highlights Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-indigo-300 transition-all">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                        </div>
+                        <h3 class="text-base font-display font-bold text-slate-900 mb-1">Wearable AR Guidance</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Ultra-lightweight smart glasses project dynamic SOP check-points in peripheral vision. Hands stay sterile in the hood with 0% degloving required.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-indigo-300 transition-all">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
+                        </div>
+                        <h3 class="text-base font-display font-bold text-slate-900 mb-1">Local-First Edge Vision</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Embedded WebAssembly PGlite runs completely offline in cleanroom Faraday zones. 5-second circular ring buffer preserves battery and operator privacy.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:border-indigo-300 transition-all">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-base font-display font-bold text-slate-900 mb-1">Bidirectional LIMS Flow</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Live sync with Benchling, Veeva, SAP, and LabWare. Direct automated data ingestion eliminates manual secondary transcriptions and human transcription errors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep-Dive Pillar Sections -->
+        <section class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-white border-y border-slate-200/80">
+            <div class="max-w-7xl mx-auto space-y-24">
+
+                <!-- Feature 1: The Personal Experience -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider mb-3">
+                            <span>01 / Wearable Intelligence</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight leading-snug mb-4">
+                            Hands-Free Precision Built Around the Scientist
+                        </h2>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            Scientists hold dangerous reagents, pipette micropipettes, and nurture delicate cell cultures. Forcing them to step away, remove gloves, and type into stationary touchscreens introduces contamination risk and burns up to 35% of each shift.
+                        </p>
+                        <ul class="space-y-3 text-xs text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Standalone Glasses Form Factor:</strong> Ergonomic, prescription-ready smart glasses requiring no tethered mobile phone or heavy computer pack.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Contextual Peripheral Display:</strong> Steps, volumes, and safety warnings appear in the upper field of view only when relevant, leaving the central sightline unobstructed.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Hands-Free Confirmation:</strong> Operators advance procedural steps and stamp e-signatures via subtle voice commands or sterile wristband controls.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl border border-slate-800">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <span>HEADS-UP TELEMETRY STREAM</span>
+                            <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> ONLINE</span>
+                        </div>
+                        <div class="mt-6 space-y-4 font-mono text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60">
+                                <div class="text-[10px] text-indigo-400 uppercase tracking-wider mb-1">ACTIVE STEP • SOP-BIO-402</div>
+                                <div class="text-slate-100 font-sans font-medium text-sm">Transfer 250 µL Lyophilized Protein Buffer to Cryovial B-09</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 text-[11px]">
+                                <div class="p-3 rounded-lg bg-slate-800/40 border border-slate-700/40">
+                                    <div class="text-slate-400 text-[10px]">REAGENT STATUS</div>
+                                    <div class="text-emerald-400 font-semibold mt-0.5">LOT #84920 — VALIDATED</div>
+                                </div>
+                                <div class="p-3 rounded-lg bg-slate-800/40 border border-slate-700/40">
+                                    <div class="text-slate-400 text-[10px]">EQUIPMENT CALIBRATION</div>
+                                    <div class="text-emerald-400 font-semibold mt-0.5">PIPETTE P1000 • CAL 2026-11</div>
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-lg bg-indigo-950/60 border border-indigo-700/40 text-indigo-200 text-[11px] flex items-center justify-between">
+                                <span>Voice Input: "Confirm addition"</span>
+                                <span class="bg-indigo-600 text-white text-[10px] px-2 py-0.5 rounded font-sans">E-Sign Stamped</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Edge Vision & Buffer -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 bg-slate-900 rounded-3xl p-8 text-white shadow-xl border border-slate-800">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <span>CIRCULAR BUFFER ARCHITECTURE</span>
+                            <span class="text-indigo-400">5-SECOND RING</span>
+                        </div>
+                        <div class="mt-6 space-y-3 font-mono text-xs">
+                            <div class="flex items-center justify-between p-3 rounded-lg bg-slate-800/60 text-slate-300">
+                                <span>Passive Rolling Ring</span>
+                                <span class="text-emerald-400">Never streams to cloud</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 rounded-lg bg-slate-800/60 text-slate-300">
+                                <span>Milestone Event Trigger</span>
+                                <span class="text-indigo-300">Locks 2.5s pre + 2.5s post</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 rounded-lg bg-slate-800/60 text-slate-300">
+                                <span>SHA-256 Frame Digest</span>
+                                <span class="text-amber-300">Cryptographically signed</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-800/30 border border-slate-700/30 text-[11px] text-slate-400 font-sans leading-relaxed">
+                                Continuous surveillance is unacceptable in biopharma cleanrooms. The circular buffer guarantees zero constant video uploading while preserving indisputable objective proof for deviations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider mb-3">
+                            <span>02 / Edge Computer Vision</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight leading-snug mb-4">
+                            Contextual Vision Without Surveillance Overhead
+                        </h2>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            By recognizing equipment asset tags, reagent barcodes, and container QR codes passively through the camera lens, the scientist never has to aim a handheld scanner or manual barcode reader again.
+                        </p>
+                        <ul class="space-y-3 text-xs text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Passive Asset Tag Detection:</strong> Looking at a biosafety hood automatically loads its current certification, airflow status, and active protocol.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Automatic Lot Verification:</strong> Picking up a bottle validates expiration dates and lot numbers against active master batch records in real time.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Zero Operator Privacy Compromise:</strong> Raw video is never continuously transmitted or stored. Only verified protocol milestone clips are retained for audit replay.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Local-First PGlite & Offline Sync -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider mb-3">
+                            <span>03 / Zero-Latency Edge Engine</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight leading-snug mb-4">
+                            Embedded WebAssembly PGlite for Faraday-Grade Reliability
+                        </h2>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            Regulated cleanrooms are heavy physical enclosures shielded by stainless steel and airlocks that frequently kill Wi-Fi. Traditional cloud-only SaaS apps stall with loading spinners or drop critical records.
+                        </p>
+                        <ul class="space-y-3 text-xs text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">100% Offline Capability:</strong> The complete relational database and validation schema run directly on the edge using embedded PostgreSQL via WebAssembly (PGlite).</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Cryptographic Time-Lock:</strong> Records created offline receive NTP-synchronized local timestamps and SHA-256 cryptographic hashes that prevent backdating.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Zero-Loss Sync Gateway:</strong> When the technician exits into a connected gowning room or corridor, data synchronizes to the central server in sub-second batches.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl border border-slate-800">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <span>OFFLINE DATA PIPELINE</span>
+                            <span class="text-amber-400 font-mono text-[11px]">CLEANROOM AIR-GAP</span>
+                        </div>
+                        <div class="mt-6 space-y-4">
+                            <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span>Wearable Device</span>
+                                    <span class="text-emerald-400 font-semibold">PGlite WASM Engine</span>
+                                </div>
+                                <div class="text-[11px] text-slate-400 mt-1">Local read/write execution: <span class="text-slate-200">1.2ms latency</span></div>
+                            </div>
+                            <div class="flex justify-center text-indigo-400">
+                                <svg class="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono">
+                                <div class="flex justify-between items-center text-slate-300">
+                                    <span>Facility Edge Hub</span>
+                                    <span class="text-indigo-400 font-semibold">Local Ledger Gateway</span>
+                                </div>
+                                <div class="text-[11px] text-slate-400 mt-1">Immutable event journal with AES-256 encryption</div>
+                            </div>
+                            <div class="flex justify-center text-indigo-400">
+                                <svg class="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-indigo-950/60 border border-indigo-700/40 text-xs font-mono">
+                                <div class="flex justify-between items-center text-indigo-200">
+                                    <span>Central LIMS / Enterprise Cloud</span>
+                                    <span class="text-emerald-400 font-semibold">Benchling / Veeva / SAP</span>
+                                </div>
+                                <div class="text-[11px] text-indigo-300/80 mt-1">Bidirectional API sync with audit trail verification</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Spatial Twin & Digital Genealogy -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 bg-slate-900 rounded-3xl p-8 text-white shadow-xl border border-slate-800">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <span>BATCH GENEALOGY RECONSTRUCTION</span>
+                            <span class="text-indigo-400">SUITE B-04</span>
+                        </div>
+                        <div class="mt-6 space-y-3 font-mono text-xs">
+                            <div class="p-3 rounded-lg bg-slate-800/50 border border-slate-700/40 flex items-center justify-between">
+                                <span class="text-slate-300">Operator Authentication</span>
+                                <span class="text-emerald-400 font-mono">DR. S. MILLER [CERTIFIED]</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-800/50 border border-slate-700/40 flex items-center justify-between">
+                                <span class="text-slate-300">Cleanroom Suite</span>
+                                <span class="text-slate-200">ISO 7 • 20.4°C • 42% RH</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-800/50 border border-slate-700/40 flex items-center justify-between">
+                                <span class="text-slate-300">Equipment Serial</span>
+                                <span class="text-slate-200">BSC-THERMO-1184</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-800/50 border border-slate-700/40 flex items-center justify-between">
+                                <span class="text-slate-300">Raw Material Lot</span>
+                                <span class="text-slate-200">LOT-2026-ENZ-003</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-emerald-950/50 border border-emerald-700/40 text-emerald-300 text-[11px] flex items-center justify-between">
+                                <span>Audit Status</span>
+                                <span class="font-bold">100% Contemporaneous</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-indigo-600 uppercase tracking-wider mb-3">
+                            <span>04 / Spatial Intelligence</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-slate-900 tracking-tight leading-snug mb-4">
+                            Complete Spatial Digital Twin &amp; Batch Genealogy
+                        </h2>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            When an FDA auditor asks for the full history of batch vial #492, investigators usually spend three weeks pulling paper binders across four departments. With LabCoat, the entire physical and temporal lineage is instantly rendered in one screen.
+                        </p>
+                        <ul class="space-y-3 text-xs text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Multi-Room Facility Mapping:</strong> Live interactive spatial overview of active personnel, equipment locations, and cleanroom air classifications.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Interactive Genealogy Tree:</strong> Trace every vial back through equipment calibration records, environmental sensor charts, and certified operators.</div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold mt-0.5">✓</span>
+                                <div><strong class="font-semibold text-slate-900">Synchronized Event Playback:</strong> Replay step execution timelines alongside synchronized environmental metrics and video proof clips.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="py-20 px-10 sm:px-16 lg:px-24 xl:px-32 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-4">
+                    Experience LabCoat in Your Cleanroom
+                </h2>
+                <p class="text-base text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                    Test the wearable AR workflow and edge computer vision inside our live interactive browser sandbox, or schedule an on-site hardware trial with your engineering team.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/demo/"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm font-semibold bg-white text-slate-900 hover:bg-slate-100 px-7 py-3.5 rounded-full transition-all shadow-md">
+                        Launch Live Sandbox
+                    </a>
+                    <a href="index.html#contact"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white px-7 py-3.5 rounded-full transition-all shadow-md">
+                        Schedule Technical Briefing
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-10 sm:px-16 lg:px-24 xl:px-32 text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 pb-12">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <a href="index.html" class="flex items-center gap-2 text-slate-900 font-display font-bold text-lg">
+                    <div class="w-6 h-6 rounded bg-indigo-600 flex items-center justify-center text-white">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H15M10 9H14M3 21H21M5 21V7C5 5.89543 5.89543 5 7 5H17C18.1046 5 19 5.89543 19 7V21" /></svg>
+                    </div>
+                    <span>LabCoat</span>
+                </a>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    The world’s first intelligent, personal audit platform. Wearable AR, edge computer vision, and guaranteed 21 CFR Part 11 integrity.
+                </p>
+            </div>
+
+            <!-- Platform -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Platform</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="platform.html" class="hover:text-indigo-600 transition-colors font-medium text-slate-900">Platform Overview</a></li>
+                    <li><a href="index.html#problem" class="hover:text-indigo-600 transition-colors">How It Works</a></li>
+                    <li><a href="deployment.html" class="hover:text-indigo-600 transition-colors">Deployment &amp; Rollout</a></li>
+                    <li><a href="pricing.html" class="hover:text-indigo-600 transition-colors">Pricing &amp; Tiers</a></li>
+                </ul>
+            </div>
+
+            <!-- Compliance -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Compliance</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="compliance.html" class="hover:text-indigo-600 transition-colors">21 CFR Part 11</a></li>
+                    <li><a href="compliance.html#alcoa" class="hover:text-indigo-600 transition-colors">ALCOA+ Integrity</a></li>
+                    <li><a href="compliance.html#gamp" class="hover:text-indigo-600 transition-colors">GAMP 5 Validation</a></li>
+                    <li><a href="dpa.html" class="hover:text-indigo-600 transition-colors">Security &amp; DPA</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Contact -->
+            <div>
+                <h4 class="text-xs font-mono font-semibold text-slate-900 uppercase tracking-wider mb-2.5">Legal &amp; Inquiries</h4>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                    <li><a href="privacy_policy.html" class="hover:text-indigo-600 transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-indigo-600 transition-colors">Terms of Service</a></li>
+                    <li><a href="index.html#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div><span>Audit-Proof Science Personally Integrated</span></div>
+            <div><span>© 2026 LabCoat Inc. All rights reserved.</span></div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner"
+        class="fixed bottom-6 right-6 max-w-sm bg-white p-5 rounded-2xl border border-slate-200 shadow-2xl z-50 transition-all duration-300 transform translate-y-32 opacity-0 [&.show]:translate-y-0 [&.show]:opacity-100">
+        <div class="text-sm font-display font-semibold text-slate-900 mb-1">Cookie Preferences</div>
+        <p class="text-xs text-slate-500 mb-4 font-sans leading-relaxed">
+            We use essential cookies to maintain system integrity and analyze enterprise traffic.
+        </p>
+        <div class="flex items-center gap-2">
+            <button id="accept-cookies"
+                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Accept
+            </button>
+            <button id="decline-cookies"
+                class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-medium transition-colors cursor-pointer">
+                Decline
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
